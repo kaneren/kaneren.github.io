@@ -1,0 +1,1348 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔记,学习,JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="一方天地" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="继续学习JavaScript，教程来自w3schools。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 学习笔记之七">
+<meta property="og:url" content="http://rrkaige.com/2016/10/12/JavaScript学习笔记之七/index.html">
+<meta property="og:site_name" content="一方天地">
+<meta property="og:description" content="继续学习JavaScript，教程来自w3schools。">
+<meta property="og:image" content="http://ob0mgqhy4.bkt.clouddn.com/20161012-myblog75.png">
+<meta property="og:updated_time" content="2016-10-19T10:30:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 学习笔记之七">
+<meta name="twitter:description" content="继续学习JavaScript，教程来自w3schools。">
+<meta name="twitter:image" content="http://ob0mgqhy4.bkt.clouddn.com/20161012-myblog75.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false,
+    motion: true,
+    duoshuo: {
+      userId: 6312606111681742000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://rrkaige.com/2016/10/12/JavaScript学习笔记之七/"/>
+
+  <title> JavaScript 学习笔记之七 | 一方天地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一方天地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">面朝大海，春暖花开</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bars"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-setup">
+          <a href="/setup" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-anchor"></i> <br />
+            
+            建站
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  
+	  <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+	  
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript 学习笔记之七
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-12T09:44:24+08:00" content="2016-10-12">
+              2016-10-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web征途/" itemprop="url" rel="index">
+                    <span itemprop="name">Web征途</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/12/JavaScript学习笔记之七/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/12/JavaScript学习笔记之七/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/12/JavaScript学习笔记之七/" class="leancloud_visitors" data-flag-title="JavaScript 学习笔记之七">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">热度 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p> 继续学习 JavaScript，教程来自 <a href="http://www.w3schools.com/js/" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161012-myblog75.png" alt="JavaScript"></p>
+<a id="more"></a>
+<h3 id="Forms"><a href="#Forms" class="headerlink" title="Forms"></a>Forms</h3><p>Validation can be defined by many different methods, and deployed in many different ways.</p>
+<ul>
+<li><strong>Server side validation</strong> is performed by a web server, after input has been sent to the server.</li>
+<li><strong>Client side validation</strong> is performed by a web browser, before input is sent to a web server.</li>
+</ul>
+<p>HTML5 introduced a new HTML validation concept called <strong>constraint validation</strong>. HTML constraint validation is based on:</p>
+<ul>
+<li>Constraint validation <strong>HTML Input Attributes</strong></li>
+<li>Constraint validation <strong>CSS Pseudo Selectors</strong></li>
+<li>Constraint validation <strong>DOM Properties and Methods</strong></li>
+</ul>
+<h3 id="Validation-API"><a href="#Validation-API" class="headerlink" title="Validation API"></a>Validation API</h3><p>Constraint Validation DOM Methods</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>checkValidity()</code></td>
+<td>Returns true if an input element contains valid data.</td>
+</tr>
+<tr>
+<td><code>setCustomValidity()</code></td>
+<td>Sets the validationMessage property of an input element.</td>
+</tr>
+</tbody>
+</table>
+<p>Constraint Validation DOM Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>validity</td>
+<td>Contains boolean properties related to the validity of an input element.</td>
+</tr>
+<tr>
+<td>validationMessage</td>
+<td>Contains the message a browser will display when the validity is false.</td>
+</tr>
+<tr>
+<td>willValidate</td>
+<td>Indicates if an input element will be validated.</td>
+</tr>
+</tbody>
+</table>
+<p>Validity Properties</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customError</td>
+<td>Set to true, if a custom validity message is set.</td>
+</tr>
+<tr>
+<td>patternMismatch</td>
+<td>Set to true, if an element’s value does not match its pattern attribute.</td>
+</tr>
+<tr>
+<td>rangeOverflow</td>
+<td>Set to true, if an element’s value is greater than its max attribute.</td>
+</tr>
+<tr>
+<td>rangeUnderflow</td>
+<td>Set to true, if an element’s value is less than its min attribute.</td>
+</tr>
+<tr>
+<td>stepMismatch</td>
+<td>Set to true, if an element’s value is invalid per its step attribute.</td>
+</tr>
+<tr>
+<td>tooLong</td>
+<td>Set to true, if an element’s value exceeds its maxLength attribute.</td>
+</tr>
+<tr>
+<td>typeMismatch</td>
+<td>Set to true, if an element’s value is invalid per its type attribute.</td>
+</tr>
+<tr>
+<td>valueMissing</td>
+<td>Set to true, if an element (with a required attribute) has no value.</td>
+</tr>
+<tr>
+<td>valid</td>
+<td>Set to true, if an element’s value is valid.</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;input id=&quot;id1&quot; type=&quot;number&quot; max=&quot;100&quot;&gt;</div><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;OK&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function myFunction() &#123;</div><div class="line">    var txt = &quot;&quot;;</div><div class="line">    if (document.getElementById(&quot;id1&quot;).validity.rangeOverflow) &#123;</div><div class="line">       txt = &quot;Value too large&quot;;</div><div class="line">    &#125;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = txt;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h3><p>In JavaScript, objects are king. If you understand objects, you understand JavaScript.</p>
+<p>In JavaScript, almost “everything” is an object.</p>
+<ul>
+<li>Booleans can be objects (or primitive data treated as objects)</li>
+<li>Numbers can be objects (or primitive data treated as objects)</li>
+<li>Strings can be objects (or primitive data treated as objects)</li>
+<li>Dates are always objects</li>
+<li>Maths are always objects</li>
+<li>Regular expressions are always objects</li>
+<li>Arrays are always objects</li>
+<li>Functions are always objects</li>
+<li>Objects are objects</li>
+</ul>
+<p>In JavaScript, all values, except primitive values, are objects.</p>
+<p>Primitive values are: strings (“John Doe”), numbers (3.14), true, false, null, and undefined.</p>
+<ul>
+<li>Using an <strong>object literal</strong>, you both define and create an object in one statement. An object literal is a list of name:value pairs (like age:50) inside curly braces {}.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var person = &#123;</div><div class="line">    firstName:&quot;John&quot;,</div><div class="line">    lastName:&quot;Doe&quot;,</div><div class="line">    age:50,</div><div class="line">    eyeColor:&quot;blue&quot;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>Using the JavaScript <strong>Keyword new</strong>.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var person = new Object();</div><div class="line">person.firstName = &quot;John&quot;;</div><div class="line">person.lastName = &quot;Doe&quot;;</div><div class="line">person.age = 50;</div><div class="line">person.eyeColor = &quot;blue&quot;;</div></pre></td></tr></table></figure>
+<p><strong>Note：</strong> The two examples above do exactly the same. There is no need to use <code>new Object()</code>. For simplicity, readability and execution speed, use the first one (the object literal method).</p>
+<ul>
+<li>Using an <strong>Object Constructor</strong>.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function person(first, last, age, eye) &#123;</div><div class="line">    this.firstName = first;</div><div class="line">    this.lastName = last;</div><div class="line">    this.age = age;</div><div class="line">    this.eyeColor = eye;</div><div class="line">&#125;</div><div class="line">var myFather = new person(&quot;John&quot;, &quot;Doe&quot;, 50, &quot;blue&quot;);</div><div class="line">var myMother = new person(&quot;Sally&quot;, &quot;Rally&quot;, 48, &quot;green&quot;);</div></pre></td></tr></table></figure>
+<p>In JavaScript, the thing called <strong>this</strong>, is the object that “owns” the JavaScript code.</p>
+<p>The value of <strong>this</strong>, when used in a function, is the object that “owns” the function.<br>The value of <strong>this</strong>, when used in an object, is the object itself.<br>The <strong>this</strong> keyword in an object constructor does not have a value. It is only a substitute for the new object.<br>The value of <strong>this</strong> will become the new object when the constructor is used to create an object.</p>
+<p><strong>Note:</strong> <strong>this</strong> is not a variable. It is a keyword. You cannot change the value of <strong>this</strong>.</p>
+<ul>
+<li>In ECMAScript 5, an object can also be created with the function <code>Object.create()</code>.</li>
+</ul>
+<p>JavaScript has <strong>built-in constructors</strong> for native objects.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var x1 = new Object();    // A new Object object</div><div class="line">var x2 = new String();    // A new String object</div><div class="line">var x3 = new Number();    // A new Number object</div><div class="line">var x4 = new Boolean();   // A new Boolean object</div><div class="line">var x5 = new Array();     // A new Array object</div><div class="line">var x6 = new RegExp();    // A new RegExp object</div><div class="line">var x7 = new Function();  // A new Function object</div><div class="line">var x8 = new Date();      // A new Date object</div></pre></td></tr></table></figure>
+<p>There is no reason to create complex objects. Primitive values execute much faster.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var x1 = &#123;&#125;;            // new object</div><div class="line">var x2 = &quot;&quot;;            // new primitive string</div><div class="line">var x3 = 0;             // new primitive number</div><div class="line">var x4 = false;         // new primitive boolean</div><div class="line">var x5 = [];            // new array	object</div><div class="line">var x6 = /()/           // new regexp object</div><div class="line">var x7 = function()&#123;&#125;;  // new function object</div></pre></td></tr></table></figure>
+<p>Objects are <strong>mutable</strong>: They are addressed by <strong>reference</strong>, not by value.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = person;  // This will not create a copy of person.</div></pre></td></tr></table></figure>
+<p>The object x is <strong>not a copy of</strong> person. It <strong>is</strong> person. Both x and person is the same object. Any changes to x will also change person, because x and person are the same object.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var person = &#123;firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;&#125;</div><div class="line"></div><div class="line">var x = person;</div><div class="line">x.age = 10;           // This will change both x.age and person.age</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> JavaScript variables are not mutable. Only JavaScript objects.</p>
+<h3 id="Object-Properties"><a href="#Object-Properties" class="headerlink" title="Object Properties"></a>Object Properties</h3><p>Properties are the most important part of any JavaScript object.</p>
+<p>Properties are the values associated with a JavaScript object. A JavaScript object is a collection of unordered properties. Properties can usually be changed, added, and deleted, but some are read only.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">objectName.property          // person.age</div><div class="line">objectName[&quot;property&quot;]       // person[&quot;age&quot;]</div><div class="line">objectName[expression]       // x = &quot;age&quot;; person[x]</div></pre></td></tr></table></figure>
+<p>The JavaScript <strong>for…in</strong> statement loops through the properties of an object.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for (variable in object) &#123;</div><div class="line">    code to be executed</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The block of code inside of the for…in loop will be executed <strong>once</strong> for each property.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var person = &#123;fname:&quot;John&quot;, lname:&quot;Doe&quot;, age:25&#125;; </div><div class="line">for (x in person) &#123;</div><div class="line">    txt += person[x];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>You can add new properties to an existing object by simply giving it a value.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">person.nationality = &quot;English&quot;;</div></pre></td></tr></table></figure>
+<p>The <strong>delete</strong> keyword deletes a property from an object.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var person = &#123;firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;&#125;;</div><div class="line">delete person.age;   // or delete person[&quot;age&quot;];</div></pre></td></tr></table></figure>
+<ul>
+<li>The delete keyword deletes both the value of the property and the property itself.</li>
+<li>After deletion, the property cannot be used before it is added back again.</li>
+<li>The delete operator is designed to be used on object properties. It has no effect on variables or functions.</li>
+<li>The delete operator should not be used on predefined JavaScript object properties. It can crash your application.</li>
+</ul>
+<h3 id="Object-Methods"><a href="#Object-Methods" class="headerlink" title="Object Methods"></a>Object Methods</h3><p>A JavaScript method is a property containing a <strong>function definition</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">methodName : function() &#123; code lines &#125;</div><div class="line">objectName.methodName()</div></pre></td></tr></table></figure>
+<p>This example accesses the fullName() method of a person object.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">name = person.fullName();</div></pre></td></tr></table></figure>
+<p>If you access the fullName <strong>property</strong>, without (), it will return the <strong>function definition</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">name = person.fullName;</div></pre></td></tr></table></figure>
+<h3 id="Object-Prototypes"><a href="#Object-Prototypes" class="headerlink" title="Object Prototypes"></a>Object Prototypes</h3><p>Every JavaScript object has a prototype. The prototype is also an object. All JavaScript objects inherit the properties and methods from their prototype.</p>
+<ul>
+<li>Objects created using an object literal, or with <code>new Object()</code>, inherit from a prototype called Object.prototype.</li>
+<li>Objects created with <code>new Date()</code> inherit the Date.prototype.</li>
+<li>The Object.prototype is on the top of the prototype chain.</li>
+<li>All JavaScript objects (Date, Array, RegExp, Function, ….) inherit from the Object.prototype.</li>
+</ul>
+<p>The standard way to create an object prototype is to use an <strong>object constructor function</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function Person(first, last, age, eyecolor) &#123;</div><div class="line">    this.firstName = first;</div><div class="line">    this.lastName = last;</div><div class="line">    this.age = age;</div><div class="line">    this.eyeColor = eyecolor;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The constructor function is the prototype for Person objects.</li>
+<li>It is considered good practice to name constructor function with an upper-case first letter.</li>
+</ul>
+<p>To add a new <strong>property</strong> to a prototype, you must add it to the constructor function.</p>
+<p>Your constructor function can also define <strong>methods</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function Person(first, last, age, eyecolor) &#123;</div><div class="line">    this.firstName = first;</div><div class="line">    this.lastName = last;</div><div class="line">    this.age = age;</div><div class="line">    this.eyeColor = eyecolor;</div><div class="line">    this.nationality = &quot;English&quot;;</div><div class="line">    this.name = function() &#123;return this.firstName + &quot; &quot; + this.lastName;&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The JavaScript prototype property allows you to add new <strong>properties</strong> to an existing prototype.</p>
+<p>The JavaScript prototype property also allows you to add new <strong>methods</strong> to an existing prototype.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function Person(first, last, age, eyecolor) &#123;</div><div class="line">    this.firstName = first;</div><div class="line">    this.lastName = last;</div><div class="line">    this.age = age;</div><div class="line">    this.eyeColor = eyecolor;</div><div class="line">&#125;</div><div class="line">Person.prototype.nationality = &quot;English&quot;;</div><div class="line">Person.prototype.name = function() &#123;</div><div class="line">    return this.firstName + &quot; &quot; + this.lastName;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="Function-Definitions"><a href="#Function-Definitions" class="headerlink" title="Function Definitions"></a>Function Definitions</h3><p>JavaScript functions are <strong>defined</strong> with the <strong>function</strong> keyword. You can use a function <strong>declaration</strong> or a function <strong>expression</strong>.</p>
+<p>Earlier in this tutorial, you learned that functions are <strong>declared</strong> with the following syntax. Declared functions are not executed immediately. They are “saved for later use”, and will be executed later, when they are invoked (called upon).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function functionName(parameters) &#123;</div><div class="line">  code to be executed</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> Semicolons are used to separate executable JavaScript statements. Since a function declaration is not an executable statement, it is not common to end it with a semicolon.</p>
+<p>A JavaScript function can also be defined using an <strong>expression</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x = function (a, b) &#123;return a * b&#125;;</div><div class="line">var z = x(4, 3);</div></pre></td></tr></table></figure>
+<p>The function above is actually an <strong>anonymous</strong> function (a function without a name). Functions stored in variables do not need function names. They are always invoked (called) using the variable name.</p>
+<p><strong>Note:</strong> The function above ends with a semicolon because it is a part of an executable statement.</p>
+<p>Functions can also be defined with a built-in JavaScript function constructor called <code>Function()</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var myFunction = new Function(&quot;a&quot;, &quot;b&quot;, &quot;return a * b&quot;);</div><div class="line">var x = myFunction(4, 3);</div></pre></td></tr></table></figure>
+<p>Function expressions can be made “<strong>self-invoking</strong>“. A self-invoking expression is invoked (started) automatically, without being called. Function expressions will execute automatically if the expression is followed by ().</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(function () &#123;</div><div class="line">    var x = &quot;Hello!!&quot;;      // I will invoke myself</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<p>The function above is actually an <strong>anonymous self-invoking function</strong> (function without name).</p>
+<h3 id="Function-Parameters"><a href="#Function-Parameters" class="headerlink" title="Function Parameters"></a>Function Parameters</h3><p>Earlier in this tutorial, you learned that functions can have <strong>parameters</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">functionName(parameter1, parameter2, parameter3) &#123;</div><div class="line">    code to be executed</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Function <strong>parameters</strong> are the <strong>names</strong> listed in the function definition.</li>
+<li>Function <strong>arguments</strong> are the real <strong>values</strong> passed to (and received by) the function.</li>
+</ul>
+<p>JavaScript function definitions do not specify data types for parameters. JavaScript functions do not perform type checking on the passed arguments. JavaScript functions do not check the number of arguments received.</p>
+<p>If a function is called with <strong>missing arguments</strong> (less than declared), the missing values are set to: <strong>undefined</strong>.</p>
+<p>If a function is called with <strong>too many arguments</strong> (more than declared), these arguments can be reached using <strong>the arguments object</strong>.</p>
+<p>The argument object contains an array of the arguments used when the function was called (invoked).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">x = findMax(1, 123, 500, 115, 44, 88);</div><div class="line">function findMax() &#123;</div><div class="line">    var i;</div><div class="line">    var max = -Infinity;</div><div class="line">    for (i = 0; i &lt; arguments.length; i++) &#123;</div><div class="line">        if (arguments[i] &gt; max) &#123;</div><div class="line">            max = arguments[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return max;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>JavaScript arguments are passed by <strong>value</strong>: The function only gets to know the values, not the argument’s locations. If a function changes an argument’s value, it does not change the parameter’s original value.</p>
+<p><strong>Changes to arguments are not visible (reflected) outside the function.</strong></p>
+<p>Objects will behave like they are passed by <strong>reference</strong>: If a function changes an object property, it changes the original value.</p>
+<p><strong>Changes to object properties are visible (reflected) outside the function.</strong></p>
+<h3 id="Function-Invocation"><a href="#Function-Invocation" class="headerlink" title="Function Invocation"></a>Function Invocation</h3><ul>
+<li>Invoking a Function as a <strong>Function</strong></li>
+</ul>
+<p>In HTML the default global object is the HTML page itself, so the function above “belongs” to the HTML page. In a browser the page object is the browser window. The function above automatically becomes a <strong>window function</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function myFunction(a, b) &#123;</div><div class="line">    return a * b;</div><div class="line">&#125;</div><div class="line">myFunction(10, 2);           // myFunction(10, 2) will return 20</div><div class="line"></div><div class="line">window.myFunction(10, 2);    // window.myFunction(10, 2) will also return 20</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> This is a common way to invoke a JavaScript function, but not a very good practice. Global variables, methods, or functions can easily create name conflicts and bugs in the global object.</p>
+<ul>
+<li>Invoking a Function as a <strong>Method</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var myObject = &#123;</div><div class="line">    firstName:&quot;John&quot;,</div><div class="line">    lastName: &quot;Doe&quot;,</div><div class="line">    fullName: function () &#123;</div><div class="line">        return this.firstName + &quot; &quot; + this.lastName;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">myObject.fullName();         // Will return &quot;John Doe&quot;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> Invoking a function as an object method, causes the value of <strong>this</strong> to be the object itself.</p>
+<ul>
+<li>Invoking a Function with a <strong>Function Constructor</strong></li>
+</ul>
+<p>If a function invocation is preceded with the new keyword, it is a constructor invocation.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// This is a function constructor:</div><div class="line">function myFunction(arg1, arg2) &#123;</div><div class="line">    this.firstName = arg1;</div><div class="line">    this.lastName  = arg2;</div><div class="line">&#125;</div><div class="line">// This	creates a new object</div><div class="line">var x = new myFunction(&quot;John&quot;,&quot;Doe&quot;);</div><div class="line">x.firstName;                             // Will return &quot;John&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li>Invoking a Function with a <strong>Function Method</strong></li>
+</ul>
+<p>In JavaScript, functions are objects. JavaScript functions have properties and methods.</p>
+<p><code>call()</code> and <code>apply()</code> are predefined JavaScript function methods. Both methods can be used to invoke a function, and both methods must have the owner object as first parameter. The only difference is that <code>call()</code> takes the function arguments <strong>separately</strong>, and <code>apply()</code> takes the function arguments <strong>in an array</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function myFunction(a, b) &#123;</div><div class="line">    return a * b;</div><div class="line">&#125;</div><div class="line">myObject1 = myFunction.call(myObject, 10, 2);     // Will return 20</div><div class="line"></div><div class="line">myArray = [10, 2];</div><div class="line">myObject2 = myFunction.apply(myObject, myArray);  // Will also return 20</div></pre></td></tr></table></figure>
+<h3 id="Function-Closures"><a href="#Function-Closures" class="headerlink" title="Function Closures"></a>Function Closures</h3><p>Global variables can be used (and changed) by all scripts in the page (and in the window). A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.</p>
+<p><strong>Note:</strong> Variables created <strong>without</strong> the keyword <strong>var</strong>, are always global, even if they are created inside a function.</p>
+<ul>
+<li>Global variables live as long as your application (your window / your web page) lives.</li>
+<li>Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var add = (function () &#123;</div><div class="line">    var counter = 0;</div><div class="line">    return function () &#123;return counter += 1;&#125;</div><div class="line">&#125;)();</div><div class="line"></div><div class="line">function myFunction()&#123;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = add();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>The variable <strong>add</strong> is assigned the return value of a self-invoking function.</li>
+<li>The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.</li>
+<li>This way add becomes a function. The “wonderful” part is that it can access the counter in the parent scope.</li>
+<li>This is called a JavaScript <strong>closure</strong>. It makes it possible for a function to have “<strong>private</strong>“ variables.</li>
+<li>The counter is protected by the scope of the anonymous function, and can only be changed using the add function.</li>
+</ul>
+<p><strong>Note:</strong> A closure is a function having access to the parent scope, even after the parent function has closed.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/学习/" rel="tag">#学习</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/11/JavaScript学习笔记之六/" rel="next" title="JavaScript 学习笔记之六">
+                <i class="fa fa-chevron-left"></i> JavaScript 学习笔记之六
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/13/娱乐至死/" rel="prev" title="娱乐至死">
+                娱乐至死 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/12/JavaScript学习笔记之七/"
+           data-title="JavaScript 学习笔记之七" data-url="http://rrkaige.com/2016/10/12/JavaScript学习笔记之七/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Kane Ren" />
+          <p class="site-author-name" itemprop="name">Kane Ren</p>
+          <p class="site-description motion-element" itemprop="description">Just Do It!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">98</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">108</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+			<a title="�ղص���ǩ��ż��Highһ��^_^" rel="alternate" class="mw-harlem_shake_slow wobble shake" href='javascript:(function() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+})()'><i class="fa fa-music"></i> High</a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/kaneren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Forms"><span class="nav-number">1.</span> <span class="nav-text">Forms</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Validation-API"><span class="nav-number">2.</span> <span class="nav-text">Validation API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objects"><span class="nav-number">3.</span> <span class="nav-text">Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-Properties"><span class="nav-number">4.</span> <span class="nav-text">Object Properties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-Methods"><span class="nav-number">5.</span> <span class="nav-text">Object Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-Prototypes"><span class="nav-number">6.</span> <span class="nav-text">Object Prototypes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function-Definitions"><span class="nav-number">7.</span> <span class="nav-text">Function Definitions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function-Parameters"><span class="nav-number">8.</span> <span class="nav-text">Function Parameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function-Invocation"><span class="nav-number">9.</span> <span class="nav-text">Function Invocation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function-Closures"><span class="nav-number">10.</span> <span class="nav-text">Function Closures</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear" style="color: black;">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart" style="color: red;"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder" style="color: black;">Kane Ren</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"rrkaige"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("YW05a4T5MDoaIXON9PbvC9v7-gzGzoHsz", "u0hT5wDpjTJbj43rEwaY8qHu");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0+"°C");
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time+"°C");
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0+"°C");
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time')+"°C");
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time')+"°C");
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1345 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔记,学习,CSS," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="一方天地" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="继续学习，教程来自w3schools。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS 学习笔记之七">
+<meta property="og:url" content="http://rrkaige.com/2016/09/16/CSS学习笔记之七/index.html">
+<meta property="og:site_name" content="一方天地">
+<meta property="og:description" content="继续学习，教程来自w3schools。">
+<meta property="og:image" content="http://ob0mgqhy4.bkt.clouddn.com/20160916-myblog48.jpg">
+<meta property="og:updated_time" content="2016-10-12T02:38:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS 学习笔记之七">
+<meta name="twitter:description" content="继续学习，教程来自w3schools。">
+<meta name="twitter:image" content="http://ob0mgqhy4.bkt.clouddn.com/20160916-myblog48.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false,
+    motion: true,
+    duoshuo: {
+      userId: 6312606111681742000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://rrkaige.com/2016/09/16/CSS学习笔记之七/"/>
+
+  <title> CSS 学习笔记之七 | 一方天地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一方天地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">面朝大海，春暖花开</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bars"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-setup">
+          <a href="/setup" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-anchor"></i> <br />
+            
+            建站
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  
+	  <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+	  
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS 学习笔记之七
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-16T20:30:56+08:00" content="2016-09-16">
+              2016-09-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web征途/" itemprop="url" rel="index">
+                    <span itemprop="name">Web征途</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/16/CSS学习笔记之七/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/16/CSS学习笔记之七/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/16/CSS学习笔记之七/" class="leancloud_visitors" data-flag-title="CSS 学习笔记之七">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">热度 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p> 继续学习，教程来自 <a href="http://www.w3schools.com/css/" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20160916-myblog48.jpg" alt="CSS"></p>
+<a id="more"></a>
+<h3 id="CSS-Images"><a href="#CSS-Images" class="headerlink" title="CSS Images"></a>CSS Images</h3><ul>
+<li>Use the <code>border-radius</code> property to create rounded images:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">img &#123;</div><div class="line">    border-radius: 8px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Use the border property to create thumbnail images.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">a &#123;</div><div class="line">    display: inline-block;</div><div class="line">    border: 1px solid #ddd;</div><div class="line">    border-radius: 4px;</div><div class="line">    padding: 5px;</div><div class="line">    transition: 0.3s;</div><div class="line">&#125;</div><div class="line"></div><div class="line">a:hover &#123;</div><div class="line">    box-shadow: 0 0 2px 1px rgba</div><div class="line">    (0, 140, 186, 0.5);</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;a href=&quot;paris.jpg&quot;&gt;</div><div class="line">  &lt;img src=&quot;paris.jpg&quot; alt=&quot;Paris&quot;&gt;</div><div class="line">&lt;/a&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Responsive images will automatically adjust to fit the size of the screen.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">img &#123;</div><div class="line">    max-width: 100%;</div><div class="line">    height: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>To center an image within the page, use <code>margin: auto;</code> and make it into a block element.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">img &#123;</div><div class="line">    display: block;</div><div class="line">    margin: auto;</div><div class="line">    width: 50%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>The CSS <code>filter</code> property adds visual effects (like blur and saturation) to an element.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">img &#123;</div><div class="line">    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */</div><div class="line">    filter: grayscale(100%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="CSS-Buttons"><a href="#CSS-Buttons" class="headerlink" title="CSS Buttons"></a>CSS Buttons</h3><ul>
+<li>Use the <code>box-shadow</code> property to add shadows to a button.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.button1 &#123;</div><div class="line">    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);</div><div class="line">&#125;</div><div class="line"></div><div class="line">.button2:hover &#123;</div><div class="line">    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Use the <code>opacity</code> property to add transparency to a button (creates a “disabled” look).</li>
+</ul>
+<p><strong>Tip:</strong> You can also add the <code>cursor</code> property with a value of “not-allowed”, which will display a “no parking sign” when you mouse over the button.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.disabled &#123;</div><div class="line">    opacity: 0.6;</div><div class="line">    cursor: not-allowed;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Remove margins and add <code>float:left</code> to each button to create a button group.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.button &#123;</div><div class="line">    float: left;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Use the <code>border</code> property to create a bordered button group.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.button &#123;</div><div class="line">    float: left;</div><div class="line">    border: 1px solid green</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="CSS-Pagination-Examples"><a href="#CSS-Pagination-Examples" class="headerlink" title="CSS Pagination Examples"></a>CSS Pagination Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">.newspaper &#123;</div><div class="line">    -webkit-column-count: 3; /* Chrome, Safari, Opera */</div><div class="line">    -moz-column-count: 3; /* Firefox */</div><div class="line">    column-count: 3;</div><div class="line">    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */</div><div class="line">    -moz-column-gap: 40px; /* Firefox */</div><div class="line">    column-gap: 40px;</div><div class="line">    -webkit-column-rule: 1px solid lightblue; /* Chrome, Safari, Opera */</div><div class="line">    -moz-column-rule: 1px solid lightblue; /* Firefox */</div><div class="line">    column-rule: 1px solid lightblue;</div><div class="line">&#125;</div><div class="line"></div><div class="line">h2 &#123;</div><div class="line">    -webkit-column-span: all; /* Chrome, Safari, Opera */</div><div class="line">    column-span: all;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>column-count</td>
+<td>Specifies the number of columns an element should be divided into</td>
+</tr>
+<tr>
+<td>column-fill</td>
+<td>Specifies how to fill columns</td>
+</tr>
+<tr>
+<td>column-gap</td>
+<td>Specifies the gap between the columns</td>
+</tr>
+<tr>
+<td>column-rule</td>
+<td>A shorthand property for setting all the column-rule-* properties</td>
+</tr>
+<tr>
+<td>column-rule-color</td>
+<td>Specifies the color of the rule between columns</td>
+</tr>
+<tr>
+<td>column-rule-style</td>
+<td>Specifies the style of the rule between columns</td>
+</tr>
+<tr>
+<td>column-rule-width</td>
+<td>Specifies the width of the rule between columns</td>
+</tr>
+<tr>
+<td>column-span</td>
+<td>Specifies how many columns an element should span across</td>
+</tr>
+<tr>
+<td>column-width</td>
+<td>Specifies a suggested, optimal width for the columns</td>
+</tr>
+<tr>
+<td>columns</td>
+<td>A shorthand property for setting column-width and column-count</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS3-User-Interface"><a href="#CSS3-User-Interface" class="headerlink" title="CSS3 User Interface"></a>CSS3 User Interface</h3><ul>
+<li>The <code>resize</code> property specifies whether or not an element should be resizable by the user.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">    resize: horizontal;</div><div class="line">    overflow: auto;</div><div class="line">&#125;</div><div class="line"></div><div class="line">div &#123;</div><div class="line">    resize: vertical;</div><div class="line">&#125;</div><div class="line"></div><div class="line">div &#123;</div><div class="line">    resize: both;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>outline-offset</code> property adds space between an outline and the edge or border of an element.</li>
+</ul>
+<p>Outlines differ from borders in three ways: An outline is a line drawn around elements, outside the border edge; An outline <strong>does not take up space</strong>; An outline may be non-rectangular.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">    border: 1px solid black;</div><div class="line">    outline: 1px solid red;</div><div class="line">    outline-offset: 15px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="CSS3-Box-Sizing"><a href="#CSS3-Box-Sizing" class="headerlink" title="CSS3 Box Sizing"></a>CSS3 Box Sizing</h3><p>By default, the width and height of an element is calculated like this:</p>
+<p><code>width + padding + border = actual width of an element</code><br><code>height + padding + border = actual height of an element</code></p>
+<p>This means: When you set the width/height of an element, the element often appear bigger than you have set (because the element’s border and padding are added to the element’s specified width/height).</p>
+<p>The CSS3 <code>box-sizing</code> property allows us to include the padding and border in an element’s total width and height.</p>
+<p>If you set <code>box-sizing: border-box;</code> on an element padding and border are included in the width and height.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">.div1 &#123;</div><div class="line">    width: 300px;</div><div class="line">    height: 100px;</div><div class="line">    border: 1px solid blue;</div><div class="line">    box-sizing: border-box;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.div2 &#123;</div><div class="line">    width: 300px;</div><div class="line">    height: 100px;</div><div class="line">    padding: 50px;</div><div class="line">    border: 1px solid red;</div><div class="line">    box-sizing: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The code below ensures that all elements are sized in this more intuitive way.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* &#123;</div><div class="line">    box-sizing: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>box-sizing</td>
+<td>Allows you to include the padding and border in an element’s total width and height</td>
+</tr>
+<tr>
+<td>nav-down</td>
+<td>Specifies where to navigate when using the arrow-down navigation key</td>
+</tr>
+<tr>
+<td>nav-index</td>
+<td>Specifies the tabbing order for an element</td>
+</tr>
+<tr>
+<td>nav-left</td>
+<td>Specifies where to navigate when using the arrow-left navigation key</td>
+</tr>
+<tr>
+<td>nav-right</td>
+<td>Specifies where to navigate when using the arrow-right navigation key</td>
+</tr>
+<tr>
+<td>nav-up</td>
+<td>Specifies where to navigate when using the arrow-up navigation key</td>
+</tr>
+<tr>
+<td>outline-offset</td>
+<td>Adds space between an outline and the edge or border of an element</td>
+</tr>
+<tr>
+<td>resize</td>
+<td>Specifies whether or not an element is resizable by the user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS3-Flexible-Box"><a href="#CSS3-Flexible-Box" class="headerlink" title="CSS3 Flexible Box"></a>CSS3 Flexible Box</h3><p>Flexbox consists of flex <strong>containers</strong> and flex <strong>items</strong>.</p>
+<p>A flex container is declared by setting the <code>display</code> property of an element to either <code>flex</code> (rendered as a block) or <code>inline-flex</code> (rendered as inline).</p>
+<p>Inside a flex container there is one or more flex items.</p>
+<p><strong>Note:</strong> Everything outside a flex container and inside a flex item is rendered as usual. Flexbox defines <strong>how flex items are laid out inside a flex container</strong>.</p>
+<p>Flex items are positioned inside a flex container along a flex line. By default there is only one flex line per flex container.</p>
+<p>The <code>flex-direction</code> property specifies the direction of the flexible items inside the flex container. The default value of flex-direction is row (left-to-right, top-to-bottom). The other values are as follows:</p>
+<ul>
+<li><code>row-reverse</code> - If the writing-mode (direction) is left to right, the flex items will be laid out right to left</li>
+<li><code>column</code> - If the writing system is horizontal, the flex items will be laid out vertically</li>
+<li><code>column-reverse</code> - Same as column, but reversed</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.flex-container &#123;</div><div class="line">    display: -webkit-flex;</div><div class="line">    display: flex;</div><div class="line">    -webkit-flex-direction: row-reverse;</div><div class="line">    flex-direction: row-reverse;</div><div class="line">    width: 400px;</div><div class="line">    height: 250px;</div><div class="line">    background-color: lightgrey;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The <code>justify-content</code> property horizontally aligns the flexible container’s items when the items do not use all available space on the main-axis. The possible values are as follows:</p>
+<ul>
+<li><code>flex-start</code> - Default value. Items are positioned at the beginning of the container</li>
+<li><code>flex-end</code> - Items are positioned at the end of the container</li>
+<li><code>center</code> - Items are positioned at the center of the container</li>
+<li><code>space-between</code> - Items are positioned with space between the lines</li>
+<li><code>space-around</code> - Items are positioned with space before, between, and after the lines</li>
+</ul>
+<p>The <code>align-items</code> property vertically aligns the flexible container’s items when the items do not use all available space on the cross-axis. The possible values are as follows:</p>
+<ul>
+<li><code>stretch</code> - Default value. Items are stretched to fit the container</li>
+<li><code>flex-start</code> - Items are positioned at the top of the container</li>
+<li><code>flex-end</code> - Items are positioned at the bottom of the container</li>
+<li><code>center</code> - Items are positioned at the center of the container (vertically)</li>
+<li><code>baseline</code> - Items are positioned at the baseline of the container</li>
+</ul>
+<p>The <code>flex-wrap</code> property specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line. The possible values are as follows:</p>
+<ul>
+<li><code>nowrap</code> - Default value. The flexible items will not wrap</li>
+<li><code>wrap</code> - The flexible items will wrap if necessary</li>
+<li><code>wrap-reverse</code> - The flexible items will wrap, if necessary, in reverse order</li>
+</ul>
+<p>The <code>align-content</code> property modifies the behavior of the <code>flex-wrap</code> property. It is similar to <code>align-items</code>, but instead of aligning flex items, it aligns flex lines. The possible values are as follows:</p>
+<ul>
+<li><code>stretch</code> - Default value. Lines stretch to take up the remaining space</li>
+<li><code>flex-start</code> - Lines are packed toward the start of the flex container</li>
+<li><code>flex-end</code> - Lines are packed toward the end of the flex container</li>
+<li><code>center</code> - Lines are packed toward the center of the flex container</li>
+<li><code>space-between</code> - Lines are evenly distributed in the flex container</li>
+<li><code>space-around</code> - Lines are evenly distributed in the flex container, with half-size spaces on either end</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>display</td>
+<td>Specifies the type of box used for an HTML element</td>
+</tr>
+<tr>
+<td>flex-direction</td>
+<td>Specifies the direction of the flexible items inside a flex container</td>
+</tr>
+<tr>
+<td>justify-content</td>
+<td>Horizontally aligns the flex items when the items do not use all available space on the main-axis</td>
+</tr>
+<tr>
+<td>align-items</td>
+<td>Vertically aligns the flex items when the items do not use all available space on the cross-axis</td>
+</tr>
+<tr>
+<td>flex-wrap</td>
+<td>Specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line</td>
+</tr>
+<tr>
+<td>align-content</td>
+<td>Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines</td>
+</tr>
+<tr>
+<td>flex-flow</td>
+<td>A shorthand property for flex-direction and flex-wrap</td>
+</tr>
+<tr>
+<td>order</td>
+<td>Specifies the order of a flexible item relative to the rest of the flex items inside the same container</td>
+</tr>
+<tr>
+<td>align-self</td>
+<td>Used on flex items. Overrides the container’s align-items property</td>
+</tr>
+<tr>
+<td>flex</td>
+<td>Specifies the length of a flex item, relative to the rest of the flex items inside the same container</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS3-Media-Queries"><a href="#CSS3-Media-Queries" class="headerlink" title="CSS3 Media Queries"></a>CSS3 Media Queries</h3><p>Media queries in CSS3 extend the CSS2 media types idea: Instead of looking for a <strong>type</strong> of device, they look at the <strong>capability</strong> of the device.</p>
+<p>Media queries can be used to check many things, such as:</p>
+<ul>
+<li>width and height of the viewport</li>
+<li>width and height of the device</li>
+<li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+<li>resolution</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media not|only mediatype and (expressions) &#123;</div><div class="line">    CSS-Code;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@media screen and (min-width: 480px) &#123;</div><div class="line">    #leftsidebar &#123;width: 200px; float: left;&#125;</div><div class="line">    #main &#123;margin-left:216px;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/学习/" rel="tag">#学习</a>
+          
+            <a href="/tags/CSS/" rel="tag">#CSS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/15/中秋夜雨/" rel="next" title="中秋夜雨">
+                <i class="fa fa-chevron-left"></i> 中秋夜雨
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/17/CSS学习笔记之八/" rel="prev" title="CSS 学习笔记之八">
+                CSS 学习笔记之八 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/16/CSS学习笔记之七/"
+           data-title="CSS 学习笔记之七" data-url="http://rrkaige.com/2016/09/16/CSS学习笔记之七/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Kane Ren" />
+          <p class="site-author-name" itemprop="name">Kane Ren</p>
+          <p class="site-description motion-element" itemprop="description">Just Do It!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">98</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">108</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+			<a title="�ղص���ǩ��ż��Highһ��^_^" rel="alternate" class="mw-harlem_shake_slow wobble shake" href='javascript:(function() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+})()'><i class="fa fa-music"></i> High</a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/kaneren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-Images"><span class="nav-number">1.</span> <span class="nav-text">CSS Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-Buttons"><span class="nav-number">2.</span> <span class="nav-text">CSS Buttons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-Pagination-Examples"><span class="nav-number">3.</span> <span class="nav-text">CSS Pagination Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-User-Interface"><span class="nav-number">4.</span> <span class="nav-text">CSS3 User Interface</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-Box-Sizing"><span class="nav-number">5.</span> <span class="nav-text">CSS3 Box Sizing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-Flexible-Box"><span class="nav-number">6.</span> <span class="nav-text">CSS3 Flexible Box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-Media-Queries"><span class="nav-number">7.</span> <span class="nav-text">CSS3 Media Queries</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear" style="color: black;">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart" style="color: red;"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder" style="color: black;">Kane Ren</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"rrkaige"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("YW05a4T5MDoaIXON9PbvC9v7-gzGzoHsz", "u0hT5wDpjTJbj43rEwaY8qHu");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0+"°C");
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time+"°C");
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0+"°C");
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time')+"°C");
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time')+"°C");
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>

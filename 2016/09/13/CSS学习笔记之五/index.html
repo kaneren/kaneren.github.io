@@ -1,0 +1,1283 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔记,学习,CSS," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="一方天地" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="继续学习，教程来自w3schools。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS 学习笔记之五">
+<meta property="og:url" content="http://rrkaige.com/2016/09/13/CSS学习笔记之五/index.html">
+<meta property="og:site_name" content="一方天地">
+<meta property="og:description" content="继续学习，教程来自w3schools。">
+<meta property="og:image" content="http://ob0mgqhy4.bkt.clouddn.com/20160913-myblog44.png">
+<meta property="og:updated_time" content="2016-10-12T02:38:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS 学习笔记之五">
+<meta name="twitter:description" content="继续学习，教程来自w3schools。">
+<meta name="twitter:image" content="http://ob0mgqhy4.bkt.clouddn.com/20160913-myblog44.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false,
+    motion: true,
+    duoshuo: {
+      userId: 6312606111681742000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://rrkaige.com/2016/09/13/CSS学习笔记之五/"/>
+
+  <title> CSS 学习笔记之五 | 一方天地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一方天地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">面朝大海，春暖花开</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bars"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-setup">
+          <a href="/setup" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-anchor"></i> <br />
+            
+            建站
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  
+	  <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+	  
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS 学习笔记之五
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-13T21:24:38+08:00" content="2016-09-13">
+              2016-09-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web征途/" itemprop="url" rel="index">
+                    <span itemprop="name">Web征途</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/13/CSS学习笔记之五/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/13/CSS学习笔记之五/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/13/CSS学习笔记之五/" class="leancloud_visitors" data-flag-title="CSS 学习笔记之五">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">热度 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p> 继续学习，教程来自 <a href="http://www.w3schools.com/css/" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20160913-myblog44.png" alt="CSS"></p>
+<a id="more"></a>
+<h3 id="CSS3-Rounded-Corners"><a href="#CSS3-Rounded-Corners" class="headerlink" title="CSS3 Rounded Corners"></a>CSS3 Rounded Corners</h3><p>With CSS3, you can give any element “rounded corners”, by using the <code>border-radius</code> property.</p>
+<p><strong>Tip:</strong> The <code>border-radius</code> property is actually a shorthand property for the <code>border-top-left-radius</code>, <code>border-top-right-radius</code>, <code>border-bottom-right-radius</code> and <code>border-bottom-left-radius</code> properties.</p>
+<p>If you specify only one value for the border-radius property, this radius will be applied to all 4 corners. However, you can specify each corner separately if you wish. Here are the rules:</p>
+<ul>
+<li><strong>Four values:</strong> first value applies to top-left, second value applies to top-right, third value applies to bottom-right, and fourth value applies to bottom-left corner</li>
+<li><strong>Three values:</strong> first value applies to top-left, second value applies to top-right and bottom-left, and third value applies to bottom-right</li>
+<li><strong>Two values:</strong> first value applies to top-left and bottom-right corner, and the second value applies to top-right and bottom-left corner</li>
+<li><strong>One value:</strong> all four corners are rounded equally</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">#rcorners1 &#123;</div><div class="line">    border-radius: 25px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#rcorners2 &#123;</div><div class="line">    border-radius: 15px 50px 30px 5px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#rcorners3 &#123;</div><div class="line">    border-radius: 15px 50px 30px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#rcorners4 &#123;</div><div class="line">    border-radius: 15px 50px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#rcorners5 &#123;</div><div class="line">    border-radius: 50px/15px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#rcorners6 &#123;</div><div class="line">    border-radius: 50%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-radius</td>
+<td>A shorthand property for setting all the four border-radius properties</td>
+</tr>
+<tr>
+<td>border-top-left-radius</td>
+<td>Defines the shape of the border of the top-left corner</td>
+</tr>
+<tr>
+<td>border-top-right-radius</td>
+<td>Defines the shape of the border of the top-right corner</td>
+</tr>
+<tr>
+<td>border-bottom-right-radius</td>
+<td>Defines the shape of the border of the bottom-right corner</td>
+</tr>
+<tr>
+<td>border-bottom-left-radius</td>
+<td>Defines the shape of the border of the bottom-left corner</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS3-Border-Images"><a href="#CSS3-Border-Images" class="headerlink" title="CSS3 Border Images"></a>CSS3 Border Images</h3><p>The CSS3 <code>border-image</code> property allows you to specify an image to be used instead of the normal border around an element.</p>
+<p>The property has three parts:</p>
+<ol>
+<li>The image to use as the border</li>
+<li>Where to slice the image</li>
+<li>Define whether the middle sections should be repeated or stretched</li>
+</ol>
+<p>The <code>border-image</code> property takes the image and slices it into nine sections, like a tic-tac-toe board. It then places the corners at the corners, and the middle sections are repeated or stretched as you specify.</p>
+<p><strong>Note:</strong> For <code>border-image</code> to work, the element also needs the <code>border</code> property set!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">#borderimg1 &#123;</div><div class="line">    border: 10px solid transparent;</div><div class="line">    padding: 15px;</div><div class="line">    -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */</div><div class="line">    -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */</div><div class="line">    border-image: url(border.png) 30 round;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#borderimg2 &#123;</div><div class="line">    border: 10px solid transparent;</div><div class="line">    padding: 15px;</div><div class="line">    -webkit-border-image: url(border.png) 30 stretch; /* Safari 3.1-5 */</div><div class="line">    -o-border-image: url(border.png) 30 stretch; /* Opera 11-12.1 */</div><div class="line">    border-image: url(border.png) 30 stretch;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#borderimg3 &#123;</div><div class="line">    border: 10px solid transparent;</div><div class="line">    padding: 15px;</div><div class="line">    -webkit-border-image: url(border.png) 30% round; /* Safari 3.1-5 */</div><div class="line">    -o-border-image: url(border.png) 30% round; /* Opera 11-12.1 */</div><div class="line">    border-image: url(border.png) 30% round;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>Tip:</strong> The <code>border-image</code> property is actually a shorthand property for the <code>border-image-source</code>, <code>border-image-slice</code>, <code>border-image-width</code>, <code>border-image-outset</code> and <code>border-image-repeat</code> properties.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-image</td>
+<td>A shorthand property for setting all the border-image properties</td>
+</tr>
+<tr>
+<td>border-image-source</td>
+<td>Specifies the path to the image to be used as a border</td>
+</tr>
+<tr>
+<td>border-image-slice</td>
+<td>Specifies how to slice the border image</td>
+</tr>
+<tr>
+<td>border-image-width</td>
+<td>Specifies the widths of the border image</td>
+</tr>
+<tr>
+<td>border-image-outset</td>
+<td>Specifies the amount by which the border image area extends beyond the border box</td>
+</tr>
+<tr>
+<td>border-image-repeat</td>
+<td>Specifies whether the border image should be repeated, rounded or stretched</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS3-Backgrounds"><a href="#CSS3-Backgrounds" class="headerlink" title="CSS3 Backgrounds"></a>CSS3 Backgrounds</h3><p>CSS3 allows you to add multiple background images for an element, through the <code>background-image</code> property. The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#example1 &#123;</div><div class="line">    background-image: url(img_flwr.gif), url(paper.gif);</div><div class="line">    background-position: right bottom, left top;</div><div class="line">    background-repeat: no-repeat, repeat;</div><div class="line">    background-size: 50px, auto;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#example2 &#123;</div><div class="line">    background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;</div><div class="line">    background-size: 50px, html &#123;</div><div class="line">    background: url(img_flower.jpg) no-repeat center fixed; </div><div class="line">    background-size: cover;</div><div class="line">&#125;auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The CSS3 <code>background-size</code> property allows you to specify the size of background images. Before CSS3, the size of a background image was the actual size of the image. CSS3 allows us to re-use background images in different contexts. The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#div1 &#123;</div><div class="line">    background: url(img_flower.jpg);</div><div class="line">    background-size: 100px 80px;</div><div class="line">    background-repeat: no-repeat;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The two other possible values for <code>background-size</code> are <code>contain</code> and <code>cover</code>.</p>
+<ul>
+<li><p>The <code>contain</code> keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.</p>
+</li>
+<li><p>The <code>cover</code> keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area.</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#div2 &#123;</div><div class="line">    background: url(img_flower.jpg);</div><div class="line">    background-size: contain;</div><div class="line">    background-repeat: no-repeat;</div><div class="line">&#125;</div><div class="line">#div3 &#123;</div><div class="line">    background: url(img_flower.jpg);</div><div class="line">    background-size: cover;</div><div class="line">    background-repeat: no-repeat;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">html &#123;</div><div class="line">    background: url(img_flower.jpg) no-repeat center fixed; </div><div class="line">    background-size: cover;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The CSS3 <code>background-origin</code> property specifies where the background image is positioned. The property takes three different values:</p>
+<ul>
+<li><strong>border-box</strong> - the background image starts from the upper left corner of the border</li>
+<li><strong>padding-box</strong> - (default) the background image starts from the upper left corner of the padding edge</li>
+<li><strong>content-box</strong> - the background image starts from the upper left corner of the content</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#example1 &#123;</div><div class="line">    border: 10px solid black;</div><div class="line">    padding: 35px;</div><div class="line">    background: url(img_flwr.gif);</div><div class="line">    background-repeat: no-repeat;</div><div class="line">    background-origin: content-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The CSS3 <code>background-clip</code> property specifies the painting area of the background. The property takes three different values:</p>
+<ul>
+<li><strong>border-box</strong> - (default) the background is painted to the outside edge of the border</li>
+<li><strong>padding-box</strong> - the background is painted to the outside edge of the padding</li>
+<li><strong>content-box</strong> - the background is painted within the content box</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#example2 &#123;</div><div class="line">    border: 10px dotted black;</div><div class="line">    padding: 35px;</div><div class="line">    background: yellow;</div><div class="line">    background-clip: content-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background</td>
+<td>A shorthand property for setting all the background properties in one declaration</td>
+</tr>
+<tr>
+<td>background-clip</td>
+<td>Specifies the painting area of the background</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>Specifies one or more background images for an element</td>
+</tr>
+<tr>
+<td>background-origin</td>
+<td>Specifies where the background image(s) is/are positioned</td>
+</tr>
+<tr>
+<td>background-size</td>
+<td>Specifies the size of the background image(s)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS3-Colors"><a href="#CSS3-Colors" class="headerlink" title="CSS3 Colors"></a>CSS3 Colors</h3><p>CSS supports color names, hexadecimal and RGB colors. In addition, CSS3 also introduces:</p>
+<ul>
+<li>RGBA colors</li>
+<li>HSL colors</li>
+<li>HSLA colors</li>
+<li>opacity</li>
+</ul>
+<p>RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity for a color.</p>
+<p>An RGBA color value is specified with: <code>rgba(red, green, blue, alpha)</code>. The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#p1 &#123;background-color: rgba(255, 0, 0, 0.3);&#125;  /* red with opacity */</div></pre></td></tr></table></figure>
+<p>HSL stands for Hue, Saturation and Lightness. An HSL color value is specified with: <code>hsl(hue, saturation, lightness)</code>.</p>
+<ul>
+<li>Hue is a degree on the color wheel (from 0 to 360): 0 (or 360) is red, 120 is green, 240 is blue.</li>
+<li>Saturation is a percentage value: 100% is the full color.</li>
+<li>Lightness is also a percentage; 0% is dark (black) and 100% is white.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#p2 &#123;background-color: hsl(120, 100%, 50%);&#125;  /* green */</div></pre></td></tr></table></figure>
+<p>HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a color.</p>
+<p>An HSLA color value is specified with: <code>hsla(hue, saturation, lightness, alpha)</code>, where the alpha parameter defines the opacity. The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#p3 &#123;background-color: hsla(120, 100%, 50%, 0.3);&#125;  /* green with opacity */</div></pre></td></tr></table></figure>
+<p>The CSS3 <code>opacity</code> property sets the opacity for a specified RGB value. Its value must be a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#p4 &#123;background-color:rgb(255,0,0);opacity:0.6;&#125;  /* red with opacity */</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> the text above will also be opaque.</p>
+<h3 id="CSS3-Gradients"><a href="#CSS3-Gradients" class="headerlink" title="CSS3 Gradients"></a>CSS3 Gradients</h3><p>CSS3 gradients let you display smooth transitions between two or more specified colors. CSS3 defines two types of gradients:</p>
+<ul>
+<li><strong>Linear Gradients</strong> (goes down/up/left/right/diagonally)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(direction, color-stop1, color-stop2, ...);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">#grad1 &#123;</div><div class="line">    background: red; /* For browsers that do not support gradients */</div><div class="line">    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */</div><div class="line">    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */</div><div class="line">    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */</div><div class="line">    background: linear-gradient(red, yellow); /* Standard syntax */</div><div class="line">&#125;</div><div class="line"></div><div class="line">#grad2 &#123;</div><div class="line">  background: linear-gradient(to right, red , yellow); /* Standard syntax */</div><div class="line">&#125;</div><div class="line"></div><div class="line">#grad3 &#123;</div><div class="line">  background: linear-gradient(to bottom right, red, yellow); /* Standard syntax */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background: linear-gradient(angle, color-stop1, color-stop2);</div></pre></td></tr></table></figure>
+<p>The <code>angle</code> is specified as an angle between a horizontal line and the gradient line.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#grad4 &#123;</div><div class="line">  background: linear-gradient(-90deg, red, yellow); /* Standard syntax */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#grad5 &#123;</div><div class="line">  background: linear-gradient(red, yellow, green); /* Standard syntax */</div><div class="line">&#125;</div><div class="line"></div><div class="line">#grad6 &#123;</div><div class="line">  /* Standard syntax */</div><div class="line">  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#grad7 &#123;</div><div class="line">  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#grad8 &#123;</div><div class="line">  /* Standard syntax */</div><div class="line">  background: repeating-linear-gradient(red, yellow 10%, green 20%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>Radial Gradients</strong> (defined by their center)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background: radial-gradient(shape size at position, start-color, ..., last-color);</div></pre></td></tr></table></figure>
+<p>By default, shape is <strong>ellipse</strong>, size is <strong>farthest-corner</strong>, and position is <strong>center</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#grad1 &#123;</div><div class="line">  background: red; /* For browsers that do not support gradients */</div><div class="line">  background: -webkit-radial-gradient(red, yellow, green); /* Safari 5.1 to 6.0 */</div><div class="line">  background: -o-radial-gradient(red, yellow, green); /* For Opera 11.6 to 12.0 */</div><div class="line">  background: -moz-radial-gradient(red, yellow, green); /* For Firefox 3.6 to 15 */</div><div class="line">  background: radial-gradient(red, yellow, green); /* Standard syntax */</div><div class="line">&#125;</div><div class="line"></div><div class="line">#grad2 &#123;</div><div class="line">  background: radial-gradient(red 5%, yellow 15%, green 60%); /* Standard syntax */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The shape parameter defines the shape. It can take the value <strong>circle</strong> or <strong>ellipse</strong>. The default value is ellipse.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#grad3 &#123;</div><div class="line">  background: radial-gradient(circle, red, yellow, green); /* Standard syntax */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The size parameter defines the size of the gradient. It can take four values: <strong>closest-side</strong>, <strong>farthest-side</strong>, <strong>closest-corner</strong>, <strong>farthest-corner</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#grad4 &#123;</div><div class="line">  /* Standard syntax */</div><div class="line">  background: radial-gradient(closest-side at 60% 55%, red, yellow, black);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#grad5 &#123;</div><div class="line">  /* Standard syntax */</div><div class="line">  background: repeating-radial-gradient(red, yellow 10%, green 15%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/学习/" rel="tag">#学习</a>
+          
+            <a href="/tags/CSS/" rel="tag">#CSS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/12/走吧/" rel="next" title="走吧">
+                <i class="fa fa-chevron-left"></i> 走吧
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/14/CSS学习笔记之六/" rel="prev" title="CSS 学习笔记之六">
+                CSS 学习笔记之六 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/13/CSS学习笔记之五/"
+           data-title="CSS 学习笔记之五" data-url="http://rrkaige.com/2016/09/13/CSS学习笔记之五/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Kane Ren" />
+          <p class="site-author-name" itemprop="name">Kane Ren</p>
+          <p class="site-description motion-element" itemprop="description">Just Do It!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">98</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">108</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+			<a title="�ղص���ǩ��ż��Highһ��^_^" rel="alternate" class="mw-harlem_shake_slow wobble shake" href='javascript:(function() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+})()'><i class="fa fa-music"></i> High</a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/kaneren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-Rounded-Corners"><span class="nav-number">1.</span> <span class="nav-text">CSS3 Rounded Corners</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-Border-Images"><span class="nav-number">2.</span> <span class="nav-text">CSS3 Border Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-Backgrounds"><span class="nav-number">3.</span> <span class="nav-text">CSS3 Backgrounds</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-Colors"><span class="nav-number">4.</span> <span class="nav-text">CSS3 Colors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3-Gradients"><span class="nav-number">5.</span> <span class="nav-text">CSS3 Gradients</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear" style="color: black;">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart" style="color: red;"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder" style="color: black;">Kane Ren</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"rrkaige"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("YW05a4T5MDoaIXON9PbvC9v7-gzGzoHsz", "u0hT5wDpjTJbj43rEwaY8qHu");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0+"°C");
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time+"°C");
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0+"°C");
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time')+"°C");
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time')+"°C");
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>

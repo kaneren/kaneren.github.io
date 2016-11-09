@@ -1,0 +1,1384 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔记,学习,JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="一方天地" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="继续学习JavaScript，教程来自w3schools。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 学习笔记之三">
+<meta property="og:url" content="http://rrkaige.com/2016/09/26/JavaScript学习笔记之三/index.html">
+<meta property="og:site_name" content="一方天地">
+<meta property="og:description" content="继续学习JavaScript，教程来自w3schools。">
+<meta property="og:image" content="http://ob0mgqhy4.bkt.clouddn.com/20160926-myblog59.jpg">
+<meta property="og:updated_time" content="2016-10-12T02:37:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 学习笔记之三">
+<meta name="twitter:description" content="继续学习JavaScript，教程来自w3schools。">
+<meta name="twitter:image" content="http://ob0mgqhy4.bkt.clouddn.com/20160926-myblog59.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false,
+    motion: true,
+    duoshuo: {
+      userId: 6312606111681742000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://rrkaige.com/2016/09/26/JavaScript学习笔记之三/"/>
+
+  <title> JavaScript 学习笔记之三 | 一方天地 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">一方天地</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">面朝大海，春暖花开</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bars"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-setup">
+          <a href="/setup" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-anchor"></i> <br />
+            
+            建站
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  
+	  <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+	  
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript 学习笔记之三
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-26T14:28:35+08:00" content="2016-09-26">
+              2016-09-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web征途/" itemprop="url" rel="index">
+                    <span itemprop="name">Web征途</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/26/JavaScript学习笔记之三/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/JavaScript学习笔记之三/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/26/JavaScript学习笔记之三/" class="leancloud_visitors" data-flag-title="JavaScript 学习笔记之三">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">热度 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p> 继续学习 JavaScript，教程来自 <a href="http://www.w3schools.com/js/" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20160926-myblog59.jpg" alt="JavaScript"></p>
+<a id="more"></a>
+<h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h3><p>JavaScript strings are used for storing and manipulating text.</p>
+<p>The length of a string is found in the built in property <strong>length</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var txt = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;</div><div class="line">var sln = txt.length;</div></pre></td></tr></table></figure>
+<p>The backslash escape character turns special characters into string characters.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x = &apos;It\&apos;s alright&apos;;</div><div class="line">var y = &quot;We are the so-called \&quot;Vikings\&quot; from the north.&quot;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\&#39;</code></td>
+<td>single quote</td>
+</tr>
+<tr>
+<td><code>\&quot;</code></td>
+<td>double quote</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>backslash</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>new line</td>
+</tr>
+<tr>
+<td><code>\r</code></td>
+<td>carriage return</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>tab</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>backspace</td>
+</tr>
+<tr>
+<td><code>\f</code></td>
+<td>form feed</td>
+</tr>
+</tbody>
+</table>
+<p>If a JavaScript statement does not fit on one line, the best place to break it is after an operator.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">&quot;Hello Dolly.&quot;;</div></pre></td></tr></table></figure>
+<p>You can also break up a code line within a text string with a single backslash.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello \</div><div class="line">Dolly!&quot;;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The \ method is not a ECMAScript (JavaScript) standard.</li>
+<li>Some browsers do not allow spaces behind the \ character.</li>
+</ul>
+<p>The safest (but a little slower) way to break a long string is to use string addition.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello&quot; + </div><div class="line">&quot;Dolly!&quot;;</div></pre></td></tr></table></figure>
+<h3 id="String-Methods"><a href="#String-Methods" class="headerlink" title="String Methods"></a>String Methods</h3><p>The <code>indexOf()</code> method returns the index of (the position of) the <strong>first</strong> occurrence of a specified text in a string. The <code>lastIndexOf()</code> method returns the index of the <strong>last</strong> occurrence of a specified text in a string. Both the <code>indexOf()</code>, and the <code>lastIndexOf()</code> methods return <strong>-1</strong> if the text is not found.</p>
+<p>The <code>search()</code> method searches a string for a specified value and returns the position of the match.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str = &quot;Please locate where &apos;locate&apos; occurs!&quot;;</div><div class="line">var pos1 = str.indexOf(&quot;locate&quot;);</div><div class="line">var pos2 = str.lastIndexOf(&quot;locate&quot;);</div><div class="line">var pos3 = str.search(&quot;locate&quot;);</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The two methods, <code>indexOf()</code> and <code>search()</code>, are equal. But the <code>search()</code> method can take much more powerful search values.</p>
+<p><code>slice(start, end)</code> extracts a part of a string and returns the extracted part in a new string.</p>
+<p><code>substring(start, end)</code> is similar to <code>slice()</code>. The difference is that <code>substring()</code> cannot accept negative indexes.</p>
+<p><code>substr(start, end)</code> is similar to <code>slice()</code>. The difference is that the second parameter specifies the <strong>length</strong> of the extracted part.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var str = &quot;Apple, Banana, Kiwi&quot;;</div><div class="line">var res1 = str.slice(7,13);    //Banana</div><div class="line">var res2 = str.slice(-12,-6);    //Banana</div><div class="line">var res3 = str.slice(7);    //Banana, Kiwi</div><div class="line">var res4 = str.slice(-12);    //Banana, Kiwi</div><div class="line">var res5 = str.substring(7,13);    //Banana</div><div class="line">var res6 = str.substr(7,6);    //Banana</div></pre></td></tr></table></figure>
+<p>The <code>replace()</code> method replaces a specified value with another value in a string. By default, the <code>replace()</code> function replaces only the first match. To replace all matches, use a regular expression with a g flag (for global match).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">str = &quot;Please visit Microsoft!&quot;;</div><div class="line">var n1 = str.replace(&quot;Microsoft&quot;,&quot;W3Schools&quot;);</div><div class="line">var n2 = str.replace(/Microsoft/g,&quot;W3Schools&quot;);</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The <code>replace()</code> method does not change the string it is called on. It returns a new string.</p>
+<p>A string is converted to upper case with <code>toUpperCase()</code>. A string is converted to lower case with <code>toLowerCase()</code>.</p>
+<p><code>concat()</code> joins two or more strings. The <code>concat()</code> method can be used instead of the plus operator.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var text = &quot;Hello&quot; + &quot; &quot; + &quot;World!&quot;;</div><div class="line">var text = &quot;Hello&quot;.concat(&quot; &quot;,&quot;World!&quot;);</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> All string methods return a new string. They don’t modify the original string. Formally said: Strings are <strong>immutable</strong>: Strings cannot be changed, only replaced.</p>
+<p>The <code>charAt()</code> method returns the character at a specified index (position) in a string. The <code>charCodeAt()</code> method returns the unicode of the character at a specified index in a string.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;HELLO WORLD&quot;;</div><div class="line">str.charAt(0);            // returns H</div><div class="line">str.charCodeAt(0);         //	returns 72</div></pre></td></tr></table></figure>
+<p>A string can be converted to an array with the <code>split()</code> method.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;a,b,c,d,e,f&quot;;</div><div class="line">var arr = str.split(&quot;,&quot;);</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = arr[0];</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>If the separator is omitted, the returned array will contain the whole string in index [0].</li>
+<li>If the separator is “”, the returned array will be an array of single characters.</li>
+</ul>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><p>JavaScript has only one type of number. Numbers can be written with, or without, decimals.</p>
+<p>JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard. </p>
+<p>This format stores numbers in <strong>64 bits</strong>, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63:</p>
+<table>
+<thead>
+<tr>
+<th>Value (aka Fraction/Mantissa)</th>
+<th>Exponent</th>
+<th>Sign</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>52 bits (0 - 51)</td>
+<td>11 bits (52 - 62)</td>
+<td>1 bit (63)</td>
+</tr>
+</tbody>
+</table>
+<p>Integers (numbers without a period or exponent notation) are considered accurate up to <strong>15 digits</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x = 999999999999999;   // x will be 999999999999999</div><div class="line">var y = 9999999999999999;  // y will be 10000000000000000</div></pre></td></tr></table></figure>
+<p>The maximum number of decimals is 17, but floating point arithmetic is not always 100% accurate. To solve the problem above, it helps to multiply and divide.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x1 = 0.2 + 0.1;         // x1 will be 0.30000000000000004</div><div class="line">var x2 = (0.2 * 10 + 0.1 * 10) / 10;       // x2 will be 0.3</div></pre></td></tr></table></figure>
+<p>By default, Javascript displays numbers as base 10 decimals. But you can use the toString() method to output numbers as base 16 (hex), base 8 (octal), or base 2 (binary).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var myNumber = 128;</div><div class="line">myNumber.toString(16);     // returns 80</div><div class="line">myNumber.toString(8);      // returns 200</div><div class="line">myNumber.toString(2);      // returns 10000000</div></pre></td></tr></table></figure>
+<p><strong>Infinity</strong> (or <strong>-Infinity</strong>) is the value JavaScript will return if you calculate a number outside the largest possible number.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x =  2 / 0;          // x will be Infinity</div><div class="line">var y = -2 / 0;          // y will be -Infinity</div><div class="line">typeof Infinity;        // returns &quot;number&quot;</div></pre></td></tr></table></figure>
+<p>NaN is a JavaScript reserved word indicating that a number is not a legal number.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var x1 = 100 / &quot;Apple&quot;;  // x1 will be NaN (Not a Number)</div><div class="line">var x2 = 100 / &quot;10&quot;;     // x2 will be 10</div><div class="line">isNaN(x1);               // returns true because x1 is Not a Number</div><div class="line">typeof NaN;             // returns &quot;number&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x = NaN;</div><div class="line">var y = 5;</div><div class="line">var z = x + y;         // z will be NaN</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x = NaN;</div><div class="line">var y = &quot;5&quot;;</div><div class="line">var z = x + y;         // z will be NaN5</div></pre></td></tr></table></figure>
+<p>Normally JavaScript numbers are primitive values created from literals: <code>var x = 123</code></p>
+<p>But numbers can also be defined as objects with the keyword new: <code>var y = new Number(123)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x = 123;    // typeof x returns number</div><div class="line">var y = new Number(123);    // typeof y returns object</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x = 500;</div><div class="line">var y = new Number(500);    // (x == y) is true because x and y have equal values</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x = 500;</div><div class="line">var y = new Number(500);    // (x === y) is false because x and y have different types</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x = new Number(500);</div><div class="line">var y = new Number(500);    // (x == y) is false because objects cannot be compared</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Do not create Number objects. It slows down execution speed.</li>
+<li>The new keyword complicates the code. This can produce some unexpected results.</li>
+<li>JavaScript objects cannot be compared.</li>
+</ul>
+<h3 id="Number-Methods"><a href="#Number-Methods" class="headerlink" title="Number Methods"></a>Number Methods</h3><p>With JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
+<p><code>toString()</code> returns a number as a string. All number methods can be used on any type of numbers (<strong>literals</strong>, <strong>variables</strong>, or <strong>expressions</strong>).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var x = 123;</div><div class="line">x.toString();            // returns 123 from variable x</div><div class="line">(123).toString();        // returns 123 from literal 123</div><div class="line">(100 + 23).toString();   // returns 123 from expression 100 + 23</div></pre></td></tr></table></figure>
+<p><code>toExponential()</code> returns a string, with a number <strong>rounded</strong> and written using exponential notation. A parameter defines the number of characters behind the decimal poin.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var x = 9.656;</div><div class="line">x.toExponential(2);     // returns 9.66e+0</div><div class="line">x.toExponential(4);     // returns 9.6560e+0</div></pre></td></tr></table></figure>
+<p><code>toFixed()</code> returns a string, with the number written with a specified number of decimals.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var x = 9.656;</div><div class="line">x.toFixed(0);           // returns 10</div><div class="line">x.toFixed(2);           // returns 9.66</div><div class="line">x.toFixed(4);           // returns 9.6560</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> toFixed(2) is perfect for working with money.</p>
+<p><code>toPrecision()</code> returns a string, with a number written with a specified length.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var x = 9.656;</div><div class="line">x.toPrecision();        // returns 9.656</div><div class="line">x.toPrecision(2);       // returns 9.7</div><div class="line">x.toPrecision(4);       // returns 9.656</div></pre></td></tr></table></figure>
+<p><code>valueOf()</code> returns a number as a number. It is used internally in JavaScript to convert Number objects to primitive values. There is no reason to use it in your code.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var x = 123;</div><div class="line">x.valueOf();            // returns 123 from variable x</div><div class="line">(123).valueOf();        // returns 123 from literal 123</div><div class="line">(100 + 23).valueOf();   // returns 123 from expression 100 + 23</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> All JavaScript data types have a valueOf() and a toString() method.</p>
+<p>JavaScript <strong>global methods</strong> can be used on all JavaScript data types. These are the most relevant methods, when working with numbers:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Number()</code></td>
+<td>Returns a number, converted from its argument.</td>
+</tr>
+<tr>
+<td><code>parseFloat()</code></td>
+<td>Parses its argument and returns a floating point number</td>
+</tr>
+<tr>
+<td><code>parseInt()</code></td>
+<td>Parses its argument and returns an integer</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">x = true;</div><div class="line">Number(x);        // returns 1</div><div class="line">x = false;     </div><div class="line">Number(x);        // returns 0</div><div class="line">x = new Date();</div><div class="line">Number(x);        // returns 1404568027739</div><div class="line">x = &quot;10&quot;</div><div class="line">Number(x);        // returns 10</div><div class="line">x = &quot;10 20&quot;</div><div class="line">Number(x);        // returns NaN</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> Used on Date(), the Number() method returns the number of milliseconds since 1.1.1970.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">parseFloat(&quot;10&quot;);        // returns 10</div><div class="line">parseFloat(&quot;10.33&quot;);     // returns 10.33</div><div class="line">parseFloat(&quot;10 20 30&quot;);  // returns 10</div><div class="line">parseFloat(&quot;10 years&quot;);  // returns 10</div><div class="line">parseFloat(&quot;years 10&quot;);  // returns NaN</div><div class="line"></div><div class="line">parseInt(&quot;10&quot;);         // returns 10</div><div class="line">parseInt(&quot;10.33&quot;);      // returns 10</div><div class="line">parseInt(&quot;10 20 30&quot;);   // returns 10</div><div class="line">parseInt(&quot;10 years&quot;);   // returns 10</div><div class="line">parseInt(&quot;years 10&quot;);   // returns NaN</div></pre></td></tr></table></figure>
+<p><strong>Number properties</strong> belongs to the JavaScript’s number object wrapper called <strong>Number</strong>. These properties can only be accessed as <code>Number.MAX_VALUE</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = Number.MAX_VALUE;    // x will be 1.7976931348623157e+308</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAX_VALUE</td>
+<td>Returns the largest number possible in JavaScript</td>
+</tr>
+<tr>
+<td>MIN_VALUE</td>
+<td>Returns the smallest number possible in JavaScript</td>
+</tr>
+<tr>
+<td>NEGATIVE_INFINITY</td>
+<td>Represents negative infinity (returned on overflow)</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>Represents a “Not-a-Number” value</td>
+</tr>
+<tr>
+<td>POSITIVE_INFINITY</td>
+<td>Represents infinity (returned on overflow)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Math-Object"><a href="#Math-Object" class="headerlink" title="Math Object"></a>Math Object</h3><p>Unlike other global objects, the Math object has no constructor. Methods and properties are static. All methods and properties (constants) can be used <strong>without creating a Math object first</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>abs(x)</code></td>
+<td>Returns the absolute value of x</td>
+</tr>
+<tr>
+<td><code>acos(x)</code></td>
+<td>Returns the arccosine of x, in radians</td>
+</tr>
+<tr>
+<td><code>asin(x)</code></td>
+<td>Returns the arcsine of x, in radians</td>
+</tr>
+<tr>
+<td><code>atan(x)</code></td>
+<td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+</tr>
+<tr>
+<td><code>atan2(y,x)</code></td>
+<td>Returns the arctangent of the quotient of its arguments</td>
+</tr>
+<tr>
+<td><code>sin(x)</code></td>
+<td>Returns the sine of x (x is in radians)</td>
+</tr>
+<tr>
+<td><code>cos(x)</code></td>
+<td>Returns the cosine of x (x is in radians)</td>
+</tr>
+<tr>
+<td><code>tan(x)</code></td>
+<td>Returns the tangent of an angle</td>
+</tr>
+<tr>
+<td><code>round(x)</code></td>
+<td>Returns the value of x rounded to its nearest integer</td>
+</tr>
+<tr>
+<td><code>ceil(x)</code></td>
+<td>Returns the value of x rounded up to its nearest integer</td>
+</tr>
+<tr>
+<td><code>floor(x)</code></td>
+<td>Returns the value of x rounded down to its nearest integer</td>
+</tr>
+<tr>
+<td><code>max(x,y,z,...,n)</code></td>
+<td>Returns the number with the highest value</td>
+</tr>
+<tr>
+<td><code>min(x,y,z,...,n)</code></td>
+<td>Returns the number with the lowest value</td>
+</tr>
+<tr>
+<td><code>pow(x,y)</code></td>
+<td>Returns the value of x to the power of y</td>
+</tr>
+<tr>
+<td><code>exp(x)</code></td>
+<td>Returns the value of Ex</td>
+</tr>
+<tr>
+<td><code>sqrt(x)</code></td>
+<td>Returns the square root of x</td>
+</tr>
+<tr>
+<td><code>log(x)</code></td>
+<td>Returns the natural logarithm (base E) of x</td>
+</tr>
+<tr>
+<td><code>random()</code></td>
+<td>Returns a random number between 0 and 1</td>
+</tr>
+</tbody>
+</table>
+<p>JavaScript provides 8 mathematical constants that can be accessed with the Math object.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Math.E        // returns Euler&apos;s number</div><div class="line">Math.PI       // returns PI</div><div class="line">Math.SQRT2    // returns the square root of 2</div><div class="line">Math.SQRT1_2  // returns the square root of 1/2</div><div class="line">Math.LN2      // returns the natural logarithm of 2</div><div class="line">Math.LN10     // returns the natural logarithm of 10</div><div class="line">Math.LOG2E    // returns base 2 logarithm of E</div><div class="line">Math.LOG10E   // returns base 10 logarithm of E</div></pre></td></tr></table></figure>
+<h3 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h3><p><code>Math.random()</code> returns a random number between <strong>0 (inclusive)</strong>,  and <strong>1 (exclusive)</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Math.random();              // returns a random number lower than 1</div></pre></td></tr></table></figure>
+<p><code>Math.random()</code> used with <code>Math.floor()</code> can be used to return random integers.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Math.floor(Math.random() * 11);      // returns a number between 0 and 10</div><div class="line">Math.floor(Math.random() * 101);     // returns a number between 0 and 100</div><div class="line">Math.floor(Math.random() * 10) + 1;  // returns a number between 1 and 10</div><div class="line">Math.floor(Math.random() * 100) + 1; // returns a number between 1 and 100</div></pre></td></tr></table></figure>
+<p>This JavaScript function always returns a random number between <strong>min (included)</strong> and <strong>max (excluded)</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function getRndInteger(min, max) &#123;</div><div class="line">    return Math.floor(Math.random() * (max - min) ) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This JavaScript function always returns a random number between min and max (<strong>both included</strong>).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function getRndInteger(min, max) &#123;</div><div class="line">    return Math.floor(Math.random() * (max - min + 1) ) + min;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/学习/" rel="tag">#学习</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/25/Thunderbird的使用/" rel="next" title="Thunderbird 的使用">
+                <i class="fa fa-chevron-left"></i> Thunderbird 的使用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/27/SUMO!/" rel="prev" title="SUMO！">
+                SUMO！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/26/JavaScript学习笔记之三/"
+           data-title="JavaScript 学习笔记之三" data-url="http://rrkaige.com/2016/09/26/JavaScript学习笔记之三/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Kane Ren" />
+          <p class="site-author-name" itemprop="name">Kane Ren</p>
+          <p class="site-description motion-element" itemprop="description">Just Do It!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">98</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">108</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+			<a title="�ղص���ǩ��ż��Highһ��^_^" rel="alternate" class="mw-harlem_shake_slow wobble shake" href='javascript:(function() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+})()'><i class="fa fa-music"></i> High</a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/kaneren" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Strings"><span class="nav-number">1.</span> <span class="nav-text">Strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-Methods"><span class="nav-number">2.</span> <span class="nav-text">String Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Numbers"><span class="nav-number">3.</span> <span class="nav-text">Numbers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Number-Methods"><span class="nav-number">4.</span> <span class="nav-text">Number Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math-Object"><span class="nav-number">5.</span> <span class="nav-text">Math Object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Random"><span class="nav-number">6.</span> <span class="nav-text">Random</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear" style="color: black;">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart" style="color: red;"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder" style="color: black;">Kane Ren</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"rrkaige"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("YW05a4T5MDoaIXON9PbvC9v7-gzGzoHsz", "u0hT5wDpjTJbj43rEwaY8qHu");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0+"°C");
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time+"°C");
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0+"°C");
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time')+"°C");
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time')+"°C");
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/src/particle.js"></script>
+
+</body>
+</html>
