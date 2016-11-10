@@ -4,6 +4,24 @@
   
     
     <entry>
+      <title><![CDATA[秋橘]]></title>
+      <url>http://rrkaige.com/2016/11/09/%E7%A7%8B%E6%A9%98/</url>
+      <content type="html"><![CDATA[<p> 晚上吃完饭，去后街买点橘子。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161109-myblog103.jpg" alt="Orange"></p>
+<a id="more"></a>
+<p> 秋天，正是橘子上市的时节。后街对面的水果摊，2.8 元 / 斤，挑 10 个，7 块钱左右即可，微信支付，非常方便。相对来说，橘子真是够便宜。表皮金黄圆润，非常好剥，味道甜而不酸，饱满多汁，我一口气可以吃两个。拎回实验室，大家一起分享。</p>
+<p> 突然想起来，“橘”和“桔”的区别在哪？以前似乎随便用，并无注意。寻思不得，Google 之。嘿，还真有不少门道和争论。</p>
+<ul>
+<li><a href="http://health.sohu.com/20151224/n432477039.shtml" target="_blank" rel="external"> 终于分得清橘、橙、柑、桔了！</a></li>
+<li><a href="http://www.guokr.com/question/7111/" target="_blank" rel="external"> 桔 + 柑 + 橙 + 枳 + 有什么区别？</a></li>
+<li><a href="https://www.zhihu.com/question/20686259" target="_blank" rel="external"> 桔子、橘子、芦柑三者之间的差别是什么？</a></li>
+</ul>
+<p> 看了半天，还是没搞明白。所以，我这吃的到底是“橘”、“桔”还是“柑”呢？反正肯定不是“橙”了。</p>
+<p> 算了，还是吃个橘子压压惊吧。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[丢失的 Contributions]]></title>
       <url>http://rrkaige.com/2016/11/08/%E4%B8%A2%E5%A4%B1%E7%9A%84Contributions/</url>
       <content type="html"><![CDATA[<p>换电脑后，继续更新个人博客，deploy 之后，发现 GitHub 上 Contribution 的小绿块没有出现，郁闷。</p>
@@ -429,6 +447,235 @@
 <p> 无尽的比较很伤心。身边的小伙伴，薪资高者有之，offer 多者有之。心高气傲，恨不尽得。</p>
 <p> 心态摇摆。工作？读博？又进入死循环。软件？嵌入式？遇挫后的不淡定。后端？前端？销售？管理？真想一个个尝试。</p>
 <p> 我想，我需要好好睡一觉。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaScript HTML DOM 学习笔记]]></title>
+      <url>http://rrkaige.com/2016/10/15/JavaScript-HTML-DOM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p> 学习 JavaScript HTML DOM，教程来自 <a href="http://www.w3schools.com/js/js_htmldom.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161015-myblog78-1.gif" alt="JavaScript"></p>
+<a id="more"></a>
+<h3 id="DOM-Introduction"><a href="#DOM-Introduction" class="headerlink" title="DOM Introduction"></a>DOM Introduction</h3><p>The DOM (<strong>Document Object Model</strong>) is a W3C (World Wide Web Consortium) standard.</p>
+<p>The DOM defines a standard for accessing documents:</p>
+<p>“The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.”</p>
+<p>The W3C DOM standard is separated into 3 different parts:</p>
+<ul>
+<li><strong>Core DOM</strong> - standard model for all document types</li>
+<li><strong>XML DOM</strong> - standard model for XML documents</li>
+<li><strong>HTML DOM</strong> - standard model for HTML documents</li>
+</ul>
+<p>The HTML DOM is a standard <strong>object</strong> model and <strong>programming interface</strong> for HTML. It defines:</p>
+<ul>
+<li>The HTML elements as <strong>objects</strong></li>
+<li>The <strong>properties</strong> of all HTML elements</li>
+<li>The <strong>methods</strong> to access all HTML elements</li>
+<li>The <strong>events</strong> for all HTML elements</li>
+</ul>
+<p>In other words: <strong>The HTML DOM is a standard for how to get, change, add, or delete HTML elements</strong>.</p>
+<p>When a web page is loaded, the browser creates a DOM of the page.</p>
+<p>The <strong>HTML DOM</strong> model is constructed as a tree of <strong>Objects</strong>:</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161015-myblog78-2.png" alt="HTML DOM"></p>
+<p>With the object model, JavaScript gets all the power it needs to create dynamic HTML:</p>
+<ul>
+<li>JavaScript can change all the HTML elements in the page</li>
+<li>JavaScript can change all the HTML attributes in the page</li>
+<li>JavaScript can change all the CSS styles in the page</li>
+<li>JavaScript can remove existing HTML elements and attributes</li>
+<li>JavaScript can add new HTML elements and attributes</li>
+<li>JavaScript can react to all existing HTML events in the page</li>
+<li>JavaScript can create new HTML events in the page</li>
+</ul>
+<h3 id="DOM-Methods"><a href="#DOM-Methods" class="headerlink" title="DOM Methods"></a>DOM Methods</h3><p>The HTML DOM can be accessed with JavaScript (and with other programming languages).</p>
+<p>In the DOM, all HTML elements are defined as objects.</p>
+<p>The programming interface is the properties and methods of each object.</p>
+<p>HTML DOM <strong>methods</strong> are <strong>actions</strong> you can perform (on HTML Elements).</p>
+<p>HTML DOM <strong>properties</strong> are <strong>values</strong> (of HTML Elements) that you can set or change.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line">&lt;script&gt;</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello World!&quot;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>In the example above, <strong>getElementById</strong> is a method, while <strong>innerHTML</strong> is a property.</p>
+<ul>
+<li>The most common way to access an HTML element is to use the id of the element.</li>
+<li>The easiest way to get the content of an element is by using the innerHTML property.</li>
+</ul>
+<h3 id="DOM-Document"><a href="#DOM-Document" class="headerlink" title="DOM Document"></a>DOM Document</h3><p>The HTML DOM <strong>document</strong> object is the owner of all other objects in your web page.</p>
+<h3 id="DOM-Elements"><a href="#DOM-Elements" class="headerlink" title="DOM Elements"></a>DOM Elements</h3><ul>
+<li>Finding HTML Element by <strong>Id</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var myElement = document.getElementById(&quot;intro&quot;);</div></pre></td></tr></table></figure>
+<p>If the element is found, the method will return the element as an object (in myElement). If the element is not found, myElement will contain null.</p>
+<ul>
+<li>Finding HTML Elements by <strong>Tag Name</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = document.getElementsByTagName(&quot;p&quot;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var x = document.getElementById(&quot;main&quot;);</div><div class="line">var y = x.getElementsByTagName(&quot;p&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li>Finding HTML Elements by <strong>Class Name</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = document.getElementsByClassName(&quot;intro&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li>Finding HTML Elements by <strong>CSS Selectors</strong></li>
+</ul>
+<p>If you want to find all HTML elements that matches a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the <code>querySelectorAll()</code> method.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = document.querySelectorAll(&quot;p.intro&quot;);</div></pre></td></tr></table></figure>
+<ul>
+<li>Finding HTML Elements by <strong>HTML Object Collections</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var x = document.forms[&quot;frm1&quot;];</div><div class="line">var text = &quot;&quot;;</div><div class="line">var i;</div><div class="line">for (i = 0; i &lt; x.length; i++) &#123;</div><div class="line">    text += x.elements[i].value + &quot;&lt;br&gt;&quot;;</div><div class="line">&#125;</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = text;</div></pre></td></tr></table></figure>
+<h3 id="DOM-Changing-HTML"><a href="#DOM-Changing-HTML" class="headerlink" title="DOM - Changing HTML"></a>DOM - Changing HTML</h3><p>The HTML DOM allows JavaScript to change the content of HTML elements.</p>
+<p>To change the content of an HTML <strong>element</strong>, use this syntax:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(id).innerHTML = new HTML;</div></pre></td></tr></table></figure>
+<p>To change the value of an HTML <strong>attribute</strong>, use this syntax:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(id).attribute = new value;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;img id=&quot;myImage&quot; src=&quot;smiley.gif&quot;&gt;</div><div class="line">&lt;script&gt;</div><div class="line">document.getElementById(&quot;myImage&quot;).src = &quot;landscape.jpg&quot;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="DOM-Changing-CSS"><a href="#DOM-Changing-CSS" class="headerlink" title="DOM - Changing CSS"></a>DOM - Changing CSS</h3><p>The HTML DOM allows JavaScript to change the style of HTML elements.</p>
+<p>To change the style of an HTML element, use this syntax:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(id).style.property = new style;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;p id=&quot;p2&quot;&gt;Hello World!&lt;/p&gt;</div><div class="line">&lt;script&gt;</div><div class="line">document.getElementById(&quot;p2&quot;).style.color = &quot;blue&quot;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="DOM-Animation"><a href="#DOM-Animation" class="headerlink" title="DOM Animation"></a>DOM Animation</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;</div><div class="line">&lt;button onclick=&quot;myMove()&quot;&gt;Click Me&lt;/button&gt;</div><div class="line">&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;div id =&quot;container&quot;&gt;</div><div class="line">&lt;div id =&quot;animate&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function myMove() &#123;</div><div class="line">  var elem = document.getElementById(&quot;animate&quot;);</div><div class="line">  var pos = 0;</div><div class="line">  var id = setInterval(frame, 5);</div><div class="line">  function frame() &#123;</div><div class="line">    if (pos == 350) &#123;</div><div class="line">      clearInterval(id);</div><div class="line">    &#125; else &#123;</div><div class="line">      pos++;</div><div class="line">      elem.style.top = pos + &apos;px&apos;;</div><div class="line">      elem.style.left = pos + &apos;px&apos;;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="DOM-Events"><a href="#DOM-Events" class="headerlink" title="DOM Events"></a>DOM Events</h3><p>A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.</p>
+<ul>
+<li>The onclick Events</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 onclick=&quot;this.innerHTML=&apos;Ooops!&apos;&quot;&gt;Click on this text!&lt;/h1&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>The onload and onunload Events</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;body onload=&quot;checkCookies()&quot;&gt;</div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function checkCookies() &#123;</div><div class="line">    var text = &quot;&quot;;</div><div class="line">    if (navigator.cookieEnabled == true) &#123;</div><div class="line">        text = &quot;Cookies are enabled.&quot;;</div><div class="line">    &#125; else &#123;</div><div class="line">        text = &quot;Cookies are not enabled.&quot;;</div><div class="line">    &#125;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = text;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>The onchange Event</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; id=&quot;fname&quot; onchange=&quot;myFunction()&quot;&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function myFunction() &#123;</div><div class="line">    var x = document.getElementById(&quot;fname&quot;);</div><div class="line">    x.value = x.value.toUpperCase();</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>The onmouseover and onmouseout Events</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;div onmouseover=&quot;mOver(this)&quot; onmouseout=&quot;mOut(this)&quot;</div><div class="line">style=&quot;background-color:#D94A38;width:120px;height:20px;padding:40px;&quot;&gt;</div><div class="line">Mouse Over Me&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function mOver(obj) &#123;</div><div class="line">    obj.innerHTML = &quot;Thank You&quot;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function mOut(obj) &#123;</div><div class="line">    obj.innerHTML = &quot;Mouse Over Me&quot;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>The onmousedown, onmouseup and onclick Events</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;div onmousedown=&quot;mDown(this)&quot; onmouseup=&quot;mUp(this)&quot;</div><div class="line">style=&quot;background-color:#D94A38;width:90px;height:20px;padding:40px;&quot;&gt;</div><div class="line">Click Me&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function mDown(obj) &#123;</div><div class="line">    obj.style.backgroundColor = &quot;#1ec5e5&quot;;</div><div class="line">    obj.innerHTML = &quot;Release Me&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function mUp(obj) &#123;</div><div class="line">    obj.style.backgroundColor=&quot;#D94A38&quot;;</div><div class="line">    obj.innerHTML=&quot;Thank You&quot;;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="DOM-EventListener"><a href="#DOM-EventListener" class="headerlink" title="DOM EventListener"></a>DOM EventListener</h3><p>The <code>addEventListener()</code> method attaches an event handler to an element without overwriting existing event handlers.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.addEventListener(event, function, useCapture);</div></pre></td></tr></table></figure>
+<ul>
+<li>The first parameter is the type of the event (like “click” or “mousedown”).</li>
+<li>The second parameter is the function we want to call when the event occurs.</li>
+<li>The third parameter is a boolean value specifying whether to use event <strong>bubbling</strong> or event <strong>capturing</strong>. This parameter is optional.</li>
+</ul>
+<p><strong>Note:</strong> you don’t use the “on” prefix for the event; use “click” instead of “onclick”.</p>
+<p>Add an Event Handler to an Element</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">element.addEventListener(&quot;click&quot;, function()&#123; alert(&quot;Hello World!&quot;); &#125;);</div></pre></td></tr></table></figure>
+<p>Add Many Event Handlers to the Same Element</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;myBtn&quot;&gt;Try it&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var x = document.getElementById(&quot;myBtn&quot;);</div><div class="line">x.addEventListener(&quot;mouseover&quot;, myFunction);</div><div class="line">x.addEventListener(&quot;click&quot;, mySecondFunction);</div><div class="line">x.addEventListener(&quot;mouseout&quot;, myThirdFunction);</div><div class="line"></div><div class="line">function myFunction() &#123;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML += &quot;Moused over!&lt;br&gt;&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function mySecondFunction() &#123;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML += &quot;Clicked!&lt;br&gt;&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function myThirdFunction() &#123;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML += &quot;Moused out!&lt;br&gt;&quot;;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>Add an Event Handler to the Window Object</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">window.addEventListener(&quot;resize&quot;, function()&#123;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = Math.random();</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>Passing Parameters</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;myBtn&quot;&gt;Try it&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var p1 = 5;</div><div class="line">var p2 = 7;</div><div class="line"></div><div class="line">document.getElementById(&quot;myBtn&quot;).addEventListener(&quot;click&quot;, function() &#123;</div><div class="line">    myFunction(p1, p2);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">function myFunction(a, b) &#123;</div><div class="line">    var result = a * b;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = result;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>Event Bubbling or Event Capturing?</p>
+<p>There are two ways of event propagation in the HTML DOM, bubbling and capturing.</p>
+<p>Event propagation is a way of defining the element order when an event occurs. If you have a <code>&lt;p&gt;</code> element inside a <code>&lt;div&gt;</code> element, and the user clicks on the <code>&lt;p&gt;</code> element, which element’s “click” event should be handled first?</p>
+<ul>
+<li>In bubbling the inner most element’s event is handled first and then the outer: the <code>&lt;p&gt;</code> element’s click event is handled first, then the <code>&lt;div&gt;</code> element’s click event.</li>
+<li>In capturing the outer most element’s event is handled first and then the inner: the <code>&lt;div&gt;</code> element’s click event will be handled first, then the <code>&lt;p&gt;</code> element’s click event.</li>
+</ul>
+<p>The default value is <strong>false</strong>, which will use the <strong>bubbling propagation</strong>, when the value is set to <strong>true</strong>, the event uses the <strong>capturing propagation</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;myDiv&quot;&gt;</div><div class="line">  &lt;p id=&quot;myP&quot;&gt;Click this paragraph, I am Bubbling.&lt;/p&gt;</div><div class="line">&lt;/div&gt;&lt;br&gt;</div><div class="line"></div><div class="line">&lt;div id=&quot;myDiv2&quot;&gt;</div><div class="line">  &lt;p id=&quot;myP2&quot;&gt;Click this paragraph, I am Capturing.&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">document.getElementById(&quot;myP&quot;).addEventListener(&quot;click&quot;, function() &#123;</div><div class="line">    alert(&quot;You clicked the P element!&quot;);</div><div class="line">&#125;, false);</div><div class="line"></div><div class="line">document.getElementById(&quot;myDiv&quot;).addEventListener(&quot;click&quot;, function() &#123;</div><div class="line">    alert(&quot;You clicked the DIV element!&quot;);</div><div class="line">&#125;, false);</div><div class="line"></div><div class="line">document.getElementById(&quot;myP2&quot;).addEventListener(&quot;click&quot;, function() &#123;</div><div class="line">    alert(&quot;You clicked the P element!&quot;);</div><div class="line">&#125;, true);</div><div class="line"></div><div class="line">document.getElementById(&quot;myDiv2&quot;).addEventListener(&quot;click&quot;, function() &#123;</div><div class="line">    alert(&quot;You clicked the DIV element!&quot;);</div><div class="line">&#125;, true);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>The <code>removeEventListener()</code> method</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;removeHandler()&quot; id=&quot;myBtn&quot;&gt;Try it&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">document.getElementById(&quot;myDIV&quot;).addEventListener(&quot;mousemove&quot;, myFunction);</div><div class="line"></div><div class="line">function myFunction() &#123;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = Math.random();</div><div class="line">&#125;</div><div class="line"></div><div class="line">function removeHandler() &#123;</div><div class="line">    document.getElementById(&quot;myDIV&quot;).removeEventListener(&quot;mousemove&quot;, myFunction);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="DOM-Navigation"><a href="#DOM-Navigation" class="headerlink" title="DOM Navigation"></a>DOM Navigation</h3><p>The nodes in the node tree have a hierarchical relationship to each other.</p>
+<p>The terms parent, child, and sibling are used to describe the relationships.</p>
+<ul>
+<li>In a node tree, the top node is called the root (or root node)</li>
+<li>Every node has exactly one parent, except the root (which has no parent)</li>
+<li>A node can have a number of children</li>
+<li>Siblings (brothers or sisters) are nodes with the same parent</li>
+</ul>
+<p>You can use the following node properties to navigate between nodes with JavaScript:</p>
+<ul>
+<li>parentNode</li>
+<li>childNodes[nodenumber]</li>
+<li>firstChild</li>
+<li>lastChild</li>
+<li>nextSibling</li>
+<li>previousSibling</li>
+</ul>
+<p>A common error in DOM processing is to expect an element node to contain text.</p>
+<p>In this example: <code>&lt;title&gt;DOM Tutorial&lt;/title&gt;</code>, the element node <code>&lt;title&gt;</code> does not contain text. It contains a <strong>text node</strong> with the value “DOM Tutorial”.</p>
+<p>The value of the text node can be accessed by the node’s <strong>innerHTML</strong> property, or the <strong>nodeValue</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;h1 id=&quot;intro&quot;&gt;My First Page&lt;/h1&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;demo&quot;&gt;Hello!&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var myText = document.getElementById(&quot;intro&quot;).childNodes[0].nodeValue;</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = myText;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">var myText = document.getElementById(&quot;intro&quot;).firstChild.nodeValue;</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = myText;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>There are two special properties that allow access to the full document:</p>
+<ul>
+<li><strong>document.body</strong> - The body of the document</li>
+<li><strong>document.documentElement</strong> - The full document</li>
+</ul>
+<p>The nodeName property specifies the name of a node.</p>
+<ul>
+<li>nodeName is read-only</li>
+<li>nodeName of an element node is the same as the tag name</li>
+<li>nodeName of an attribute node is the attribute name</li>
+<li>nodeName of a text node is always #text</li>
+<li>nodeName of the document node is always #document</li>
+</ul>
+<p><strong>Note:</strong> nodeName always contains the uppercase tag name of an HTML element.</p>
+<p>The nodeValue property specifies the value of a node.</p>
+<ul>
+<li>nodeValue for element nodes is undefined</li>
+<li>nodeValue for text nodes is the text itself</li>
+<li>nodeValue for attribute nodes is the attribute value</li>
+</ul>
+<p>The nodeType property returns the type of node. nodeType is read only.</p>
+<table>
+<thead>
+<tr>
+<th>Element type</th>
+<th>NodeType</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Document</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<h3 id="DOM-Elements-Nodes"><a href="#DOM-Elements-Nodes" class="headerlink" title="DOM Elements (Nodes)"></a>DOM Elements (Nodes)</h3><ul>
+<li>Creating New HTML Elements (Nodes)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div1&quot;&gt;</div><div class="line">&lt;p id=&quot;p1&quot;&gt;This is a paragraph.&lt;/p&gt;</div><div class="line">&lt;p id=&quot;p2&quot;&gt;This is another paragraph.&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var para = document.createElement(&quot;p&quot;);</div><div class="line">var node = document.createTextNode(&quot;This is new.&quot;);</div><div class="line">para.appendChild(node);</div><div class="line"></div><div class="line">var element = document.getElementById(&quot;div1&quot;);</div><div class="line">element.appendChild(para);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Creating new HTML Elements - insertBefore()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">var para = document.createElement(&quot;p&quot;);</div><div class="line">var node = document.createTextNode(&quot;This is new.&quot;);</div><div class="line">para.appendChild(node);</div><div class="line"></div><div class="line">var element = document.getElementById(&quot;div1&quot;);</div><div class="line">var child = document.getElementById(&quot;p1&quot;);</div><div class="line">element.insertBefore(para,child);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Removing Existing HTML Elements</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">var parent = document.getElementById(&quot;div1&quot;);</div><div class="line">var child = document.getElementById(&quot;p1&quot;);</div><div class="line">parent.removeChild(child);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> It would be nice to be able to remove an element without referring to the parent. But sorry. The DOM needs to know both the element you want to remove, and its parent.</p>
+<p>Here is a common workaround: Find the child you want to remove, and use its <strong>parentNode</strong> property to find the parent:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var child = document.getElementById(&quot;p1&quot;);</div><div class="line">child.parentNode.removeChild(child);</div></pre></td></tr></table></figure>
+<ul>
+<li>Replacing HTML Elements </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">var para = document.createElement(&quot;p&quot;);</div><div class="line">var node = document.createTextNode(&quot;This is new.&quot;);</div><div class="line">para.appendChild(node);</div><div class="line"></div><div class="line">var parent = document.getElementById(&quot;div1&quot;);</div><div class="line">var child = document.getElementById(&quot;p1&quot;);</div><div class="line">parent.replaceChild(para,child);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="DOM-Node-List"><a href="#DOM-Node-List" class="headerlink" title="DOM Node List"></a>DOM Node List</h3><p>The <code>getElementsByTagName()</code> method returns a <strong>node list</strong>. A node list is an array-like collection of nodes.</p>
+<p>The <strong>length</strong> property defines the number of nodes in a node list.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var	myNodelist = document.getElementsByTagName(&quot;p&quot;);</div><div class="line">var i;</div><div class="line">for (i = 0; i &lt;	myNodelist.length; i++) &#123;</div><div class="line">   	myNodelist[i].style.backgroundColor = &quot;red&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> A node list is not an array! A node list may look like an array, but it is not. You can loop through the node list and refer to its nodes like an array. However, you cannot use Array Methods, like <code>valueOf()</code> or <code>join()</code> on the node list.</p>
 ]]></content>
     </entry>
     
