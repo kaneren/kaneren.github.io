@@ -536,6 +536,155 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Javascript BOM 学习笔记]]></title>
+      <url>http://rrkaige.com/2016/10/18/Javascript-BOM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p> 学习 JavaScript HTML DOM，教程来自 <a href="http://www.w3schools.com/js/js_window.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161018-myblog81.jpg" alt="I Love Javascript"></p>
+<a id="more"></a>
+<h3 id="Window-The-Browser-Object-Model"><a href="#Window-The-Browser-Object-Model" class="headerlink" title="Window - The Browser Object Model"></a>Window - The Browser Object Model</h3><p>The Browser Object Model (BOM) allows JavaScript to “talk to” the browser.</p>
+<p>There are no official standards for the <strong>Browser Object Model</strong> (BOM).</p>
+<p>Since modern browsers have implemented (almost) the same methods and properties for JavaScript interactivity, it is often referred to, as methods and properties of the BOM.</p>
+<p>All global JavaScript objects, functions, and variables automatically become members of the window object.</p>
+<ul>
+<li>Global variables are properties of the window object.</li>
+<li>Global functions are methods of the window object.</li>
+</ul>
+<p>Even the document object (of the HTML DOM) is a property of the window object:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">window.document.getElementById(&quot;header&quot;);</div><div class="line">document.getElementById(&quot;header&quot;);</div></pre></td></tr></table></figure>
+<p>Two properties can be used to determine the size of the browser window.</p>
+<ul>
+<li><code>window.innerHeight</code> - the inner height of the browser window (in pixels)</li>
+<li><code>window.innerWidth</code> - the inner width of the browser window (in pixels)</li>
+</ul>
+<p><strong>Note：</strong> The browser window (the browser viewport) is NOT including toolbars and scrollbars.</p>
+<p>For Internet Explorer 8, 7, 6, 5:</p>
+<ul>
+<li><code>document.documentElement.clientHeight</code>, <code>document.documentElement.clientWidth</code></li>
+</ul>
+<p>or</p>
+<ul>
+<li><code>document.body.clientHeight</code>, <code>document.body.clientWidth</code></li>
+</ul>
+<p>A practical JavaScript solution (covering all browsers):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var w = window.innerWidth</div><div class="line">|| document.documentElement.clientWidth</div><div class="line">|| document.body.clientWidth;</div><div class="line"></div><div class="line">var h = window.innerHeight</div><div class="line">|| document.documentElement.clientHeight</div><div class="line">|| document.body.clientHeight;</div></pre></td></tr></table></figure>
+<p>Some other methods:</p>
+<ul>
+<li><code>window.open()</code> - open a new window</li>
+<li><code>window.close()</code> - close the current window</li>
+<li><code>window.moveTo()</code> -move the current window</li>
+<li><code>window.resizeTo()</code> -resize the current window</li>
+</ul>
+<h3 id="Window-Screen"><a href="#Window-Screen" class="headerlink" title="Window Screen"></a>Window Screen</h3><p>The <code>window.screen</code> object can be written without the window prefix.</p>
+<ul>
+<li>The <code>screen.width</code> property returns the width of the visitor’s screen in pixels.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">&quot;Screen Width: &quot; + screen.width;</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>screen.height</code> property returns the height of the visitor’s screen in pixels.</li>
+<li>The <code>screen.availWidth</code> property returns the width of the visitor’s screen, in pixels, minus interface features like the Windows Taskbar.</li>
+<li>The <code>screen.availHeight</code> property returns the height of the visitor’s screen, in pixels, minus interface features like the Windows Taskbar.</li>
+<li>The <code>screen.colorDepth</code> property returns the number of bits used to display one color.</li>
+</ul>
+<p><strong>Note：</strong> The #rrggbb (rgb) values used in HTML represents “True Colors” (16,777,216 different colors)</p>
+<ul>
+<li>The <code>screen.pixelDepth</code> property returns the pixel depth of the screen.</li>
+</ul>
+<p><strong>Note：</strong> For modern computers, Color Depth and Pixel Depth are equal.</p>
+<h3 id="Window-Location"><a href="#Window-Location" class="headerlink" title="Window Location"></a>Window Location</h3><p>The <code>window.location</code> object can be written without the window prefix.</p>
+<ul>
+<li><code>window.location.href</code> returns the href (URL) of the current page</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">&quot;Page location is &quot; + window.location.href;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>window.location.hostname</code> returns the domain name of the web host</li>
+<li><code>window.location.pathname</code> returns the path and filename of the current page</li>
+<li><code>window.location.protocol</code> returns the web protocol used (http:// or https://)</li>
+<li><code>window.location.assign</code> loads a new document</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">function newDoc() &#123;</div><div class="line">    window.location.assign(&quot;http://www.w3schools.com&quot;)</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;input type=&quot;button&quot; value=&quot;Load new document&quot; onclick=&quot;newDoc()&quot;&gt;</div></pre></td></tr></table></figure>
+<h3 id="Window-History"><a href="#Window-History" class="headerlink" title="Window History"></a>Window History</h3><p>The <code>window.history</code> object can be written without the window prefix.</p>
+<p>To protect the privacy of the users, there are limitations to how JavaScript can access this object.</p>
+<ul>
+<li><code>history.back()</code> - same as clicking back in the browser</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">function goBack() &#123;</div><div class="line">    window.history.back()</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;input type=&quot;button&quot; value=&quot;Back&quot; onclick=&quot;goBack()&quot;&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>history.forward()</code> - same as clicking forward in the browser</li>
+</ul>
+<h3 id="Window-Navigator"><a href="#Window-Navigator" class="headerlink" title="Window Navigator"></a>Window Navigator</h3><p>The <code>window.navigator</code> object can be written without the window prefix.</p>
+<ul>
+<li>The <strong>cookieEnabled</strong> property returns true if cookies are enabled, otherwise false.</li>
+<li>The <strong>appName</strong> property returns the application name of the browser.</li>
+</ul>
+<p><strong>Note：</strong> Strange enough, “Netscape” is the application name for both IE11, Chrome, Firefox, and Safari.</p>
+<ul>
+<li>The <strong>appCodeName</strong> property returns the application code name of the browser.</li>
+</ul>
+<p><strong>Note：</strong> “Mozilla” is the application code name for both Chrome, Firefox, IE, Safari, and Opera.</p>
+<ul>
+<li>The <strong>product</strong> property returns the product name of the browser engine.</li>
+<li>The <strong>appVersion</strong> property returns version information about the browser.</li>
+<li>The <strong>userAgent</strong> property returns the user-agent header sent by the browser to the server.</li>
+<li>The <strong>platform</strong> property returns the browser platform (operating system).</li>
+<li>The <strong>language</strong> property returns the browser’s language.</li>
+<li>The <strong>onLine</strong> property returns true if the browser is online.</li>
+<li>The <code>javaEnabled()</code> method returns true if Java is enabled.</li>
+</ul>
+<h3 id="Popup-Boxes"><a href="#Popup-Boxes" class="headerlink" title="Popup Boxes"></a>Popup Boxes</h3><p>JavaScript has three kind of popup boxes: <strong>Alert box</strong>, <strong>Confirm box</strong>, and <strong>Prompt box</strong>.</p>
+<p>An alert box is often used if you want to make sure information comes through to the user. When an alert box pops up, the user will have to click “OK” to proceed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.alert(&quot;sometext&quot;);</div></pre></td></tr></table></figure>
+<p>The <code>window.alert()</code> method can be written without the window prefix.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&quot;I am an alert box!&quot;);</div></pre></td></tr></table></figure>
+<p>A confirm box is often used if you want the user to verify or accept something. When a confirm box pops up, the user will have to click either “OK” or “Cancel” to proceed. If the user clicks “OK”, the box returns true. If the user clicks “Cancel”, the box returns false.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.confirm(&quot;sometext&quot;);</div></pre></td></tr></table></figure>
+<p>The <code>window.confirm()</code> method can be written without the window prefix.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;</div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function myFunction() &#123;</div><div class="line">    var x;</div><div class="line">    if (confirm(&quot;Press a button!&quot;) == true) &#123;</div><div class="line">        x = &quot;You pressed OK!&quot;;</div><div class="line">    &#125; else &#123;</div><div class="line">        x = &quot;You pressed Cancel!&quot;;</div><div class="line">    &#125;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = x;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>A prompt box is often used if you want the user to input a value before entering a page. When a prompt box pops up, the user will have to click either “OK” or “Cancel” to proceed after entering an input value. If the user clicks “OK” the box returns the input value. If the user clicks “Cancel” the box returns null.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.prompt(&quot;sometext&quot;,&quot;defaultText&quot;);</div></pre></td></tr></table></figure>
+<p>The <code>window.prompt()</code> method can be written without the window prefix.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;</div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function myFunction() &#123;</div><div class="line">    var person = prompt(&quot;Please enter your name&quot;, &quot;Harry Potter&quot;);</div><div class="line">    if (person != null) &#123;</div><div class="line">        document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">        &quot;Hello &quot; + person + &quot;! How are you today?&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>To display <strong>line breaks</strong> inside a popup box, use a <strong>back-slash followed by the character n</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&quot;Hello\nHow are you?&quot;);</div></pre></td></tr></table></figure>
+<h3 id="Timing-Events"><a href="#Timing-Events" class="headerlink" title="Timing Events"></a>Timing Events</h3><p>The window object allows execution of code at specified time intervals.</p>
+<p><code>setTimeout(function, milliseconds)</code> executes a function, after waiting a specified number of milliseconds.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;setTimeout(myFunction, 3000)&quot;&gt;Try it&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function myFunction() &#123;</div><div class="line">    alert(&apos;Hello&apos;);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>The <code>clearTimeout()</code> method stops the execution of the function specified in <code>setTimeout()</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">myVar = setTimeout(function, milliseconds);</div><div class="line">clearTimeout(myVar);</div></pre></td></tr></table></figure>
+<p><code>setInterval(function, milliseconds)</code> is same as <code>setTimeout()</code>, but repeats the execution of the function continuously.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var myVar = setInterval(myTimer, 1000);</div><div class="line"></div><div class="line">function myTimer() &#123;</div><div class="line">    var d = new Date();</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = d.toLocaleTimeString();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The <code>clearInterval()</code> method stops the executions of the function specified in the <code>setInterval()</code> method.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line">&lt;button onclick=&quot;clearInterval(myVar)&quot;&gt;Stop time&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var myVar = setInterval(myTimer, 1000);</div><div class="line">function myTimer() &#123;</div><div class="line">    var d = new Date();</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = d.toLocaleTimeString();</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="Cookies"><a href="#Cookies" class="headerlink" title="Cookies"></a>Cookies</h3><p>Cookies are data, stored in small text files, on your computer.</p>
+<p>When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.</p>
+<p>Cookies were invented to solve the problem “how to remember information about the user”:</p>
+<ul>
+<li>When a user visits a web page, his name can be stored in a cookie.</li>
+<li>Next time the user visits the page, the cookie “remembers” his name.</li>
+</ul>
+<p>Cookies are saved in name-value pairs like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">username = John Doe</div></pre></td></tr></table></figure>
+<p>JavaScript can create, read, and delete cookies with the <code>document.cookie</code> property.</p>
+<p>With JavaScript, a cookie can be created like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.cookie = &quot;username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/&quot;;</div></pre></td></tr></table></figure>
+<p>With JavaScript, cookies can be read like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var x = document.cookie;</div></pre></td></tr></table></figure>
+<p><strong>Note：</strong> <code>document.cookie</code> will return all cookies in one string much like: <code>cookie1=value; cookie2=value; cookie3=value</code>;</p>
+<p>With JavaScript, you can change a cookie the same way as you create it, The old cookie is overwritten.</p>
+<p>Deleting a cookie is very simple. Just set the expires parameter to a passed date:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.cookie = &quot;username=; expires=Thu, 01 Jan 1970 00:00:00 UTC&quot;;</div></pre></td></tr></table></figure>
+<p>In the example to follow, we will create a cookie that stores the name of a visitor.</p>
+<p>The first time a visitor arrives to the web page, he will be asked to fill in his name. The name is then stored in a cookie.</p>
+<p>The next time the visitor arrives at the same page, he will get a welcome message.</p>
+<p>For the example we will create 3 JavaScript functions:</p>
+<ul>
+<li>A function to set a cookie value</li>
+<li>A function to get a cookie value</li>
+<li>A function to check a cookie value</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">function setCookie(cname, cvalue, exdays) &#123;</div><div class="line">    var d = new Date();</div><div class="line">    d.setTime(d.getTime() + (exdays*24*60*60*1000));</div><div class="line">    var expires = &quot;expires=&quot;+d.toUTCString();</div><div class="line">    document.cookie = cname + &quot;=&quot; + cvalue + &quot;;&quot; + expires + &quot;;path=/&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function getCookie(cname) &#123;</div><div class="line">    var name = cname + &quot;=&quot;;</div><div class="line">    var ca = document.cookie.split(&apos;;&apos;);</div><div class="line">    for(var i = 0; i &lt; ca.length; i++) &#123;</div><div class="line">        var c = ca[i];</div><div class="line">        while (c.charAt(0) == &apos; &apos;) &#123;</div><div class="line">            c = c.substring(1);</div><div class="line">        &#125;</div><div class="line">        if (c.indexOf(name) == 0) &#123;</div><div class="line">            return c.substring(name.length, c.length);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return &quot;&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function checkCookie() &#123;</div><div class="line">    var user = getCookie(&quot;username&quot;);</div><div class="line">    if (user != &quot;&quot;) &#123;</div><div class="line">        alert(&quot;Welcome again &quot; + user);</div><div class="line">    &#125; else &#123;</div><div class="line">        user = prompt(&quot;Please enter your name:&quot;, &quot;&quot;);</div><div class="line">        if (user != &quot;&quot; &amp;&amp; user != null) &#123;</div><div class="line">            setCookie(&quot;username&quot;, user, 365);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[缝缝补补又三年]]></title>
       <url>http://rrkaige.com/2016/10/17/%E7%BC%9D%E7%BC%9D%E8%A1%A5%E8%A1%A5%E5%8F%88%E4%B8%89%E5%B9%B4/</url>
       <content type="html"><![CDATA[<blockquote>
