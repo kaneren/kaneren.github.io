@@ -7,7 +7,7 @@
       <title><![CDATA[JavaScript AJAX 学习笔记]]></title>
       <url>http://rrkaige.com/2016/11/17/JavaScript-AJAX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p> 学习 JavaScript HTML DOM，教程来自 <a href="http://www.w3schools.com/js/js_ajax_intro.asp" target="_blank" rel="external">w3schools</a>。</p>
-<p><img src="-b" alt="AJAX"></p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161117-myblog111-1.jpg" alt="AJAX"></p>
 <a id="more"></a>
 <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>AJAX = <strong>Asynchronous JavaScript And XML</strong>.</p>
 <p>AJAX is not a programming language. AJAX just uses a combination of:</p>
@@ -18,7 +18,7 @@
 <p><strong>Note:</strong> AJAX is a misleading name. AJAX applications might use <strong>XML</strong> to transport data, but it is equally common to transport data as <strong>plain text</strong> or <strong>JSON text</strong>.</p>
 <p>AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;demo&quot;&gt;</div><div class="line">&lt;h1&gt;The XMLHttpRequest Object&lt;/h1&gt;</div><div class="line">&lt;button type=&quot;button&quot; onclick=&quot;loadDoc()&quot;&gt;Change Content&lt;/button&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function loadDoc() &#123;</div><div class="line">  var xhttp = new XMLHttpRequest();</div><div class="line">  xhttp.onreadystatechange = function() &#123;</div><div class="line">    if (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</div><div class="line">      document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">      this.responseText;</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">  xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, true);</div><div class="line">  xhttp.send();</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p><img src="-b" alt="AJAX"></p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161117-myblog111-2.gif" alt="How AJAX Works"></p>
 <ol>
 <li>An event occurs in a web page (the page is loaded, a button is clicked)</li>
 <li>An XMLHttpRequest object is created by JavaScript</li>
