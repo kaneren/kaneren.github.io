@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-11-16T12:07:08.652Z</updated>
+  <updated>2016-11-17T15:05:42.915Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,195 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript AJAX 学习笔记</title>
+    <link href="http://rrkaige.com/2016/11/17/JavaScript-AJAX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://rrkaige.com/2016/11/17/JavaScript-AJAX-学习笔记/</id>
+    <published>2016-11-17T01:45:01.000Z</published>
+    <updated>2016-11-17T15:05:42.915Z</updated>
+    
+    <content type="html"><![CDATA[<p> 学习 JavaScript HTML DOM，教程来自 <a href="http://www.w3schools.com/js/js_ajax_intro.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="-b" alt="AJAX"></p>
+<a id="more"></a>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>AJAX = <strong>Asynchronous JavaScript And XML</strong>.</p>
+<p>AJAX is not a programming language. AJAX just uses a combination of:</p>
+<ul>
+<li>A browser built-in XMLHttpRequest object (to request data from a web server)</li>
+<li>JavaScript and HTML DOM (to display or use the data)</li>
+</ul>
+<p><strong>Note:</strong> AJAX is a misleading name. AJAX applications might use <strong>XML</strong> to transport data, but it is equally common to transport data as <strong>plain text</strong> or <strong>JSON text</strong>.</p>
+<p>AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;demo&quot;&gt;</div><div class="line">&lt;h1&gt;The XMLHttpRequest Object&lt;/h1&gt;</div><div class="line">&lt;button type=&quot;button&quot; onclick=&quot;loadDoc()&quot;&gt;Change Content&lt;/button&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function loadDoc() &#123;</div><div class="line">  var xhttp = new XMLHttpRequest();</div><div class="line">  xhttp.onreadystatechange = function() &#123;</div><div class="line">    if (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</div><div class="line">      document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">      this.responseText;</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">  xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, true);</div><div class="line">  xhttp.send();</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p><img src="-b" alt="AJAX"></p>
+<ol>
+<li>An event occurs in a web page (the page is loaded, a button is clicked)</li>
+<li>An XMLHttpRequest object is created by JavaScript</li>
+<li>The XMLHttpRequest object sends a request to a web server</li>
+<li>The server processes the request</li>
+<li>The server sends a response back to the web page</li>
+<li>The response is read by JavaScript</li>
+<li>Proper action (like page update) is performed by JavaScript</li>
+</ol>
+<h3 id="The-XMLHttpRequest-Object"><a href="#The-XMLHttpRequest-Object" class="headerlink" title="The XMLHttpRequest Object"></a>The XMLHttpRequest Object</h3><p>All modern browsers (Chrome, IE7+, Firefox, Safari, and Opera) have a built-in <strong>XMLHttpRequest</strong> object.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variable = new XMLHttpRequest();</div></pre></td></tr></table></figure>
+<p>Old versions of Internet Explorer (IE5 and IE6) use an ActiveX Object:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variable = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var xhttp;</div><div class="line">if (window.XMLHttpRequest) &#123;</div><div class="line">    // code for modern browsers</div><div class="line">    xhttp = new XMLHttpRequest();</div><div class="line">    &#125; else &#123;</div><div class="line">    // code for IE6, IE5</div><div class="line">    xhttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>For security reasons, modern browsers do not allow access across domains. This means that both the web page and the XML file it tries to load, must be located <strong>on the same server</strong>.</p>
+<h3 id="Send-a-Request-To-a-Server"><a href="#Send-a-Request-To-a-Server" class="headerlink" title="Send a Request To a Server"></a>Send a Request To a Server</h3><p>To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, true);</div><div class="line">xhttp.send();</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>open(method,url,async,user,psw)</td>
+<td>Specifies the type of request</td>
+</tr>
+<tr>
+<td>send()</td>
+<td>Sends the request to the server (used for GET)</td>
+</tr>
+<tr>
+<td>send(string)</td>
+<td>Sends the request to the server (used for POST)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>method: the type of request: GET or POST</li>
+<li>url: the server (file) location</li>
+</ul>
+<p>The file can be any kind of file, like <code>.txt</code> and <code>.xml</code>, or server scripting files like <code>.asp</code> and <code>.php</code> (which can perform actions on the server before sending the response back).</p>
+<ul>
+<li>async: true (asynchronous) or false (synchronous)</li>
+<li>user: optional user name</li>
+<li>psw: optional password</li>
+</ul>
+<p><strong>GET</strong> is simpler and faster than <strong>POST</strong>, and can be used in most cases. However, always use POST requests when:</p>
+<ul>
+<li>A cached file is not an option (update a file or database on the server).</li>
+<li>Sending a large amount of data to the server (POST has no size limitations).</li>
+<li>Sending user input (which can contain unknown characters), POST is more robust and secure than GET.</li>
+</ul>
+<p>A simple GET request:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhttp.open(&quot;GET&quot;, &quot;demo_get.asp&quot;, true);</div><div class="line">xhttp.send();</div></pre></td></tr></table></figure>
+<p>In the example above, you may get a cached result. To avoid this, add a unique ID to the URL:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhttp.open(&quot;GET&quot;, &quot;demo_get.asp?t=&quot; + Math.random(), true);</div><div class="line">xhttp.send();</div></pre></td></tr></table></figure>
+<p>If you want to send information with the GET method, add the information to the URL:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhttp.open(&quot;GET&quot;, &quot;demo_get2.asp?fname=Henry&amp;lname=Ford&quot;, true);</div><div class="line">xhttp.send();</div></pre></td></tr></table></figure>
+<p>A simple POST request:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhttp.open(&quot;POST&quot;, &quot;demo_post.asp&quot;, true);</div><div class="line">xhttp.send();</div></pre></td></tr></table></figure>
+<p>To POST data like an HTML form, add an HTTP header with setRequestHeader(). Specify the data you want to send in the send() method:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xhttp.open(&quot;POST&quot;, &quot;ajax_test.asp&quot;, true);</div><div class="line">xhttp.setRequestHeader(&quot;Content-type&quot;, &quot;application/x-www-form-urlencoded&quot;);</div><div class="line">xhttp.send(&quot;fname=Henry&amp;lname=Ford&quot;);</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setRequestHeader(header, value)</td>
+<td>Adds HTTP headers to the request</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>header: specifies the header name</li>
+<li>value: specifies the header value</li>
+</ul>
+<p>Using async=false is not recommended, but for a few small requests this can be ok. Remember that the JavaScript will NOT continue to execute, until the server response is ready. If the server is busy or slow, the application will hang or stop.</p>
+<p><strong>Note:</strong> When you use async=false, do NOT write an onreadystatechange function - just put the code after the send() statement:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, false);</div><div class="line">xhttp.send();</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = xhttp.responseText;</div></pre></td></tr></table></figure>
+<h3 id="Server-Response"><a href="#Server-Response" class="headerlink" title="Server Response"></a>Server Response</h3><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onreadystatechange</td>
+<td>Defines a function to be called when the readyState property changes</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>Holds the status of the XMLHttpRequest. (0: request not initialized; 1: server connection established; 2: request received; 3: processing request; 4: request finished and response is ready)</td>
+</tr>
+<tr>
+<td>status</td>
+<td>200: “OK”; 403: “Forbidden”; 404: “Page not found”</td>
+</tr>
+<tr>
+<td>statusText</td>
+<td>Returns the status-text (e.g. “OK” or “Not Found”)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> The onreadystatechange event is triggered five times (0-4), one time for each change in readyState.</p>
+<p>A <strong>callback function</strong> is a function passed as a parameter to another function.</p>
+<p>If you have more than one AJAX task a website, you should create one function for executing the XMLHttpRequest object, and one callback function for each AJAX task.</p>
+<p>The function call should contain the URL and what function to call when the response is ready.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">loadDoc(&quot;url-1&quot;, myFunction1);</div><div class="line"></div><div class="line">loadDoc(&quot;url-2&quot;, myFunction2);</div><div class="line"></div><div class="line">function loadDoc(url, cFunction) &#123;</div><div class="line">  var xhttp;</div><div class="line">  xhttp=new XMLHttpRequest();</div><div class="line">  xhttp.onreadystatechange = function() &#123;</div><div class="line">    if (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</div><div class="line">      cFunction(this);</div><div class="line">    &#125;</div><div class="line"> 	&#125;;</div><div class="line">  xhttp.open(&quot;GET&quot;, url, true);</div><div class="line">  xhttp.send();</div><div class="line">&#125;</div><div class="line"></div><div class="line">function myFunction1(xhttp) &#123;</div><div class="line">  // action goes here</div><div class="line">&#125; </div><div class="line">function myFunction2(xhttp) &#123;</div><div class="line">  // action goes here</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>responseText</td>
+<td>get the response data as a string</td>
+</tr>
+<tr>
+<td>responseXML</td>
+<td>get the response data as XML data</td>
+</tr>
+<tr>
+<td>getResponseHeader()</td>
+<td>Returns specific header information from the server resource</td>
+</tr>
+<tr>
+<td>getAllResponseHeaders()</td>
+<td>Returns all the header information from the server resource</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>responseText</strong> property returns the server response as a JavaScript string, and you can use it accordingly:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = xhttp.responseText;</div></pre></td></tr></table></figure>
+<p>The <strong>responseXML</strong> property returns the server response as an XML DOM object. Using this property you can parse the response as an XML DOM object:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">xmlDoc = xhttp.responseXML;</div><div class="line">txt = &quot;&quot;;</div><div class="line">x = xmlDoc.getElementsByTagName(&quot;ARTIST&quot;);</div><div class="line">for (i = 0; i &lt; x.length; i++) &#123;</div><div class="line">  txt += x[i].childNodes[0].nodeValue + &quot;&lt;br&gt;&quot;;</div><div class="line">  &#125;</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = txt;</div><div class="line">xhttp.open(&quot;GET&quot;, &quot;cd_catalog.xml&quot;, true);</div><div class="line">xhttp.send();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = this.getAllResponseHeaders();</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML = this.getResponseHeader(&quot;Last-Modified&quot;);</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习JavaScript HTML DOM，教程来自&lt;a href=&quot;http://www.w3schools.com/js/js_ajax_intro.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;-b&quot; alt=&quot;AJAX&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
+    
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
+    
+      <category term="AJAX" scheme="http://rrkaige.com/tags/AJAX/"/>
+    
+  </entry>
   
   <entry>
     <title>后街歌声</title>
@@ -752,48 +941,6 @@
       <category term="视频" scheme="http://rrkaige.com/tags/%E8%A7%86%E9%A2%91/"/>
     
       <category term="光影魔术手" scheme="http://rrkaige.com/tags/%E5%85%89%E5%BD%B1%E9%AD%94%E6%9C%AF%E6%89%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一见钟情么</title>
-    <link href="http://rrkaige.com/2016/10/28/%E4%B8%80%E8%A7%81%E9%92%9F%E6%83%85%E4%B9%88/"/>
-    <id>http://rrkaige.com/2016/10/28/一见钟情么/</id>
-    <published>2016-10-28T07:54:19.000Z</published>
-    <updated>2016-11-03T05:53:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p> 当你对一个人产生好奇的时候，你就喜欢上 TA 了。</p>
-</blockquote>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161028-myblog91.jpg" alt="Love at First Sight"></p>
-<a id="more"></a>
-<p> 是的，我现在是如此的激动，心跳很快。我觉得，我喜欢上她了。</p>
-<p> 就是那个女孩，云。23 号的群面，在我之前，坐我旁边。进房间前，很自然搭上了话，文文静静，只一眼就有好感。群面时，不缓不急，声如珠玉。当面试官问她，会从在座十位同学选哪两位共事时，我屏住了呼吸。然后，满心欢喜却强忍笑意。是的，有我。我转过头，看她侧脸优美的曲线，耳边一缕青丝。那一瞬间，我沦陷了。</p>
-<p> 当然，我注意到她左手无名指的戒指，暗自忐忑。结束后，没有多聊就分开了。直到坐上公交，上网一查，天，结婚戒指？不，不一定吧。也许——我也不知道也许啥。我暗自叹息，也没要联系方式，还能再见么？</p>
-<p> 那天晚上，我神思不属。只记得她本科和研究生的学校，上网一搜，还真有！本科的学院？好像和小雨一样啊。小雨是我的高中同学，果断询问。啊哈，认识的，就这样要到了她的 QQ 号。加不加？我犹豫不决。</p>
-<p> 直到昨天，我收到终面的通知，需要明天前往杭州。是时候了，我对自己说。加好友，打招呼，说明来意，就这么聊开了。什么？也是我们县的？什么？初中就是在县中上的？那岂不是有很多认识的同学？对啊！天！是巧合么？就这样熟悉，愉快地交谈，像认识很久的老朋友。哦，你也收到终面通知了？一个人？那正好啊。我适时提出一同坐车前去，结果已买票，而且已售罄，面试时间也相差两小时。好吧，那就，杭州见。很高兴认识你，我很开心！</p>
-<p> 晚上，按耐不住的我，忍不住向暴暴打听。暴暴也是我的高中同学，果然认识，而且还有个大新闻。她就是我们那一届的县中考状元，由此去了市里读书。原来，当年入学考试，旁边第一排空着的位置就是她的啊？怪不得总感觉名字如此熟悉，我恍然大悟。而且，貌似也是高考没发挥好，但最终考研逆袭成功。</p>
-<p> 如此有缘。</p>
-<p> 于是，今天的我总会莫名兴奋。我问阿修和小妹，他们都说我恋爱了。是的，很久没这么冲动，陷入无限遐思。但是，他们提到了戒指，像锤子砸碎幻镜。我忐忑不安，却无法直言相问。等等吧，我安慰自己。明天就能见到了，会搞清楚的。</p>
-<p> 我敲下这些文字，依然无法平静。先把手头工作搞定，今夜注定无眠。</p>
-<p> 或许，这就是一见钟情吧。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;当你对一个人产生好奇的时候，你就喜欢上TA了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161028-myblog91.jpg&quot; alt=&quot;Love at First Sight&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="尘世行者" scheme="http://rrkaige.com/categories/%E5%B0%98%E4%B8%96%E8%A1%8C%E8%80%85/"/>
-    
-    
-      <category term="经历" scheme="http://rrkaige.com/tags/%E7%BB%8F%E5%8E%86/"/>
-    
-      <category term="喜欢" scheme="http://rrkaige.com/tags/%E5%96%9C%E6%AC%A2/"/>
     
   </entry>
   
