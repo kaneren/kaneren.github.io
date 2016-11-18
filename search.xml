@@ -4,9 +4,108 @@
   
     
     <entry>
+      <title><![CDATA[JSON 学习笔记]]></title>
+      <url>http://rrkaige.com/2016/11/18/JSON%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p> 学习 JSON，教程来自 <a href="http://www.w3schools.com/js/js_json_intro.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161118-myblog112.png" alt="JSON"></p>
+<a id="more"></a>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
+<li>JSON stands for JavaScript Object Notation</li>
+<li>JSON is a lightweight data-interchange format</li>
+<li>JSON is language independent *</li>
+<li>JSON is “self-describing” and easy to understand</li>
+</ul>
+<p><strong>Note:</strong> * JSON uses JavaScript syntax, but the JSON format is text only, just like XML. Text can be read and used as a data format by any programming language.</p>
+<p>Much Like XML Because</p>
+<ul>
+<li>Both JSON and XML are “self describing” (human readable)</li>
+<li>Both JSON and XML are hierarchical (values within values)</li>
+<li>Both JSON and XML can be parsed and used by lots of programming languages</li>
+<li>Both JSON and XML can be fetched with an XMLHttpRequest</li>
+</ul>
+<p>Much Unlike XML Because</p>
+<ul>
+<li>JSON doesn’t use end tag</li>
+<li>JSON is shorter</li>
+<li>JSON is quicker to read and write</li>
+<li>JSON can use arrays</li>
+</ul>
+<p>The biggest difference is: XML has to be parsed with an XML parser. JSON can be parsed by a standard JavaScript function.</p>
+<p>For AJAX applications, JSON is faster and easier than XML:</p>
+<p>Using XML</p>
+<ul>
+<li>Fetch an XML document</li>
+<li>Use the XML DOM to loop through the document</li>
+<li>Extract values and store in variables</li>
+</ul>
+<p>Using JSON</p>
+<ul>
+<li>Fetch a JSON string</li>
+<li><code>JSON.Parse</code> the JSON string</li>
+</ul>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><p>JSON syntax is derived from JavaScript object notation syntax:</p>
+<ul>
+<li>Data is in name/value pairs</li>
+<li>Data is separated by commas</li>
+<li>Curly braces hold objects</li>
+<li>Square brackets hold arrays</li>
+</ul>
+<p>JSON data is written as name/value pairs. A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value.</p>
+<p><strong>Note:</strong> JSON names require double quotes. JavaScript names don’t.</p>
+<p>JSON values can be:</p>
+<ul>
+<li>A number (integer or floating point)</li>
+<li>A string (in double quotes)</li>
+<li>A Boolean (true or false)</li>
+<li>An array (in square brackets)</li>
+<li>An object (in curly braces)</li>
+<li>null</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&quot;employees&quot;:[</div><div class="line">    &#123;&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;&#125;, </div><div class="line">    &#123;&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;&#125;, </div><div class="line">    &#123;&quot;firstName&quot;:&quot;Peter&quot;,&quot;lastName&quot;:&quot;Jones&quot;&#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>Because JSON syntax is derived from JavaScript object notation, very little extra software is needed to work with JSON within JavaScript.</p>
+<p>With JavaScript you can create an array of objects and assign data to it, like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var employees = [</div><div class="line">    &#123;&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;&#125;,</div><div class="line">    &#123;&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;&#125;,</div><div class="line">    &#123;&quot;firstName&quot;:&quot;Peter&quot;,&quot;lastName&quot;: &quot;Jones&quot;&#125;</div><div class="line">];</div></pre></td></tr></table></figure>
+<p>The first entry in the JavaScript object array can be accessed like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// returns John Doe</div><div class="line">employees[0].firstName + &quot; &quot; + employees[0].lastName;</div><div class="line"></div><div class="line">employees[0][&quot;firstName&quot;] + &quot; &quot; + employees[0][&quot;lastName&quot;];</div></pre></td></tr></table></figure>
+<ul>
+<li>The file type for JSON files is “<code>.json</code>“</li>
+<li>The MIME type for JSON text is “application/json”</li>
+</ul>
+<h3 id="How-To"><a href="#How-To" class="headerlink" title="How To"></a>How To</h3><p>A common use of JSON is to read data from a web server, and display the data in a web page.</p>
+<p>The JavaScript function <code>JSON.parse(text)</code> can be used to convert a JSON text into a JavaScript object:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var text = &apos;&#123;&quot;employees&quot;:[&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot; &#125;,&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;Anna&quot;,&quot;lastName&quot;:&quot;Smith&quot; &#125;,&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;Peter&quot;,&quot;lastName&quot;:&quot;Jones&quot; &#125;]&#125;&apos;;</div><div class="line"></div><div class="line">obj = JSON.parse(text);</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">obj.employees[1].firstName + &quot; &quot; + obj.employees[1].lastName;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>Older browsers without the support for the JavaScript function <code>JSON.parse()</code> can use the <code>eval()</code> function to convert a JSON text into a JavaScript object:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var obj = eval (&quot;(&quot; + text + &quot;)&quot;);</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The <code>eval()</code> function can compile and execute any JavaScript. This represents a potential security problem. <strong>Try to avoid it</strong>.</p>
+<p>It is safer to use a JSON parser to convert a JSON text to a JavaScript object.</p>
+<ul>
+<li>A JSON parser will recognize only JSON text and will not compile scripts.</li>
+<li>In browsers that provide native JSON support, JSON parsers are also faster.</li>
+</ul>
+<h3 id="Http-Request"><a href="#Http-Request" class="headerlink" title="Http Request"></a>Http Request</h3><ol>
+<li>Create an <strong>array of objects</strong>. Use an <strong>array literal</strong> to declare an array of objects. Give each object two properties: <strong>display</strong> and <strong>url</strong>.</li>
+<li>Create a <strong>JavaScript function</strong> to display the array. Create a function <code>myFunction()</code> that loops the array objects, and display the content as HTML links.</li>
+<li>Create a <strong>text file</strong>. Put the array literal in a file named <code>myTutorials.txt</code>.</li>
+<li>Read the text file with an <strong>XMLHttpRequest</strong>. Write an XMLHttpRequest to read the text file, and use <code>myFunction()</code> to display the array.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;id01&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var xmlhttp = new XMLHttpRequest();</div><div class="line">var url = &quot;myTutorials.txt&quot;;</div><div class="line"></div><div class="line">xmlhttp.onreadystatechange = function() &#123;</div><div class="line">    if (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</div><div class="line">        var myArr = JSON.parse(this.responseText);</div><div class="line">        myFunction(myArr);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xmlhttp.open(&quot;GET&quot;, url, true);</div><div class="line">xmlhttp.send();</div><div class="line"></div><div class="line">function myFunction(arr) &#123;</div><div class="line">    var out = &quot;&quot;;</div><div class="line">    var i;</div><div class="line">    for(i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">        out += &apos;&lt;a href=&quot;&apos; + arr[i].url + &apos;&quot;&gt;&apos; +</div><div class="line">        arr[i].display + &apos;&lt;/a&gt;&lt;br&gt;&apos;;</div><div class="line">    &#125;</div><div class="line">    document.getElementById(&quot;id01&quot;).innerHTML = out;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>myTutorials.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">&#123;</div><div class="line">&quot;display&quot;: &quot;JavaScript Tutorial&quot;,</div><div class="line">&quot;url&quot;: &quot;http://www.w3schools.com/js/default.asp&quot;</div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">&quot;display&quot;: &quot;HTML Tutorial&quot;,</div><div class="line">&quot;url&quot;: &quot;http://www.w3schools.com/html/default.asp&quot;</div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">&quot;display&quot;: &quot;CSS Tutorial&quot;,</div><div class="line">&quot;url&quot;: &quot;http://www.w3schools.com/css/default.asp&quot;</div><div class="line">&#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<h3 id="Function-Files"><a href="#Function-Files" class="headerlink" title="Function Files"></a>Function Files</h3><ol>
+<li>Create an <strong>array of objects</strong>. Use an <strong>array literal</strong> to declare an array of objects. Give each object two properties: <strong>display</strong> and <strong>url</strong>.</li>
+<li>Create a <strong>JavaScript function</strong> to display the array. Create a function <code>myFunction()</code> that loops the array objects, and display the content as HTML links.</li>
+<li>Use an <strong>array literal</strong> as the argument (instead of the array variable).</li>
+<li>Put the function in an external <strong>js file</strong>.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;id01&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function myFunction(arr) &#123;</div><div class="line">    var out = &quot;&quot;;</div><div class="line">    var i;</div><div class="line">    for(i = 0; i&lt;arr.length; i++) &#123;</div><div class="line">        out += &apos;&lt;a href=&quot;&apos; + arr[i].url + &apos;&quot;&gt;&apos; +</div><div class="line">        arr[i].display + &apos;&lt;/a&gt;&lt;br&gt;&apos;;</div><div class="line">    &#125;</div><div class="line">    document.getElementById(&quot;id01&quot;).innerHTML = out;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script src=&quot;myTutorials.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>myTutorials.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">myFunction([</div><div class="line">&#123;</div><div class="line">&quot;display&quot;: &quot;JavaScript Tutorial&quot;,</div><div class="line">&quot;url&quot;: &quot;http://www.w3schools.com/js/default.asp&quot;</div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">&quot;display&quot;: &quot;HTML Tutorial&quot;,</div><div class="line">&quot;url&quot;: &quot;http://www.w3schools.com/html/default.asp&quot;</div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">&quot;display&quot;: &quot;CSS Tutorial&quot;,</div><div class="line">&quot;url&quot;: &quot;http://www.w3schools.com/css/default.asp&quot;</div><div class="line">&#125;</div><div class="line">]);</div></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[JavaScript AJAX 学习笔记]]></title>
-      <url>http://rrkaige.com/2016/11/17/JavaScript-AJAX-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p> 学习 JavaScript HTML DOM，教程来自 <a href="http://www.w3schools.com/js/js_ajax_intro.asp" target="_blank" rel="external">w3schools</a>。</p>
+      <url>http://rrkaige.com/2016/11/17/JavaScript-AJAX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p> 学习 JavaScript AJAX，教程来自 <a href="http://www.w3schools.com/js/js_ajax_intro.asp" target="_blank" rel="external">w3schools</a>。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161117-myblog111-1.jpg" alt="AJAX"></p>
 <a id="more"></a>
 <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>AJAX = <strong>Asynchronous JavaScript And XML</strong>.</p>
@@ -704,7 +803,7 @@
     <entry>
       <title><![CDATA[Javascript BOM 学习笔记]]></title>
       <url>http://rrkaige.com/2016/10/18/Javascript-BOM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p> 学习 JavaScript HTML DOM，教程来自 <a href="http://www.w3schools.com/js/js_window.asp" target="_blank" rel="external">w3schools</a>。</p>
+      <content type="html"><![CDATA[<p> 学习 JavaScript BOM，教程来自 <a href="http://www.w3schools.com/js/js_window.asp" target="_blank" rel="external">w3schools</a>。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161018-myblog81.jpg" alt="I Love Javascript"></p>
 <a id="more"></a>
 <h3 id="Window-The-Browser-Object-Model"><a href="#Window-The-Browser-Object-Model" class="headerlink" title="Window - The Browser Object Model"></a>Window - The Browser Object Model</h3><p>The Browser Object Model (BOM) allows JavaScript to “talk to” the browser.</p>
