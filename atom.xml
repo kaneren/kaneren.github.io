@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-11-18T13:46:09.798Z</updated>
+  <updated>2016-11-19T15:12:22.993Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人 Logo 设计</title>
+    <link href="http://rrkaige.com/2016/11/19/%E4%B8%AA%E4%BA%BALogo%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://rrkaige.com/2016/11/19/个人Logo设计/</id>
+    <published>2016-11-19T14:04:59.000Z</published>
+    <updated>2016-11-19T15:12:22.993Z</updated>
+    
+    <content type="html"><![CDATA[<p>做一个自己独有的 Logo，想想就觉得兴奋。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161119-myblog113-1.png" alt="RK Logo"></p>
+<a id="more"></a>
+<p>看到别人独具一格的个人 Logo，萌生自己设计的想法，说做就做。</p>
+<p>先了解下位图和矢量图的 <a href="http://www.coreldrawchina.com/xinshourumen/weitu-shiliangtu.html" target="_blank" rel="external"> 区别</a>。</p>
+<p>没有 Photoshop，那就用<a href="https://www.gimp.org/" target="_blank" rel="external">GIMP</a>。和 Photoshop 类似的操作，上手很快。</p>
+<p>主要在于设计构思，利用“R”和“K”的变形，组成图案。第一版如下，略显方正。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161119-myblog113-2.png" alt="RK Logo"></p>
+<p>第二版更加抽象化，圆润些许，如下。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161119-myblog113-3.png" alt="RK Logo"></p>
+<p>就此，暂时用着，后续有好的想法再行制作。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;做一个自己独有的Logo，想想就觉得兴奋。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161119-myblog113-1.png&quot; alt=&quot;RK Logo&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="零壹之间" scheme="http://rrkaige.com/categories/%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4/"/>
+    
+    
+      <category term="Logo" scheme="http://rrkaige.com/tags/Logo/"/>
+    
+      <category term="GIMP" scheme="http://rrkaige.com/tags/GIMP/"/>
+    
+  </entry>
   
   <entry>
     <title>JSON 学习笔记</title>
@@ -988,43 +1024,6 @@
       <category term="经历" scheme="http://rrkaige.com/tags/%E7%BB%8F%E5%8E%86/"/>
     
       <category term="喜欢" scheme="http://rrkaige.com/tags/%E5%96%9C%E6%AC%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杭州印象</title>
-    <link href="http://rrkaige.com/2016/10/30/%E6%9D%AD%E5%B7%9E%E5%8D%B0%E8%B1%A1/"/>
-    <id>http://rrkaige.com/2016/10/30/杭州印象/</id>
-    <published>2016-10-30T14:43:04.000Z</published>
-    <updated>2016-10-30T15:20:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p> 昨天，一次面试，前往杭州，这座从未踏足的城市。</p>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161030-myblog93.jpg" alt="Hangzhou"></p>
-<a id="more"></a>
-<p> 面试地点在西溪路，结束出来，天色已晚。沿着干净的街道，很快到了浙大。</p>
-<p> 一进浙大校园，拦住一对情侣，食堂何处？遥指前方不远，喏！好吧，留学生食堂，的确很有特色。不是快餐打菜，而是柜台点菜，但大家又随便坐，等待服务员上菜。点了份蒜蓉空心菜，梅菜扣肉，结果一个略生，一个太齁。好在找位置时遇到雯雯，意大利来的华裔，文静略僵硬的口音，交谈甚欢。</p>
-<p> 浙大的校园很长，这头到那头走了二十分钟。许是太大，虽处处有路灯，依然昏暗。路上有学子，行色匆匆或欢快交谈。也有很多外人，中间路遇到一群广东过来参加培训的，粤语味浓。</p>
-<p> 浙大也有后街，不宽却长。两边都是大栋居民楼，改建成超市旅馆大排档，彩灯、阳伞、秋千，闪耀的霓虹招牌，烤鱼的火炉冒着烟气，玻璃窗内推杯换盏，身着制服相隔不远的辅警，警车灯在夜色下闪烁。</p>
-<p> 终于走到西湖，上了苏堤，笔直宽敞，间或四五座拱桥，起伏很大。坐在堤边长椅上，看远处灯火辉煌，听近处水波阵阵，感觉和玄武湖边差不了多少。</p>
-<p> 继续前进，走走停停，两边都是大树，路灯斑驳，静谧孤独。累了，歇会，挨到车站，腰酸脚疼，今天走了太多路。直接坐公交去房东家，结果又多坐一站。寻寻觅觅，终于到了目的地。开门是位小姐姐，家里干净整洁。洗个热水澡，躺在沙发上。惬意，就这样入眠吧。</p>
-<p> 大清早起来，计划去西湖边看看。到车站公交刚走，不得已等了近半个小时，人多到爆炸。明明周末，还这么多人上班？到处都在修地铁，工地上热火朝天，交通自然拥堵。经过钱塘江大桥，江面不宽，江水浑浊，装沙的大船排成长条。</p>
-<p> 看看时间，坐到西湖问水亭，沿着曲折的岸漫步。碧波荡漾，垂柳依依，廊道回转，拱桥精美。湖面有高大的画舫，摇橹的扁舟，与小岛凑成一副画卷。晨练的老人，欢快的小孩，自拍的游客，吃食的鸽子，还有树间跳跃的松鼠。但，越发觉得和玄武湖如此相似，只是更大，人更多而已。或者说，杭州，和南京是如此的相似。中国的大都市都是如此相似。</p>
-<p> 将将赶上返程的火车，回到大南京，看着车站地铁拥挤的人流，无奈苦笑。杭州，下次再约。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天，一次面试，前往杭州，这座从未踏足的城市。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161030-myblog93.jpg&quot; alt=&quot;Hangzhou&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="尘世行者" scheme="http://rrkaige.com/categories/%E5%B0%98%E4%B8%96%E8%A1%8C%E8%80%85/"/>
-    
-    
-      <category term="经历" scheme="http://rrkaige.com/tags/%E7%BB%8F%E5%8E%86/"/>
-    
-      <category term="杭州" scheme="http://rrkaige.com/tags/%E6%9D%AD%E5%B7%9E/"/>
     
   </entry>
   
