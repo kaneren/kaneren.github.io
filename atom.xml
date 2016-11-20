@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-11-19T15:12:22.993Z</updated>
+  <updated>2016-11-20T15:04:18.500Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,127 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JQuery 学习笔记之一</title>
+    <link href="http://rrkaige.com/2016/11/20/JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%80/"/>
+    <id>http://rrkaige.com/2016/11/20/JQuery学习笔记之一/</id>
+    <published>2016-11-20T13:03:02.000Z</published>
+    <updated>2016-11-20T15:04:18.500Z</updated>
+    
+    <content type="html"><![CDATA[<p> 学习 JQuery，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161120-myblog114.png" alt="JQuery"></p>
+<a id="more"></a>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>jQuery is a lightweight, “write less, do more”, <strong>JavaScript library</strong>.</p>
+<p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+<p>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.</p>
+<p>jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.</p>
+<p>The jQuery library contains the following features:</p>
+<ul>
+<li>HTML/DOM manipulation</li>
+<li>CSS manipulation</li>
+<li>HTML event methods</li>
+<li>Effects and animations</li>
+<li>AJAX</li>
+<li>Utilities</li>
+</ul>
+<p><strong>Note:</strong> The jQuery team knows all about cross-browser issues, and they have written this knowledge into the jQuery library. jQuery will run exactly the same in all major browsers, including Internet Explorer 6!</p>
+<h3 id="Get-Started"><a href="#Get-Started" class="headerlink" title="Get Started"></a>Get Started</h3><p>Downloading jQuery</p>
+<p>There are two versions of jQuery available for downloading:</p>
+<ul>
+<li>Production version - this is for your live website because it has been minified and compressed</li>
+<li>Development version - this is for testing and development (uncompressed and readable code)</li>
+</ul>
+<p>Both versions can be downloaded from jQuery.com.</p>
+<p>The jQuery library is a single JavaScript file, and you reference it with the HTML <code>&lt;script&gt;</code> tag (notice that the <code>&lt;script&gt;</code> tag should be inside the <code>&lt;head&gt;</code> section):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
+<p><strong>Tip:</strong> Place the downloaded file in the same directory as the pages where you wish to use it.</p>
+<p>Do you wonder why we do not have type=”text/javascript” inside the <code>&lt;script&gt;</code> tag?</p>
+<p>This is not required in HTML5. JavaScript is the default scripting language in HTML5 and in all modern browsers!</p>
+<p>jQuery CDN</p>
+<p>If you don’t want to download and host jQuery yourself, you can include it from a CDN (Content Delivery Network).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><p>The jQuery syntax is tailor-made for <strong>selecting</strong> HTML elements and performing some <strong>action</strong> on the element(s).</p>
+<p>Basic syntax is: <code>$(selector).action()</code></p>
+<ul>
+<li>A $ sign to define/access jQuery</li>
+<li>A (selector) to “query (or find)” HTML elements</li>
+<li>A jQuery <code>action()</code> to be performed on the element(s)</li>
+</ul>
+<p>All jQuery methods in our examples, are inside a document ready event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">   // jQuery methods go here...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>This is to prevent any jQuery code from running before the document is finished loading (is ready).</p>
+<p><strong>Tip:</strong> The jQuery team has also created an even shorter method for the document ready event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">   // jQuery methods go here...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h3><p>jQuery selectors allow you to select and manipulate HTML element(s).</p>
+<p>jQuery selectors are used to “find” (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It’s based on the existing CSS Selectors, and in addition, it has some own custom selectors.</p>
+<p>All selectors in jQuery start with the dollar sign and parentheses: <code>$()</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;p&quot;)</div><div class="line">$(&quot;#test&quot;)</div><div class="line">$(&quot;.test&quot;)</div></pre></td></tr></table></figure>
+<h3 id="Event-Methods"><a href="#Event-Methods" class="headerlink" title="Event Methods"></a>Event Methods</h3><p>All the different visitor’s actions that a web page can respond to are called events.</p>
+<p>The term “<strong>fires/fired</strong>“ is often used with events. Example: “The keypress event is fired, the moment you press a key”.</p>
+<p>Here are some common DOM events:</p>
+<table>
+<thead>
+<tr>
+<th>Mouse Events</th>
+<th>Keyboard Events</th>
+<th>Form Events</th>
+<th>Document/Window Events</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>click</td>
+<td>keypress</td>
+<td>submit</td>
+<td>load</td>
+</tr>
+<tr>
+<td>dblclick</td>
+<td>keydown</td>
+<td>change</td>
+<td>resize</td>
+</tr>
+<tr>
+<td>mouseenter</td>
+<td>keyup</td>
+<td>focus</td>
+<td>scroll</td>
+</tr>
+<tr>
+<td>mouseleave</td>
+<td></td>
+<td>blur</td>
+<td>unload</td>
+</tr>
+</tbody>
+</table>
+<p>In jQuery, most DOM events have an equivalent jQuery method.</p>
+<p>To assign a click event to all paragraphs on a page, you can do this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;p&quot;).click();</div></pre></td></tr></table></figure>
+<p>The next step is to define what should happen when the event fires. You must pass a function to the event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;p&quot;).click(function()&#123;</div><div class="line">  // action goes here!!</div><div class="line">&#125;);</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习JQuery，教程来自&lt;a href=&quot;http://www.w3schools.com/jquery/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161120-myblog114.png&quot; alt=&quot;JQuery&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
+    
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
+    
+      <category term="JQuery" scheme="http://rrkaige.com/tags/JQuery/"/>
+    
+  </entry>
   
   <entry>
     <title>个人 Logo 设计</title>
@@ -692,11 +813,11 @@
       <category term="零壹之间" scheme="http://rrkaige.com/categories/%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4/"/>
     
     
-      <category term="GitHub" scheme="http://rrkaige.com/tags/GitHub/"/>
-    
       <category term="Hexo" scheme="http://rrkaige.com/tags/Hexo/"/>
     
       <category term="NexT" scheme="http://rrkaige.com/tags/NexT/"/>
+    
+      <category term="GitHub" scheme="http://rrkaige.com/tags/GitHub/"/>
     
       <category term="Contribution" scheme="http://rrkaige.com/tags/Contribution/"/>
     
@@ -976,54 +1097,6 @@
       <category term="随笔" scheme="http://rrkaige.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="天气" scheme="http://rrkaige.com/tags/%E5%A4%A9%E6%B0%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>幻灭的美好</title>
-    <link href="http://rrkaige.com/2016/10/31/%E5%B9%BB%E7%81%AD%E7%9A%84%E7%BE%8E%E5%A5%BD/"/>
-    <id>http://rrkaige.com/2016/10/31/幻灭的美好/</id>
-    <published>2016-10-31T14:35:42.000Z</published>
-    <updated>2016-11-03T05:53:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p> 苏堤春晓，此处无声，欲问西子，佳人奈何。</p>
-<p> 水光潋滟晴方好，除却巫山不见云。</p>
-</blockquote>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161031-myblog94.jpeg" alt="Only You"></p>
-<a id="more"></a>
-<p> 就像流星划过天空，我的爱情，半途夭折。</p>
-<p> 昨天，返程的火车上，我终于问出心底的疑惑。</p>
-<p> 那你有男朋友么？</p>
-<p> 我有丈夫。</p>
-<p> 好吧。早有准备的我，犹豫半天敲出这七个字的我，忐忑不安点击发送的我，仿佛被抽干了所有气力，如释重负又满心苦涩。</p>
-<p> 为什么？</p>
-<p> 前天，我一路睡到杭州，在拥挤的地铁中询问。她已结束面试，上了去火车站的公交。就这么擦肩而过。我笑言她轻轻的来，悄悄的走。结果，一语成谶。</p>
-<p> 前晚，夜游西湖，在苏堤的桥上，我写下了第一句。奈何奈何？</p>
-<p> 昨天，逛完西湖，和她瞎聊。在火车站错误的检票口傻等，差点误了车次。她是如此的独特！独来独往，随心任性，不悲过去，只做能掌控的事。一句一句，我笑言她有人生导师的即视感。她直言只和有想法的人多说，所以女性朋友不多，反而容易和男生处朋友。于是，回到开头的一幕。</p>
-<p> 过程大抵如此。</p>
-<p> 铁锤砸碎了幻镜，我也随之放开。越深入了解，越惊讶万分。他们夫妻的关系，相处的态度，相互吸引又完全独立，仿若小说中的情节。我只能惊叹，赞叹，感叹，别无他念。</p>
-<p> 这短短一周，仿若过山车般。回味，咀嚼，我写下了第二句。不见云呵。</p>
-<p> 我的爱情，妳在哪里？</p>
-<p> 就这样吧。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;苏堤春晓，此处无声，欲问西子，佳人奈何。&lt;/p&gt;
-&lt;p&gt;水光潋滟晴方好，除却巫山不见云。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161031-myblog94.jpeg&quot; alt=&quot;Only You&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="尘世行者" scheme="http://rrkaige.com/categories/%E5%B0%98%E4%B8%96%E8%A1%8C%E8%80%85/"/>
-    
-    
-      <category term="经历" scheme="http://rrkaige.com/tags/%E7%BB%8F%E5%8E%86/"/>
-    
-      <category term="喜欢" scheme="http://rrkaige.com/tags/%E5%96%9C%E6%AC%A2/"/>
     
   </entry>
   

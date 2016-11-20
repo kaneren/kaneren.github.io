@@ -4,6 +4,104 @@
   
     
     <entry>
+      <title><![CDATA[JQuery 学习笔记之一]]></title>
+      <url>http://rrkaige.com/2016/11/20/JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%80/</url>
+      <content type="html"><![CDATA[<p> 学习 JQuery，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161120-myblog114.png" alt="JQuery"></p>
+<a id="more"></a>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>jQuery is a lightweight, “write less, do more”, <strong>JavaScript library</strong>.</p>
+<p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+<p>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.</p>
+<p>jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.</p>
+<p>The jQuery library contains the following features:</p>
+<ul>
+<li>HTML/DOM manipulation</li>
+<li>CSS manipulation</li>
+<li>HTML event methods</li>
+<li>Effects and animations</li>
+<li>AJAX</li>
+<li>Utilities</li>
+</ul>
+<p><strong>Note:</strong> The jQuery team knows all about cross-browser issues, and they have written this knowledge into the jQuery library. jQuery will run exactly the same in all major browsers, including Internet Explorer 6!</p>
+<h3 id="Get-Started"><a href="#Get-Started" class="headerlink" title="Get Started"></a>Get Started</h3><p>Downloading jQuery</p>
+<p>There are two versions of jQuery available for downloading:</p>
+<ul>
+<li>Production version - this is for your live website because it has been minified and compressed</li>
+<li>Development version - this is for testing and development (uncompressed and readable code)</li>
+</ul>
+<p>Both versions can be downloaded from jQuery.com.</p>
+<p>The jQuery library is a single JavaScript file, and you reference it with the HTML <code>&lt;script&gt;</code> tag (notice that the <code>&lt;script&gt;</code> tag should be inside the <code>&lt;head&gt;</code> section):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
+<p><strong>Tip:</strong> Place the downloaded file in the same directory as the pages where you wish to use it.</p>
+<p>Do you wonder why we do not have type=”text/javascript” inside the <code>&lt;script&gt;</code> tag?</p>
+<p>This is not required in HTML5. JavaScript is the default scripting language in HTML5 and in all modern browsers!</p>
+<p>jQuery CDN</p>
+<p>If you don’t want to download and host jQuery yourself, you can include it from a CDN (Content Delivery Network).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;script src=&quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><p>The jQuery syntax is tailor-made for <strong>selecting</strong> HTML elements and performing some <strong>action</strong> on the element(s).</p>
+<p>Basic syntax is: <code>$(selector).action()</code></p>
+<ul>
+<li>A $ sign to define/access jQuery</li>
+<li>A (selector) to “query (or find)” HTML elements</li>
+<li>A jQuery <code>action()</code> to be performed on the element(s)</li>
+</ul>
+<p>All jQuery methods in our examples, are inside a document ready event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">   // jQuery methods go here...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>This is to prevent any jQuery code from running before the document is finished loading (is ready).</p>
+<p><strong>Tip:</strong> The jQuery team has also created an even shorter method for the document ready event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">   // jQuery methods go here...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h3><p>jQuery selectors allow you to select and manipulate HTML element(s).</p>
+<p>jQuery selectors are used to “find” (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It’s based on the existing CSS Selectors, and in addition, it has some own custom selectors.</p>
+<p>All selectors in jQuery start with the dollar sign and parentheses: <code>$()</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;p&quot;)</div><div class="line">$(&quot;#test&quot;)</div><div class="line">$(&quot;.test&quot;)</div></pre></td></tr></table></figure>
+<h3 id="Event-Methods"><a href="#Event-Methods" class="headerlink" title="Event Methods"></a>Event Methods</h3><p>All the different visitor’s actions that a web page can respond to are called events.</p>
+<p>The term “<strong>fires/fired</strong>“ is often used with events. Example: “The keypress event is fired, the moment you press a key”.</p>
+<p>Here are some common DOM events:</p>
+<table>
+<thead>
+<tr>
+<th>Mouse Events</th>
+<th>Keyboard Events</th>
+<th>Form Events</th>
+<th>Document/Window Events</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>click</td>
+<td>keypress</td>
+<td>submit</td>
+<td>load</td>
+</tr>
+<tr>
+<td>dblclick</td>
+<td>keydown</td>
+<td>change</td>
+<td>resize</td>
+</tr>
+<tr>
+<td>mouseenter</td>
+<td>keyup</td>
+<td>focus</td>
+<td>scroll</td>
+</tr>
+<tr>
+<td>mouseleave</td>
+<td></td>
+<td>blur</td>
+<td>unload</td>
+</tr>
+</tbody>
+</table>
+<p>In jQuery, most DOM events have an equivalent jQuery method.</p>
+<p>To assign a click event to all paragraphs on a page, you can do this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;p&quot;).click();</div></pre></td></tr></table></figure>
+<p>The next step is to define what should happen when the event fires. You must pass a function to the event:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;p&quot;).click(function()&#123;</div><div class="line">  // action goes here!!</div><div class="line">&#125;);</div></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[个人 Logo 设计]]></title>
       <url>http://rrkaige.com/2016/11/19/%E4%B8%AA%E4%BA%BALogo%E8%AE%BE%E8%AE%A1/</url>
       <content type="html"><![CDATA[<p>做一个自己独有的 Logo，想想就觉得兴奋。</p>
