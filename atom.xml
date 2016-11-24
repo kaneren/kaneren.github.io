@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-11-22T14:01:05.095Z</updated>
+  <updated>2016-11-24T12:14:31.585Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,134 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JQuery 学习笔记之三</title>
+    <link href="http://rrkaige.com/2016/11/23/JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%89/"/>
+    <id>http://rrkaige.com/2016/11/23/JQuery学习笔记之三/</id>
+    <published>2016-11-23T15:12:30.000Z</published>
+    <updated>2016-11-24T12:14:31.585Z</updated>
+    
+    <content type="html"><![CDATA[<p> 学习 JQuery，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161123-myblog117.png" alt="JQuery"></p>
+<a id="more"></a>
+<h3 id="Traversing"><a href="#Traversing" class="headerlink" title="Traversing"></a>Traversing</h3><p>jQuery traversing, which means “move through”, are used to “find” (or select) HTML elements based on their relation to other elements. Start with one selection and move through that selection until you reach the elements you desire.</p>
+<ul>
+<li>An ancestor is a parent, grandparent, great-grandparent, and so on.</li>
+<li>A descendant is a child, grandchild, great-grandchild, and so on.</li>
+<li>Siblings share the same parent.</li>
+</ul>
+<h3 id="Ancestors"><a href="#Ancestors" class="headerlink" title="Ancestors"></a>Ancestors</h3><p>Three useful jQuery methods for traversing up the DOM tree are:</p>
+<ul>
+<li>The <code>parent()</code> method returns the direct parent element of the selected element. This method only traverse a single level up the DOM tree.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;span&quot;).parent().css(&#123;&quot;color&quot;: &quot;red&quot;, &quot;border&quot;: &quot;2px solid red&quot;&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>parents()</code> method returns all ancestor elements of the selected element, all the way up to the document’s root element (<code>&lt;html&gt;</code>). You can also use an optional parameter to filter the search for ancestors.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;span&quot;).parents(&quot;ul&quot;).css(&#123;&quot;color&quot;: &quot;red&quot;, &quot;border&quot;: &quot;2px solid red&quot;&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>parentsUntil()</code> method returns all ancestor elements between two given arguments.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;span&quot;).parentsUntil(&quot;div&quot;).css(&#123;&quot;color&quot;: &quot;red&quot;, &quot;border&quot;: &quot;2px solid red&quot;&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Descendants"><a href="#Descendants" class="headerlink" title="Descendants"></a>Descendants</h3><p>Two useful jQuery methods for traversing down the DOM tree are:</p>
+<ul>
+<li>The <code>children()</code> method returns all direct children of the selected element. This method only traverse a single level down the DOM tree. You can also use an optional parameter to filter the search for children.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;div&quot;).children().css(&#123;&quot;color&quot;: &quot;red&quot;, &quot;border&quot;: &quot;2px solid red&quot;&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;div&quot;).children(&quot;p.first&quot;).css(&#123;&quot;color&quot;: &quot;red&quot;, &quot;border&quot;: &quot;2px solid red&quot;&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>find()</code> method returns descendant elements of the selected element, all the way down to the last descendant.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;div&quot;).find(&quot;*&quot;).css(&#123;&quot;color&quot;: &quot;red&quot;, &quot;border&quot;: &quot;2px solid red&quot;&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Siblings"><a href="#Siblings" class="headerlink" title="Siblings"></a>Siblings</h3><ul>
+<li>The <code>siblings()</code> method returns all sibling elements of the selected element. You can also use an optional parameter to filter the search for siblings.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;h2&quot;).siblings(&quot;p&quot;).css(&#123;&quot;color&quot;: &quot;red&quot;, &quot;border&quot;: &quot;2px solid red&quot;&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>next()</code> method returns the next sibling element of the selected element.</li>
+<li>The <code>nextAll()</code> method returns all next sibling elements of the selected element.</li>
+<li>The <code>nextUntil()</code> method returns all next sibling elements between two given arguments.</li>
+<li>The <code>prev()</code>, <code>prevAll()</code> and <code>prevUntil()</code> methods work just like the methods above but with reverse functionality: they return previous sibling elements (traverse backwards along sibling elements in the DOM tree, instead of forward).</li>
+</ul>
+<h3 id="Filtering"><a href="#Filtering" class="headerlink" title="Filtering"></a>Filtering</h3><ul>
+<li>The <code>first()</code> method returns the first element of the selected elements.</li>
+<li>The <code>last()</code> method returns the last element of the selected elements.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;div p&quot;).first().css(&quot;background-color&quot;, &quot;yellow&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>eq()</code> method returns an element with a specific index number of the selected elements. The index numbers start at 0, so the first element will have the index number 0 and not 1.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;p&quot;).eq(1).css(&quot;background-color&quot;, &quot;yellow&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>filter()</code> method lets you specify a criteria. Elements that do not match the criteria are removed from the selection, and those that match will be returned.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;p&quot;).filter(&quot;.intro&quot;).css(&quot;background-color&quot;, &quot;yellow&quot;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The <code>not()</code> method returns all elements that do not match the criteria.</li>
+</ul>
+<p><strong>Tip:</strong> The <code>not()</code> method is the opposite of <code>filter()</code>.</p>
+<h3 id="AJAX-load-Method"><a href="#AJAX-load-Method" class="headerlink" title="AJAX load() Method"></a>AJAX load() Method</h3><p>The <code>load()</code> method loads data from a server and puts the returned data into the selected element.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(selector).load(URL,data,callback);</div></pre></td></tr></table></figure>
+<ul>
+<li>The required URL parameter specifies the URL you wish to load.</li>
+<li>The optional data parameter specifies a set of querystring key/value pairs to send along with the request.</li>
+<li>The optional callback parameter is the name of a function to be executed after the <code>load()</code> method is completed.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;button&quot;).click(function()&#123;</div><div class="line">        $(&quot;#div1&quot;).load(&quot;demo_test.txt #p1&quot;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>The optional callback parameter specifies a callback function to run when the <code>load()</code> method is completed. The callback function can have different parameters:</p>
+<ul>
+<li>responseTxt - contains the resulting content if the call succeeds</li>
+<li>statusTxt - contains the status of the call</li>
+<li>xhr - contains the XMLHttpRequest object</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;button&quot;).click(function()&#123;</div><div class="line">        $(&quot;#div1&quot;).load(&quot;demo_test.txt&quot;, function(responseTxt, statusTxt, xhr)&#123;</div><div class="line">            if(statusTxt == &quot;success&quot;)</div><div class="line">                alert(&quot;External content loaded successfully!&quot;);</div><div class="line">            if(statusTxt == &quot;error&quot;)</div><div class="line">                alert(&quot;Error: &quot; + xhr.status + &quot;: &quot; + xhr.statusText);</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="AJAX-get-and-post-Methods"><a href="#AJAX-get-and-post-Methods" class="headerlink" title="AJAX get() and post() Methods"></a>AJAX get() and post() Methods</h3><p>The <code>$.get()</code> method requests data from the server with an HTTP GET request.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.get(URL,callback);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;button&quot;).click(function()&#123;</div><div class="line">        $.get(&quot;demo_test.asp&quot;, function(data, status)&#123;</div><div class="line">            alert(&quot;Data: &quot; + data + &quot;\nStatus: &quot; + status);</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The first parameter of <code>$.get()</code> is the URL we wish to request (“demo_test.asp”).</li>
+<li>The second parameter is a callback function. The first callback parameter holds the content of the page requested, and the second callback parameter holds the status of the request.</li>
+</ul>
+<p><strong>Tip:</strong> Here is how the ASP file looks like (“demo_test.asp”):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;%</div><div class="line">response.write(&quot;This is some text from an external ASP file.&quot;)</div><div class="line">%&gt;</div></pre></td></tr></table></figure>
+<p>The <code>$.post()</code> method requests data from the server using an HTTP POST request.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.post(URL,data,callback);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;button&quot;).click(function()&#123;</div><div class="line">        $.post(&quot;demo_test_post.asp&quot;,</div><div class="line">        &#123;</div><div class="line">          name: &quot;Donald Duck&quot;,</div><div class="line">          city: &quot;Duckburg&quot;</div><div class="line">        &#125;,</div><div class="line">        function(data,status)&#123;</div><div class="line">            alert(&quot;Data: &quot; + data + &quot;\nStatus: &quot; + status);</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>The first parameter of <code>$.post()</code> is the URL we wish to request (“demo_test_post.asp”).</li>
+<li>Then we pass in some data to send along with the request (name and city).</li>
+<li>The ASP script in “demo_test_post.asp” reads the parameters, processes them, and returns a result.</li>
+<li>The third parameter is a callback function. The first callback parameter holds the content of the page requested, and the second callback parameter holds the status of the request.</li>
+</ul>
+<p><strong>Tip:</strong> Here is how the ASP file looks like (“demo_test_post.asp”):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;%</div><div class="line">dim fname,city</div><div class="line">fname=Request.Form(&quot;name&quot;)</div><div class="line">city=Request.Form(&quot;city&quot;)</div><div class="line">Response.Write(&quot;Dear &quot; &amp; fname &amp; &quot;. &quot;)</div><div class="line">Response.Write(&quot;Hope you live well in &quot; &amp; city &amp; &quot;.&quot;)</div><div class="line">%&gt;</div></pre></td></tr></table></figure>
+<h3 id="The-noConflict-Method"><a href="#The-noConflict-Method" class="headerlink" title="The noConflict() Method"></a>The noConflict() Method</h3><p>The <code>noConflict()</code> method releases the hold on the $ shortcut identifier, so that other scripts can use it.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$.noConflict();</div><div class="line">jQuery(document).ready(function()&#123;</div><div class="line">    jQuery(&quot;button&quot;).click(function()&#123;</div><div class="line">        jQuery(&quot;p&quot;).text(&quot;jQuery is still working!&quot;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>You can also create your own shortcut very easily. The <code>noConflict()</code> method returns a reference to jQuery, that you can save in a variable, for later use.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var jq = $.noConflict();</div><div class="line">jq(document).ready(function()&#123;</div><div class="line">    jq(&quot;button&quot;).click(function()&#123;</div><div class="line">        jq(&quot;p&quot;).text(&quot;jQuery is still working!&quot;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>If you have a block of jQuery code which uses the $ shortcut and you do not want to change it all, you can pass the $ sign in as a parameter to the ready method. This allows you to access jQuery using $, inside this function - outside of it, you will have to use “jQuery”:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$.noConflict();</div><div class="line">jQuery(document).ready(function($)&#123;</div><div class="line">    $(&quot;button&quot;).click(function()&#123;</div><div class="line">        $(&quot;p&quot;).text(&quot;jQuery is still working!&quot;);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习JQuery，教程来自&lt;a href=&quot;http://www.w3schools.com/jquery/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161123-myblog117.png&quot; alt=&quot;JQuery&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
+    
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
+    
+      <category term="JQuery" scheme="http://rrkaige.com/tags/JQuery/"/>
+    
+  </entry>
   
   <entry>
     <title>域名</title>
@@ -1004,11 +1132,11 @@
       <category term="零壹之间" scheme="http://rrkaige.com/categories/%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4/"/>
     
     
-      <category term="GitHub" scheme="http://rrkaige.com/tags/GitHub/"/>
-    
       <category term="Hexo" scheme="http://rrkaige.com/tags/Hexo/"/>
     
       <category term="NexT" scheme="http://rrkaige.com/tags/NexT/"/>
+    
+      <category term="GitHub" scheme="http://rrkaige.com/tags/GitHub/"/>
     
       <category term="Contribution" scheme="http://rrkaige.com/tags/Contribution/"/>
     
@@ -1146,77 +1274,6 @@
       <category term="Java" scheme="http://rrkaige.com/tags/Java/"/>
     
       <category term="开发环境" scheme="http://rrkaige.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新装备</title>
-    <link href="http://rrkaige.com/2016/11/03/%E6%96%B0%E8%A3%85%E5%A4%87/"/>
-    <id>http://rrkaige.com/2016/11/03/新装备/</id>
-    <published>2016-11-03T05:02:38.000Z</published>
-    <updated>2016-11-03T15:26:40.979Z</updated>
-    
-    <content type="html"><![CDATA[<p>思虑良久，换了新的手提电脑。</p>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161103-myblog97.jpg-b" alt="Laptop"></p>
-<a id="more"></a>
-<p>正赶上双十一，到处大促销。在 JD 上寻找比较三天，挑中了现在这款，华硕飞行堡垒 FX-PRO。刚上大学买的华硕笔记本用到现在依然不错，不愧“华硕品质，坚如磐石”。</p>
-<p>凌晨下单，下午就到货。拆箱开机，摸起来爱不释手。配置大致如下：</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>配置</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>处理器</td>
-<td>Intel i5-6300HQ，2.3 GHz，三级缓存 6 M</td>
-</tr>
-<tr>
-<td>芯片组</td>
-<td>Intel HM170 PCH</td>
-</tr>
-<tr>
-<td>内存</td>
-<td>8GB，DDR4 2133 MHz，2 x SODIMM</td>
-</tr>
-<tr>
-<td>显卡</td>
-<td>独显：NV GTX 960M，核显：Intel HD Graphics 530，2 GB GDDR5</td>
-</tr>
-<tr>
-<td>固态硬盘</td>
-<td>128 G</td>
-</tr>
-<tr>
-<td>机械硬盘</td>
-<td>1 T，5400 转 / 分钟</td>
-</tr>
-</tbody>
-</table>
-<p>运行良好，完全足够日常使用。售价 5000 多，12 期无息，以后每月需还款 400 多。</p>
-<p>接下来，就是枯燥繁重的安装软件过程。除去日常必需，还有就是 Git，Thunderbird 和个人博客了。</p>
-<p>迁移个人博客时，遇到太多状况外。参照以前建个人博客的文章，以及这篇 <a href="http://puhemo.xyz/2016/06/03/hexo-change-pc/" target="_blank" rel="external"> 帮助</a>。大体分两步，先按照正常步骤把文件夹初始化做好，然后将必须的文件转移覆盖。</p>
-<p>安装 Node 时，最新 6.9.1 LTS 版本问题多多，无法解决，不得已换成 4.4.4 LTS 版本，还得手动安装必要的 modules。发布时正好遇到 NexT 出问题，主页只显示空白背景，多次尝试后无解，上网搜索才发现是集体状况，<a href="https://github.com/iissnan/hexo-theme-next/issues/1214" target="_blank" rel="external">解决办法</a>。</p>
-<p>终于搞定，心累，但也开心。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;思虑良久，换了新的手提电脑。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161103-myblog97.jpg-b&quot; alt=&quot;Laptop&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="零壹之间" scheme="http://rrkaige.com/categories/%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4/"/>
-    
-    
-      <category term="Hexo" scheme="http://rrkaige.com/tags/Hexo/"/>
-    
-      <category term="NexT" scheme="http://rrkaige.com/tags/NexT/"/>
-    
-      <category term="电脑" scheme="http://rrkaige.com/tags/%E7%94%B5%E8%84%91/"/>
     
   </entry>
   
