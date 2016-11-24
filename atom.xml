@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-11-24T12:14:31.585Z</updated>
+  <updated>2016-11-24T14:44:52.106Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>原创何在</title>
+    <link href="http://rrkaige.com/2016/11/24/%E5%8E%9F%E5%88%9B%E4%BD%95%E5%9C%A8/"/>
+    <id>http://rrkaige.com/2016/11/24/原创何在/</id>
+    <published>2016-11-24T14:00:31.000Z</published>
+    <updated>2016-11-24T14:44:52.106Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p> 熙来攘往的中国电视，终于容不下这唯一一档以原创为核心的音乐真人秀，慨当以叹！——刘欢 </p>
+</blockquote>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161124-myblog118.jpg" alt="Monkey King: Hero Is Back"></p>
+<a id="more"></a>
+<p> 食堂，电视正播放某个音乐选秀节目，女歌手翻唱一首英文歌，声嘶力竭，极其熟悉。突然发现很无聊，当年也追过这类节目，现在觉得就是浪费时间。一场场秀，除了翻唱还是翻唱，或许有不同的味道，大多依然平淡无奇。节目的噱头更多在于灯光乐器舞蹈外貌故事，谁还去关注音乐本身呢。回顾往年节目，又有几个选手真正闯出一片天。娱乐罢了。</p>
+<p> 网易云音乐最近总推送日语歌，听到太多熟悉的旋律。原来，华语翻唱如此之多。底下评论中，如我一般惊讶者不少，看来大家都在井底呆太久。现在想来，杰伦作为中国风开创者确实功不可没。</p>
+<p> 开头是最近刘欢老师的感慨，《中国好歌曲》据说要停摆。纷扰的世界，大环境和小环境都不适应吧。回想那时，听到《野子》，《悟空》，《卷珠帘》的惊喜，至今仍在。可惜可叹。</p>
+<p> 看音乐界的原创如此艰难，纷纷扰扰净是唯利主义。其他行业何尝不是？软件，同样抄袭成风，开源也是步履维艰。两者的平衡，如此难以把控。生活的重担，如何能说放就放？短暂的一生，到底该怎样活？</p>
+<p> 但愿，浮世之中，能保持一颗初心。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=33162226&auto=1&height=66"></iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;熙来攘往的中国电视，终于容不下这唯一一档以原创为核心的音乐真人秀，慨当以叹！——刘欢&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161124-myblog118.jpg&quot; alt=&quot;Monkey King: Hero Is Back&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="尘世行者" scheme="http://rrkaige.com/categories/%E5%B0%98%E4%B8%96%E8%A1%8C%E8%80%85/"/>
+    
+    
+      <category term="随笔" scheme="http://rrkaige.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="音乐" scheme="http://rrkaige.com/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+      <category term="原创" scheme="http://rrkaige.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>JQuery 学习笔记之三</title>
@@ -614,11 +653,11 @@
   </entry>
   
   <entry>
-    <title>JavaScript AJAX 学习笔记</title>
-    <link href="http://rrkaige.com/2016/11/17/JavaScript-AJAX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://rrkaige.com/2016/11/17/JavaScript-AJAX学习笔记/</id>
+    <title>AJAX 学习笔记</title>
+    <link href="http://rrkaige.com/2016/11/17/AJAX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://rrkaige.com/2016/11/17/AJAX学习笔记/</id>
     <published>2016-11-17T01:45:01.000Z</published>
-    <updated>2016-11-18T01:31:46.900Z</updated>
+    <updated>2016-11-24T12:44:20.211Z</updated>
     
     <content type="html"><![CDATA[<p> 学习 JavaScript AJAX，教程来自 <a href="http://www.w3schools.com/js/js_ajax_intro.asp" target="_blank" rel="external">w3schools</a>。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161117-myblog111-1.jpg" alt="AJAX"></p>
@@ -1132,11 +1171,11 @@
       <category term="零壹之间" scheme="http://rrkaige.com/categories/%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4/"/>
     
     
+      <category term="GitHub" scheme="http://rrkaige.com/tags/GitHub/"/>
+    
       <category term="Hexo" scheme="http://rrkaige.com/tags/Hexo/"/>
     
       <category term="NexT" scheme="http://rrkaige.com/tags/NexT/"/>
-    
-      <category term="GitHub" scheme="http://rrkaige.com/tags/GitHub/"/>
     
       <category term="Contribution" scheme="http://rrkaige.com/tags/Contribution/"/>
     
@@ -1239,41 +1278,6 @@
       <category term="随笔" scheme="http://rrkaige.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="朋友" scheme="http://rrkaige.com/tags/%E6%9C%8B%E5%8F%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 开发环境搭建</title>
-    <link href="http://rrkaige.com/2016/11/04/Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://rrkaige.com/2016/11/04/Java开发环境搭建/</id>
-    <published>2016-11-04T03:33:22.000Z</published>
-    <updated>2016-11-04T12:58:19.833Z</updated>
-    
-    <content type="html"><![CDATA[<p>新电脑，重新搭建 Java 开发环境，记录下来，以备后用。</p>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161104-myblog98.jpg" alt="Java"></p>
-<a id="more"></a>
-<p>老规矩，下载 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Java SE</a>，安装之后配置环境变量，参照这篇<a href="http://www.runoob.com/java/java-environment-setup.html" target="_blank" rel="external"> 文章 </a>。至于原因，这篇<a href="http://blog.csdn.net/u010297957/article/details/51334951" target="_blank" rel="external"> 文章 </a> 解释很清楚。在系统变量中添加<code>JAVA_HOME</code>，<code>C:\Program Files\Java\jdk1.8.0_112</code>，在用户变量中添加<code>PATH</code>，<code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code>。在运行中键入命令: <code>java -version</code>、<code>java</code>、<code>javac</code>，查看结果。</p>
-<p>写一个 Hello World 小程序<code>HelloWorld.java</code>，进行测试。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public class HelloWorld &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        System.out.println(&quot;Hello World!&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>在运行中键入<code>javac HelloWorld.java</code>，<code>java HelloWorld</code>，查看结果。</p>
-<p>接下来，下载 <a href="https://www.eclipse.org/downloads/eclipse-packages/" target="_blank" rel="external">Eclipse IDE for Java Developers</a> 安装包，解压后打开即可用。参照这篇 <a href="http://wiki.jikexueyuan.com/project/eclipse/eclipse-install.html" target="_blank" rel="external"> 文章</a>。</p>
-<p>导入 Java 项目，以 leetcode 为例。使用 GitHub 将项目 Clone 到本地，在 Eclipse 中 Import，使用<code>Git → Projects from Git</code>，一步步添加即可。Git 中的项目带有黄色方块角标（Indicates that the resource is under version control）。</p>
-<p>如此，准备工作基本完成。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;新电脑，重新搭建Java开发环境，记录下来，以备后用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161104-myblog98.jpg&quot; alt=&quot;Java&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="零壹之间" scheme="http://rrkaige.com/categories/%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4/"/>
-    
-    
-      <category term="Java" scheme="http://rrkaige.com/tags/Java/"/>
-    
-      <category term="开发环境" scheme="http://rrkaige.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
