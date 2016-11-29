@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-11-27T15:04:23.293Z</updated>
+  <updated>2016-11-29T11:58:53.273Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL 学习笔记之二</title>
+    <link href="http://rrkaige.com/2016/11/29/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%BA%8C/"/>
+    <id>http://rrkaige.com/2016/11/29/SQL学习笔记之二/</id>
+    <published>2016-11-29T11:58:53.000Z</published>
+    <updated>2016-11-29T11:58:53.273Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="-b" alt=""></p>
+<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;-b&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="尘世行者 技多压身 书里时光 影里偷闲 零壹之间 Web征途" scheme="http://rrkaige.com/categories/%E5%B0%98%E4%B8%96%E8%A1%8C%E8%80%85-%E6%8A%80%E5%A4%9A%E5%8E%8B%E8%BA%AB-%E4%B9%A6%E9%87%8C%E6%97%B6%E5%85%89-%E5%BD%B1%E9%87%8C%E5%81%B7%E9%97%B2-%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4-Web%E5%BE%81%E9%80%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>总是糊涂</title>
@@ -164,9 +186,9 @@
     <link href="http://rrkaige.com/2016/11/23/JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%89/"/>
     <id>http://rrkaige.com/2016/11/23/JQuery学习笔记之三/</id>
     <published>2016-11-23T15:12:30.000Z</published>
-    <updated>2016-11-24T12:14:31.585Z</updated>
+    <updated>2016-11-29T15:01:13.102Z</updated>
     
-    <content type="html"><![CDATA[<p> 学习 JQuery，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+    <content type="html"><![CDATA[<p> 继续学习，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161123-myblog117.png" alt="JQuery"></p>
 <a id="more"></a>
 <h3 id="Traversing"><a href="#Traversing" class="headerlink" title="Traversing"></a>Traversing</h3><p>jQuery traversing, which means “move through”, are used to “find” (or select) HTML elements based on their relation to other elements. Start with one selection and move through that selection until you reach the elements you desire.</p>
@@ -269,7 +291,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;学习JQuery，教程来自&lt;a href=&quot;http://www.w3schools.com/jquery/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
+      &lt;p&gt;继续学习，教程来自&lt;a href=&quot;http://www.w3schools.com/jquery/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161123-myblog117.png&quot; alt=&quot;JQuery&quot; /&gt;&lt;/p&gt;
     
     </summary>
@@ -340,9 +362,9 @@
     <link href="http://rrkaige.com/2016/11/21/JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%BA%8C/"/>
     <id>http://rrkaige.com/2016/11/21/JQuery学习笔记之二/</id>
     <published>2016-11-21T00:43:53.000Z</published>
-    <updated>2016-11-23T14:58:55.658Z</updated>
+    <updated>2016-11-29T15:01:00.117Z</updated>
     
-    <content type="html"><![CDATA[<p> 学习 JQuery，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+    <content type="html"><![CDATA[<p> 继续学习，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161121-myblog115-1.png" alt="JQuery"></p>
 <a id="more"></a>
 <h3 id="Get-Content-and-Attributes"><a href="#Get-Content-and-Attributes" class="headerlink" title="Get Content and Attributes"></a>Get Content and Attributes</h3><p>Three simple, but useful, jQuery methods for DOM manipulation are:</p>
@@ -409,7 +431,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;学习JQuery，教程来自&lt;a href=&quot;http://www.w3schools.com/jquery/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
+      &lt;p&gt;继续学习，教程来自&lt;a href=&quot;http://www.w3schools.com/jquery/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161121-myblog115-1.png&quot; alt=&quot;JQuery&quot; /&gt;&lt;/p&gt;
     
     </summary>
@@ -1232,57 +1254,6 @@
       <category term="随笔" scheme="http://rrkaige.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="吃货" scheme="http://rrkaige.com/tags/%E5%90%83%E8%B4%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>丢失的 Contributions</title>
-    <link href="http://rrkaige.com/2016/11/08/%E4%B8%A2%E5%A4%B1%E7%9A%84Contributions/"/>
-    <id>http://rrkaige.com/2016/11/08/丢失的Contributions/</id>
-    <published>2016-11-08T15:28:48.000Z</published>
-    <updated>2016-11-09T08:35:44.249Z</updated>
-    
-    <content type="html"><![CDATA[<p>换电脑后，继续更新个人博客，deploy 之后，发现 GitHub 上 Contribution 的小绿块没有出现，郁闷。</p>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161108-myblog102.jpg" alt="GitHub Contribution Graph"></p>
-<a id="more"></a>
-<p>因为之前换电脑迁移博客正好碰上 NexT 主题有 bug，<a href="https://github.com/iissnan/hexo-theme-next/issues/1214" target="_blank" rel="external">这里</a>。而且，博客内容可以正常 deploy，只是没有计入 Contribution。所以多次尝试无效后，暂时没多想。</p>
-<p>结果连续几天都这样，我坐不住了。再看时，发现上次 <code>Rename source/vendors to source/lib</code> 更改还有遗漏，对照作者的 <a href="https://github.com/iissnan/hexo-theme-next/commit/565c09f6a45c75ffb8f74c88270b72fbe6e1a6e0#diff-b9cfc7f2cdf78a7f4b91a753d10865a2R28" target="_blank" rel="external"> 文档</a>，检查一遍。</p>
-<p>再次尝试，问题依旧。Google 后，发现不一定是 NexT 的问题。</p>
-<ul>
-<li><a href="https://segmentfault.com/a/1190000000520300" target="_blank" rel="external">什么样的 contributions 会被 Github 计算在内？</a></li>
-<li><a href="https://segmentfault.com/a/1190000004318632" target="_blank" rel="external">为什么 Github 没有记录你的 Contributions？</a></li>
-<li><a href="https://mrxin.github.io/2014/08/11/no-contributions/" target="_blank" rel="external">contributions 不显示在 github 上</a></li>
-</ul>
-<p>上述提到是 <code>.gitconfig</code> 文件的问题。但我看里面 <code>name</code> 和<code>email</code>是正确的。</p>
-<p>有 <a href="http://blog.52fhy.com/2015/07/05/hexo/solve_hexo_-d_problem/" target="_blank" rel="external"> 文章 </a> 提到 <code>repo</code> 应该是 <code>git@github.com:xxx/xxx.github.io.git</code> 形式的，不是 <code>https://github.com/xxx/xxx.github.io.git</code> 形式的。虽然问题不一样，但可以试试。我尝试修改 <code>_config.yml</code> 文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:xxx/xxx.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<p>更改，deploy，出现一个提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Warning: Permanently added the RSA host key for IP address &apos;#&#123;Some IP address&#125;&apos; to the list of known hosts.</div></pre></td></tr></table></figure>
-<p><a href="https://github.com/blog/1606-ip-address-changes" target="_blank" rel="external">IP Address Changes</a>，表示正常。</p>
-<p>好吧，小绿块又回来了，完美。</p>
-<p>所以，稀里糊涂解决了问题。</p>
-<p>PS：顺手解决一直出现的问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">warning: LF will be replaced by CRLF in...</div></pre></td></tr></table></figure>
-<p>输入命令<code>git config --global core.autocrlf false</code>，即可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;换电脑后，继续更新个人博客，deploy之后，发现GitHub上Contribution的小绿块没有出现，郁闷。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161108-myblog102.jpg&quot; alt=&quot;GitHub Contribution Graph&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="零壹之间" scheme="http://rrkaige.com/categories/%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4/"/>
-    
-    
-      <category term="Hexo" scheme="http://rrkaige.com/tags/Hexo/"/>
-    
-      <category term="NexT" scheme="http://rrkaige.com/tags/NexT/"/>
-    
-      <category term="GitHub" scheme="http://rrkaige.com/tags/GitHub/"/>
-    
-      <category term="Contribution" scheme="http://rrkaige.com/tags/Contribution/"/>
     
   </entry>
   

@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[SQL 学习笔记之二]]></title>
+      <url>http://rrkaige.com/2016/11/29/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%BA%8C/</url>
+      <content type="html"><![CDATA[<p><img src="-b" alt=""></p>
+<a id="more"></a>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[总是糊涂]]></title>
       <url>http://rrkaige.com/2016/11/27/%E6%80%BB%E6%98%AF%E7%B3%8A%E6%B6%82/</url>
       <content type="html"><![CDATA[<p> 感情的世界里，我总是糊涂。</p>
@@ -68,7 +76,7 @@
     <entry>
       <title><![CDATA[JQuery 学习笔记之三]]></title>
       <url>http://rrkaige.com/2016/11/23/JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%89/</url>
-      <content type="html"><![CDATA[<p> 学习 JQuery，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+      <content type="html"><![CDATA[<p> 继续学习，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161123-myblog117.png" alt="JQuery"></p>
 <a id="more"></a>
 <h3 id="Traversing"><a href="#Traversing" class="headerlink" title="Traversing"></a>Traversing</h3><p>jQuery traversing, which means “move through”, are used to “find” (or select) HTML elements based on their relation to other elements. Start with one selection and move through that selection until you reach the elements you desire.</p>
@@ -202,7 +210,7 @@
     <entry>
       <title><![CDATA[JQuery 学习笔记之二]]></title>
       <url>http://rrkaige.com/2016/11/21/JQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%BA%8C/</url>
-      <content type="html"><![CDATA[<p> 学习 JQuery，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+      <content type="html"><![CDATA[<p> 继续学习，教程来自 <a href="http://www.w3schools.com/jquery/default.asp" target="_blank" rel="external">w3schools</a>。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161121-myblog115-1.png" alt="JQuery"></p>
 <a id="more"></a>
 <h3 id="Get-Content-and-Attributes"><a href="#Get-Content-and-Attributes" class="headerlink" title="Get Content and Attributes"></a>Get Content and Attributes</h3><p>Three simple, but useful, jQuery methods for DOM manipulation are:</p>
@@ -4978,7 +4986,10 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">div &#123;</div><div class="line">    width: 300px;</div><div class="line">    border: 25px solid green;</div><div class="line">    padding: 25px;</div><div class="line">    margin: 25px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>Important:</strong> When you set the width and height properties of an element with CSS, you just set the width and height of the <strong>content area</strong>. To calculate the full size of an element, you must also add padding, borders and margins.</p>
-<p>Total element width = width + left padding + right padding + left border + right border + left margin + right margin<br>Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+<ul>
+<li>Total element width = width + left padding + right padding + left border + right border + left margin + right margin</li>
+<li>Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</li>
+</ul>
 <h3 id="CSS-Outline"><a href="#CSS-Outline" class="headerlink" title="CSS Outline"></a>CSS Outline</h3><p>The CSS outline properties specify the style, color, and width of an outline. An outline is a line that is drawn around elements (outside the borders) to make the element “stand out”.</p>
 <p>However, the outline property is different from the border property - The outline is NOT a part of an element’s dimensions; the element’s total width and height is not affected by the width of the outline.</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20160905-myblog39-3.png" alt="CSS Outline"></p>
@@ -5248,7 +5259,7 @@
 <li>Inline style</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 style=&quot;color:blue;margin-left:30px;&quot;&gt;This is a heading.&lt;/h1&gt;</div></pre></td></tr></table></figure>
-<p><strong>Tip:</strong> An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly</p>
+<p><strong>Tip:</strong> An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
 <p>If some properties have been defined for the same selector (element) in different style sheets, the value from <strong>the last read style</strong> sheet will be used. </p>
 <ol>
 <li>Inline style (inside an HTML element)</li>
@@ -5805,8 +5816,10 @@
       <content type="html"><![CDATA[<p> 继续昨天的学习。教程来自 <a href="http://www.w3schools.com/html/" target="_blank" rel="external">w3schools</a>，整理如下。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20160901-myblog32.jpg" alt="HTML5"></p>
 <a id="more"></a>
-<h3 id="HTML-Head"><a href="#HTML-Head" class="headerlink" title="HTML Head"></a>HTML Head</h3><p>The <code>&lt;meta&gt;</code> element is used to specify which character set is used, page description, keywords, author, and other metadata.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">&lt;meta name=&quot;description&quot; content=&quot;Free Web tutorials&quot;&gt;</div><div class="line">&lt;meta name=&quot;keywords&quot; content=&quot;HTML,CSS,XML,JavaScript&quot;&gt;</div><div class="line">&lt;meta name=&quot;author&quot; content=&quot;Hege Refsnes&quot;&gt;</div><div class="line">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;</div></pre></td></tr></table></figure></p>
-<p>The <code>&lt;base&gt;</code> element specifies the base URL and base target for all relative URLs in a page:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;base href=&quot;http://www.w3schools.com/images/&quot; target=&quot;_blank&quot;&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="HTML-Head"><a href="#HTML-Head" class="headerlink" title="HTML Head"></a>HTML Head</h3><p>The <code>&lt;meta&gt;</code> element is used to specify which character set is used, page description, keywords, author, and other metadata.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">&lt;meta name=&quot;description&quot; content=&quot;Free Web tutorials&quot;&gt;</div><div class="line">&lt;meta name=&quot;keywords&quot; content=&quot;HTML,CSS,XML,JavaScript&quot;&gt;</div><div class="line">&lt;meta name=&quot;author&quot; content=&quot;Hege Refsnes&quot;&gt;</div><div class="line">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;</div></pre></td></tr></table></figure>
+<p>The <code>&lt;base&gt;</code> element specifies the base URL and base target for all relative URLs in a page:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;base href=&quot;http://www.w3schools.com/images/&quot; target=&quot;_blank&quot;&gt;</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -5857,7 +5870,10 @@
 <li><code>&lt;summary&gt;</code> - Defines a heading for the <code>&lt;details&gt;</code> element</li>
 </ul>
 <h3 id="HTML-Entities"><a href="#HTML-Entities" class="headerlink" title="HTML Entities"></a>HTML Entities</h3><p>Some characters are reserved in HTML. Character entities are used to display reserved characters in HTML.</p>
-<p><strong>Advantage of using an entity name:</strong> An entity name is easy to remember.<br><strong>Disadvantage of using an entity name:</strong> Browsers may not support all entity names, but the support for numbers is good.</p>
+<ul>
+<li><strong>Advantage of using an entity name:</strong> An entity name is easy to remember.</li>
+<li><strong>Disadvantage of using an entity name:</strong> Browsers may not support all entity names, but the support for numbers is good.</li>
+</ul>
 <p><strong>Note:</strong> Entity names are case sensitive.</p>
 <table>
 <thead>
@@ -5976,7 +5992,11 @@
 <li>filename - defines the name of a document or resource</li>
 </ul>
 <p>URLs can only be sent over the Internet using the ASCII character-set. If a URL contains characters outside the ASCII set, the URL has to be converted.</p>
-<p>URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.<br>URL encoding replaces non-ASCII characters with a <code>%</code> followed by hexadecimal digits.<br>URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or <code>%20</code>.</p>
+<ul>
+<li>URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.</li>
+<li>URL encoding replaces non-ASCII characters with a <code>%</code> followed by hexadecimal digits.</li>
+<li>URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or <code>%20</code>.</li>
+</ul>
 <h3 id="HTML-Forms"><a href="#HTML-Forms" class="headerlink" title="HTML Forms"></a>HTML Forms</h3><p>The HTML <code>&lt;form&gt;</code> element defines a form that is used to collect user input:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form&gt;</div><div class="line">.</div><div class="line">form elements</div><div class="line">.</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
 <p>The <code>&lt;input&gt;</code> element can be displayed in several ways, depending on the <strong>type</strong> attribute.</p>
@@ -6489,14 +6509,16 @@
 </tr>
 </tbody>
 </table>
-<h3 id="HTML-Block-and-Inline-Elements"><a href="#HTML-Block-and-Inline-Elements" class="headerlink" title="HTML Block and Inline Elements"></a>HTML Block and Inline Elements</h3><p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).<br>Examples of block-level elements:</p>
+<h3 id="HTML-Block-and-Inline-Elements"><a href="#HTML-Block-and-Inline-Elements" class="headerlink" title="HTML Block and Inline Elements"></a>HTML Block and Inline Elements</h3><p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+<p>Examples of block-level elements:</p>
 <ul>
 <li><code>&lt;div&gt;</code> is often used as a container for other HTML elements.</li>
 <li><code>&lt;h1&gt; - &lt;h6&gt;</code></li>
 <li><code>&lt;p&gt;</code></li>
 <li><code>&lt;form&gt;</code></li>
 </ul>
-<p>An inline element does not start on a new line and only takes up as much width as necessary.<br>Examples of inline elements:</p>
+<p>An inline element does not start on a new line and only takes up as much width as necessary.</p>
+<p>Examples of inline elements:</p>
 <ul>
 <li><code>&lt;span&gt;</code> is often used as a container for some text.</li>
 <li><code>&lt;a&gt;</code></li>
@@ -6520,7 +6542,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="HTML-Iframes"><a href="#HTML-Iframes" class="headerlink" title="HTML Iframes"></a>HTML Iframes</h3><p>An iframe can be used as the target frame for a link.<br>The <strong>target</strong> attribute of the link must refer to the <strong>name</strong> attribute of the iframe:</p>
+<h3 id="HTML-Iframes"><a href="#HTML-Iframes" class="headerlink" title="HTML Iframes"></a>HTML Iframes</h3><p>An iframe can be used as the target frame for a link.</p>
+<p>The <strong>target</strong> attribute of the link must refer to the <strong>name</strong> attribute of the iframe:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;iframe src=&quot;demo_iframe.htm&quot; name=&quot;iframe_a&quot;&gt;&lt;/iframe&gt;</div><div class="line"></div><div class="line">&lt;p&gt;&lt;a href=&quot;http://www.w3schools.com&quot; target=&quot;iframe_a&quot;&gt;W3Schools.com&lt;/a&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
 <table>
 <thead>
@@ -6654,7 +6677,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="HTML-Headings"><a href="#HTML-Headings" class="headerlink" title="HTML Headings"></a>HTML Headings</h3><p><strong>Note:</strong> </p>
+<h3 id="HTML-Headings"><a href="#HTML-Headings" class="headerlink" title="HTML Headings"></a>HTML Headings</h3><p><strong>Note:</strong></p>
 <ul>
 <li>Browsers automatically add some white space (a margin) before and after a heading.</li>
 <li>Use HTML headings for headings only. Don’t use headings to make text <strong>BIG</strong> or <strong>bold</strong>.</li>
@@ -6718,10 +6741,7 @@
 </tbody>
 </table>
 <h3 id="HTML-Styles"><a href="#HTML-Styles" class="headerlink" title="HTML Styles"></a>HTML Styles</h3><p>The HTML style attribute has the following syntax:</p>
-<blockquote>
-<tagname style="property:value;">
-
-</tagname></blockquote>
+<p><code>&lt;tagname style=&quot;property:value;&quot;&gt;</code></p>
 <ul>
 <li>Use the <strong>style</strong> attribute for styling HTML elements</li>
 <li>Use <strong>background-color</strong> for background color</li>

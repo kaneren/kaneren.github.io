@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="一方天地">
 <meta property="og:description" content="继续昨天的学习。教程来自w3schools，整理如下。">
 <meta property="og:image" content="http://ob0mgqhy4.bkt.clouddn.com/20160901-myblog32.jpg">
-<meta property="og:updated_time" content="2016-10-12T02:40:24.000Z">
+<meta property="og:updated_time" content="2016-11-29T13:27:58.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML 学习笔记之三">
 <meta name="twitter:description" content="继续昨天的学习。教程来自w3schools，整理如下。">
@@ -370,8 +370,10 @@
         <p> 继续昨天的学习。教程来自 <a href="http://www.w3schools.com/html/" target="_blank" rel="external">w3schools</a>，整理如下。</p>
 <p><img src="http://ob0mgqhy4.bkt.clouddn.com/20160901-myblog32.jpg" alt="HTML5"></p>
 <a id="more"></a>
-<h3 id="HTML-Head"><a href="#HTML-Head" class="headerlink" title="HTML Head"></a>HTML Head</h3><p>The <code>&lt;meta&gt;</code> element is used to specify which character set is used, page description, keywords, author, and other metadata.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">&lt;meta name=&quot;description&quot; content=&quot;Free Web tutorials&quot;&gt;</div><div class="line">&lt;meta name=&quot;keywords&quot; content=&quot;HTML,CSS,XML,JavaScript&quot;&gt;</div><div class="line">&lt;meta name=&quot;author&quot; content=&quot;Hege Refsnes&quot;&gt;</div><div class="line">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;</div></pre></td></tr></table></figure></p>
-<p>The <code>&lt;base&gt;</code> element specifies the base URL and base target for all relative URLs in a page:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;base href=&quot;http://www.w3schools.com/images/&quot; target=&quot;_blank&quot;&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="HTML-Head"><a href="#HTML-Head" class="headerlink" title="HTML Head"></a>HTML Head</h3><p>The <code>&lt;meta&gt;</code> element is used to specify which character set is used, page description, keywords, author, and other metadata.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">&lt;meta name=&quot;description&quot; content=&quot;Free Web tutorials&quot;&gt;</div><div class="line">&lt;meta name=&quot;keywords&quot; content=&quot;HTML,CSS,XML,JavaScript&quot;&gt;</div><div class="line">&lt;meta name=&quot;author&quot; content=&quot;Hege Refsnes&quot;&gt;</div><div class="line">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;</div></pre></td></tr></table></figure>
+<p>The <code>&lt;base&gt;</code> element specifies the base URL and base target for all relative URLs in a page:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;base href=&quot;http://www.w3schools.com/images/&quot; target=&quot;_blank&quot;&gt;</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -422,7 +424,10 @@
 <li><code>&lt;summary&gt;</code> - Defines a heading for the <code>&lt;details&gt;</code> element</li>
 </ul>
 <h3 id="HTML-Entities"><a href="#HTML-Entities" class="headerlink" title="HTML Entities"></a>HTML Entities</h3><p>Some characters are reserved in HTML. Character entities are used to display reserved characters in HTML.</p>
-<p><strong>Advantage of using an entity name:</strong> An entity name is easy to remember.<br><strong>Disadvantage of using an entity name:</strong> Browsers may not support all entity names, but the support for numbers is good.</p>
+<ul>
+<li><strong>Advantage of using an entity name:</strong> An entity name is easy to remember.</li>
+<li><strong>Disadvantage of using an entity name:</strong> Browsers may not support all entity names, but the support for numbers is good.</li>
+</ul>
 <p><strong>Note:</strong> Entity names are case sensitive.</p>
 <table>
 <thead>
@@ -541,7 +546,11 @@
 <li>filename - defines the name of a document or resource</li>
 </ul>
 <p>URLs can only be sent over the Internet using the ASCII character-set. If a URL contains characters outside the ASCII set, the URL has to be converted.</p>
-<p>URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.<br>URL encoding replaces non-ASCII characters with a <code>%</code> followed by hexadecimal digits.<br>URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or <code>%20</code>.</p>
+<ul>
+<li>URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.</li>
+<li>URL encoding replaces non-ASCII characters with a <code>%</code> followed by hexadecimal digits.</li>
+<li>URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or <code>%20</code>.</li>
+</ul>
 <h3 id="HTML-Forms"><a href="#HTML-Forms" class="headerlink" title="HTML Forms"></a>HTML Forms</h3><p>The HTML <code>&lt;form&gt;</code> element defines a form that is used to collect user input:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form&gt;</div><div class="line">.</div><div class="line">form elements</div><div class="line">.</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
 <p>The <code>&lt;input&gt;</code> element can be displayed in several ways, depending on the <strong>type</strong> attribute.</p>
@@ -856,7 +865,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">119</span>
+              <span class="site-state-item-count">120</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -864,7 +873,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -873,7 +882,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">126</span>
+                <span class="site-state-item-count">124</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
