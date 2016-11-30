@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-11-29T11:58:53.273Z</updated>
+  <updated>2016-11-30T15:07:10.471Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -16,24 +16,220 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>SQL 学习笔记之二</title>
-    <link href="http://rrkaige.com/2016/11/29/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%BA%8C/"/>
-    <id>http://rrkaige.com/2016/11/29/SQL学习笔记之二/</id>
-    <published>2016-11-29T11:58:53.000Z</published>
-    <updated>2016-11-29T11:58:53.273Z</updated>
+    <title>SQL 学习笔记之一</title>
+    <link href="http://rrkaige.com/2016/11/28/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%80/"/>
+    <id>http://rrkaige.com/2016/11/28/SQL学习笔记之一/</id>
+    <published>2016-11-28T02:03:11.000Z</published>
+    <updated>2016-11-30T15:07:10.471Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="-b" alt=""></p>
+    <content type="html"><![CDATA[<p> 学习 SQL，教程来自 <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161128-myblog122.png" alt="SQL"></p>
 <a id="more"></a>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>SQL is a standard language for accessing and manipulating databases.</p>
+<ul>
+<li>SQL stands for <strong>Structured Query Language</strong></li>
+<li>SQL lets you access and manipulate databases</li>
+<li>SQL is an ANSI (American National Standards Institute) standard</li>
+</ul>
+<p><strong>Note:</strong> Most of the SQL database programs also have their own proprietary extensions in addition to the SQL standard!</p>
+<p>To build a web site that shows data from a database, you will need:</p>
+<ul>
+<li>An RDBMS database program (i.e. MS Access, SQL Server, MySQL)</li>
+<li>To use a server-side scripting language, like PHP or ASP</li>
+<li>To use SQL to get the data you want</li>
+<li>To use HTML / CSS</li>
+</ul>
+<p>RDBMS stands for <strong>Relational Database Management System</strong>.</p>
+<p>RDBMS is the basis for SQL, and for all modern database systems such as MS SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.</p>
+<p>The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.</p>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><p>SQL keywords are <strong>NOT case sensitive</strong>: select is the same as SELECT.</p>
+<p>Some database systems require a semicolon at the end of each SQL statement. Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.</p>
+<h3 id="SELECT-Statement"><a href="#SELECT-Statement" class="headerlink" title="SELECT Statement"></a>SELECT Statement</h3><p>The <strong>SELECT</strong> statement is used to select data from a database. The result is stored in a result table, called the <strong>result-set</strong>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT column_name,column_name</div><div class="line">FROM table_name;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers;</div></pre></td></tr></table></figure>
+<h3 id="SELECT-DISTINCT-Statement"><a href="#SELECT-DISTINCT-Statement" class="headerlink" title="SELECT DISTINCT Statement"></a>SELECT DISTINCT Statement</h3><p>In a table, a column may contain many duplicate values; and sometimes you only want to list the different (distinct) values.</p>
+<p>The <strong>DISTINCT</strong> keyword can be used to return only distinct (different) values.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT DISTINCT column_name,column_name</div><div class="line">FROM table_name;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT DISTINCT City FROM Customers;</div></pre></td></tr></table></figure>
+<h3 id="WHERE-Clause"><a href="#WHERE-Clause" class="headerlink" title="WHERE Clause"></a>WHERE Clause</h3><p>The <strong>WHERE</strong> clause is used to extract only those records that fulfill a specified criterion.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name,column_name</div><div class="line">FROM table_name</div><div class="line">WHERE column_name operator value;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE Country=&apos;Mexico&apos;;</div></pre></td></tr></table></figure>
+<p>SQL requires single quotes around text values (most database systems will also allow double quotes). However, numeric fields should not be enclosed in quotes:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE CustomerID=1;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Equal</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>Not equal. Note: In some versions of SQL this operator may be written as !=</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Greater than or equal</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal</td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>Between an inclusive range</td>
+</tr>
+<tr>
+<td>LIKE</td>
+<td>Search for a pattern</td>
+</tr>
+<tr>
+<td>IN</td>
+<td>To specify multiple possible values for a column</td>
+</tr>
+</tbody>
+</table>
+<h3 id="AND-amp-OR-Operators"><a href="#AND-amp-OR-Operators" class="headerlink" title="AND &amp; OR Operators"></a>AND &amp; OR Operators</h3><p>The <strong>AND</strong> &amp; <strong>OR</strong> operators are used to filter records based on more than one condition.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE Country=&apos;Germany&apos;</div><div class="line">AND (City=&apos;Berlin&apos; OR City=&apos;München&apos;);</div></pre></td></tr></table></figure>
+<h3 id="ORDER-BY-Keyword"><a href="#ORDER-BY-Keyword" class="headerlink" title="ORDER BY Keyword"></a>ORDER BY Keyword</h3><p>The <strong>ORDER BY</strong> keyword is used to sort the result-set by one or more columns.</p>
+<p>The ORDER BY keyword sorts the records in ascending order by default. To sort the records in a descending order, you can use the DESC keyword.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name, column_name</div><div class="line">FROM table_name</div><div class="line">ORDER BY column_name ASC|DESC, column_name ASC|DESC;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">ORDER BY Country ASC, CustomerName DESC;</div></pre></td></tr></table></figure>
+<h3 id="INSERT-INTO-Statement"><a href="#INSERT-INTO-Statement" class="headerlink" title="INSERT INTO Statement"></a>INSERT INTO Statement</h3><p>The <strong>INSERT INTO</strong> statement is used to insert new records in a table.</p>
+<p>It is possible to write the INSERT INTO statement in two forms.</p>
+<ul>
+<li>The first form does not specify the column names where the data will be inserted, only their values:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INSERT INTO table_name</div><div class="line">VALUES (value1,value2,value3,...);</div></pre></td></tr></table></figure>
+<ul>
+<li>The second form specifies both the column names and the values to be inserted:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INSERT INTO table_name (column1,column2,column3,...)</div><div class="line">VALUES (value1,value2,value3,...);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INSERT INTO Customers (CustomerName, City, Country)</div><div class="line">VALUES (&apos;Cardinal&apos;, &apos;Stavanger&apos;, &apos;Norway&apos;);</div></pre></td></tr></table></figure>
+<h3 id="UPDATE-Statement"><a href="#UPDATE-Statement" class="headerlink" title="UPDATE Statement"></a>UPDATE Statement</h3><p>The <strong>UPDATE</strong> statement is used to update existing records in a table.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">UPDATE table_name</div><div class="line">SET column1=value1,column2=value2,...</div><div class="line">WHERE some_column=some_value;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The WHERE clause specifies which record or records that should be updated. If you omit the WHERE clause, all records will be updated!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">UPDATE Customers</div><div class="line">SET ContactName=&apos;Alfred Schmidt&apos;, City=&apos;Hamburg&apos;</div><div class="line">WHERE CustomerName=&apos;Alfreds Futterkiste&apos;;</div></pre></td></tr></table></figure>
+<h3 id="DELETE-Statement"><a href="#DELETE-Statement" class="headerlink" title="DELETE Statement"></a>DELETE Statement</h3><p>The <strong>DELETE</strong> statement is used to delete rows in a table.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DELETE FROM table_name</div><div class="line">WHERE some_column=some_value;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The WHERE clause specifies which record or records that should be deleted. If you omit the WHERE clause, all records will be deleted!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DELETE FROM Customers</div><div class="line">WHERE CustomerName=&apos;Alfreds Futterkiste&apos; AND ContactName=&apos;Maria Anders&apos;;</div></pre></td></tr></table></figure>
+<p>It is possible to delete all rows in a table without deleting the table. This means that the table structure, attributes, and indexes will be intact:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">DELETE FROM table_name;</div><div class="line"></div><div class="line">or</div><div class="line"></div><div class="line">DELETE * FROM table_name;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> Be very careful when deleting records. You cannot undo this statement!</p>
+<h3 id="Injection"><a href="#Injection" class="headerlink" title="Injection"></a>Injection</h3><p>SQL injection is a technique where malicious users can inject SQL commands into an SQL statement, via web page input.</p>
+<p>Injected SQL commands can alter SQL statement and compromise the security of a web application.</p>
+<h4 id="Based-on-1-1-is-Always-True"><a href="#Based-on-1-1-is-Always-True" class="headerlink" title="Based on 1=1 is Always True"></a>Based on 1=1 is Always True</h4><p>A smart hacker might get access to all the user names and passwords in a database by simply inserting <code>105 or 1=1</code> into the input box.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;</div></pre></td></tr></table></figure>
+<h4 id="Based-on-“”-””-is-Always-True"><a href="#Based-on-“”-””-is-Always-True" class="headerlink" title="Based on “”=”” is Always True"></a>Based on “”=”” is Always True</h4><p>A smart hacker might get access to user names and passwords in a database by simply inserting <code>&quot; or &quot;&quot;=&quot;</code> into the user name or password text box.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Users WHERE Name =&quot;&quot; or &quot;&quot;=&quot;&quot; AND Pass =&quot;&quot; or &quot;&quot;=&quot;&quot;</div></pre></td></tr></table></figure>
+<h4 id="Based-on-Batched-SQL-Statements"><a href="#Based-on-Batched-SQL-Statements" class="headerlink" title="Based on Batched SQL Statements"></a>Based on Batched SQL Statements</h4><p>Most databases support batched SQL statement, separated by semicolon.</p>
+<p>User id: <code>105; DROP TABLE Suppliers</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers</div></pre></td></tr></table></figure>
+<h4 id="Parameters-for-Protection"><a href="#Parameters-for-Protection" class="headerlink" title="Parameters for Protection"></a>Parameters for Protection</h4><p>Some web developers use a “blacklist” of words or characters to search for in SQL input, to prevent SQL injection attacks.</p>
+<p>This is not a very good idea. Many of these words (like delete or drop) and characters (like semicolons and quotation marks), are used in common language, and should be allowed in many types of input.</p>
+<p>(In fact it should be perfectly legal to input an SQL statement in a database field.)</p>
+<p>The only proven way to protect a web site from SQL injection attacks, is to use <strong>SQL parameters</strong>.</p>
+<p>SQL parameters are values that are added to an SQL query at execution time, in a controlled manner.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">txtUserId = getRequestString(&quot;UserId&quot;);</div><div class="line">txtSQL = &quot;SELECT * FROM Users WHERE UserId = @0&quot;;</div><div class="line">db.Execute(txtSQL,txtUserId);</div></pre></td></tr></table></figure>
+<p>Note that parameters are represented in the SQL statement by a @ marker.</p>
+<p>The SQL engine checks each parameter to ensure that it is correct for its column and are treated literally, and not as part of the SQL to be executed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">txtNam = getRequestString(&quot;CustomerName&quot;);</div><div class="line">txtAdd = getRequestString(&quot;Address&quot;);</div><div class="line">txtCit = getRequestString(&quot;City&quot;);</div><div class="line">txtSQL = &quot;INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)&quot;;</div><div class="line">db.Execute(txtSQL,txtNam,txtAdd,txtCit);</div></pre></td></tr></table></figure>
+<h3 id="SELECT-TOP-Clause"><a href="#SELECT-TOP-Clause" class="headerlink" title="SELECT TOP Clause"></a>SELECT TOP Clause</h3><p>The <strong>SELECT TOP</strong> clause is used to specify the number of records to return.</p>
+<p><strong>Note:</strong> Not all database systems support the SELECT TOP clause.</p>
+<ul>
+<li>SQL Server / MS Access Syntax</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT TOP number|percent column_name(s)</div><div class="line">FROM table_name;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT TOP 50 PERCENT * FROM Customers;</div></pre></td></tr></table></figure>
+<ul>
+<li>MySQL Syntax</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table_name</div><div class="line">LIMIT number;</div></pre></td></tr></table></figure>
+<ul>
+<li>Oracle Syntax</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table_name</div><div class="line">WHERE ROWNUM &lt;= number;</div></pre></td></tr></table></figure>
+<h3 id="LIKE-Operator"><a href="#LIKE-Operator" class="headerlink" title="LIKE Operator"></a>LIKE Operator</h3><p>The <strong>LIKE</strong> operator is used in a WHERE clause to search for a specified pattern in a column.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table_name</div><div class="line">WHERE column_name LIKE pattern;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE City LIKE &apos;s%&apos;;</div></pre></td></tr></table></figure>
+<p>Using the <strong>NOT</strong> keyword allows you to select records that do NOT match the pattern.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE Country NOT LIKE &apos;%land%&apos;;</div></pre></td></tr></table></figure>
+<h3 id="Wildcards"><a href="#Wildcards" class="headerlink" title="Wildcards"></a>Wildcards</h3><p>A wildcard character can be used to substitute for any other character(s) in a string.</p>
+<p>In SQL, wildcard characters are used with the SQL LIKE operator. SQL wildcards are used to search for data within a table. </p>
+<table>
+<thead>
+<tr>
+<th>Wildcard</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%</td>
+<td>A substitute for zero or more characters</td>
+</tr>
+<tr>
+<td>_</td>
+<td>A substitute for a single character</td>
+</tr>
+<tr>
+<td>[charlist]</td>
+<td>Sets and ranges of characters to match</td>
+</tr>
+<tr>
+<td>[^charlist] or [!charlist]</td>
+<td>Matches only a character NOT specified within the brackets</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE City LIKE &apos;L_n_on&apos;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE City LIKE &apos;[a-c]%&apos;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE City LIKE &apos;[!bsp]%&apos;;</div></pre></td></tr></table></figure>
+<h3 id="IN-Operator"><a href="#IN-Operator" class="headerlink" title="IN Operator"></a>IN Operator</h3><p>The <strong>IN</strong> operator allows you to specify multiple values in a WHERE clause.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table_name</div><div class="line">WHERE column_name IN (value1,value2,...);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Customers</div><div class="line">WHERE City IN (&apos;Paris&apos;,&apos;London&apos;);</div></pre></td></tr></table></figure>
+<h3 id="BETWEEN-Operator"><a href="#BETWEEN-Operator" class="headerlink" title="BETWEEN Operator"></a>BETWEEN Operator</h3><p>The <strong>BETWEEN</strong> operator is used to select values within a range. The values can be numbers, text, or dates.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table_name</div><div class="line">WHERE column_name BETWEEN value1 AND value2;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Products</div><div class="line">WHERE (Price BETWEEN 10 AND 20)</div><div class="line">AND NOT CategoryID IN (1,2,3);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Products</div><div class="line">WHERE ProductName BETWEEN &apos;C&apos; AND &apos;M&apos;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM Orders</div><div class="line">WHERE OrderDate BETWEEN #07/04/1996# AND #07/09/1996#;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>In some databases, BETWEEN selects fields that are between and excluding the test values.</li>
+<li>In other databases, BETWEEN selects fields that are between and including the test values.</li>
+<li>And in other databases, BETWEEN selects fields between the test values, including the first test value and excluding the last test value.</li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;-b&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;学习SQL，教程来自&lt;a href=&quot;http://www.w3schools.com/sql/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161128-myblog122.png&quot; alt=&quot;SQL&quot; /&gt;&lt;/p&gt;
     
     </summary>
     
-      <category term="尘世行者 技多压身 书里时光 影里偷闲 零壹之间 Web征途" scheme="http://rrkaige.com/categories/%E5%B0%98%E4%B8%96%E8%A1%8C%E8%80%85-%E6%8A%80%E5%A4%9A%E5%8E%8B%E8%BA%AB-%E4%B9%A6%E9%87%8C%E6%97%B6%E5%85%89-%E5%BD%B1%E9%87%8C%E5%81%B7%E9%97%B2-%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4-Web%E5%BE%81%E9%80%94/"/>
+      <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
     
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="SQL" scheme="http://rrkaige.com/tags/SQL/"/>
     
   </entry>
   
