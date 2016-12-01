@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-11-30T15:07:10.471Z</updated>
+  <updated>2016-12-01T14:49:00.889Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,214 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL 学习笔记之三</title>
+    <link href="http://rrkaige.com/2016/11/30/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%89/"/>
+    <id>http://rrkaige.com/2016/11/30/SQL学习笔记之三/</id>
+    <published>2016-11-30T13:36:17.000Z</published>
+    <updated>2016-12-01T14:49:00.889Z</updated>
+    
+    <content type="html"><![CDATA[<p> 继续学习，教程来自 <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161130-myblog124.jpg" alt="Code SQL Database"></p>
+<a id="more"></a>
+<h3 id="CREATE-DATABASE-Statement"><a href="#CREATE-DATABASE-Statement" class="headerlink" title="CREATE DATABASE Statement"></a>CREATE DATABASE Statement</h3><p>The <strong>CREATE DATABASE</strong> statement is used to create a database.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE DATABASE dbname;</div></pre></td></tr></table></figure>
+<h3 id="CREATE-TABLE-Statement"><a href="#CREATE-TABLE-Statement" class="headerlink" title="CREATE TABLE Statement"></a>CREATE TABLE Statement</h3><p>The <strong>CREATE TABLE</strong> statement is used to create a table in a database. Tables are organized into rows and columns; and each table must have a name.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE table_name</div><div class="line">(</div><div class="line">column_name1 data_type(size),</div><div class="line">column_name2 data_type(size),</div><div class="line">column_name3 data_type(size),</div><div class="line">....</div><div class="line">);</div></pre></td></tr></table></figure>
+<ul>
+<li>The column_name parameters specify the names of the columns of the table.</li>
+<li>The data_type parameter specifies what type of data the column can hold (e.g. varchar, integer, decimal, date, etc.).</li>
+<li>The size parameter specifies the maximum length of the column of the table.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">PersonID int,</div><div class="line">LastName varchar(255),</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255)</div><div class="line">);</div></pre></td></tr></table></figure>
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><p>SQL constraints are used to specify rules for the data in a table. If there is any violation between the constraint and the data action, the action is aborted by the constraint.</p>
+<p>Constraints can be specified when the table is created (inside the CREATE TABLE statement) or after the table is created (inside the ALTER TABLE statement).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE table_name</div><div class="line">(</div><div class="line">column_name1 data_type(size) constraint_name,</div><div class="line">column_name2 data_type(size) constraint_name,</div><div class="line">column_name3 data_type(size) constraint_name,</div><div class="line">....</div><div class="line">);</div></pre></td></tr></table></figure>
+<h4 id="NOT-NULL-Constraint"><a href="#NOT-NULL-Constraint" class="headerlink" title="NOT NULL Constraint"></a>NOT NULL Constraint</h4><p>The <strong>NOT NULL</strong> constraint enforces a column to NOT accept NULL values.</p>
+<p>The NOT NULL constraint enforces a field to always contain a value. This means that you cannot insert a new record, or update a record without adding a value to this field.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE PersonsNotNull</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h4 id="UNIQUE-Constraint"><a href="#UNIQUE-Constraint" class="headerlink" title="UNIQUE Constraint"></a>UNIQUE Constraint</h4><p>The <strong>UNIQUE</strong> constraint uniquely identifies each record in a database table.</p>
+<p>The UNIQUE and PRIMARY KEY constraints both provide a guarantee for uniqueness for a column or set of columns. A PRIMARY KEY constraint automatically has a UNIQUE constraint defined on it.</p>
+<p><strong>Note:</strong> You can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.</p>
+<ul>
+<li>UNIQUE Constraint on CREATE TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255),</div><div class="line">CONSTRAINT uc_PersonID UNIQUE (P_Id,LastName)</div><div class="line">)</div></pre></td></tr></table></figure>
+<ul>
+<li>UNIQUE Constraint on ALTER TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ADD CONSTRAINT uc_PersonID UNIQUE (P_Id,LastName)</div></pre></td></tr></table></figure>
+<ul>
+<li>DROP a UNIQUE Constraint</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">DROP CONSTRAINT uc_PersonID</div></pre></td></tr></table></figure>
+<h4 id="PRIMARY-KEY-Constraint"><a href="#PRIMARY-KEY-Constraint" class="headerlink" title="PRIMARY KEY Constraint"></a>PRIMARY KEY Constraint</h4><p>The <strong>PRIMARY KEY</strong> constraint uniquely identifies each record in a database table.</p>
+<p>Primary keys must contain UNIQUE values. A primary key column cannot contain NULL values.</p>
+<p>Most tables should have a primary key, and each table can have only ONE primary key.</p>
+<ul>
+<li>PRIMARY KEY Constraint on CREATE TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255),</div><div class="line">CONSTRAINT pk_PersonID PRIMARY KEY (P_Id,LastName)</div><div class="line">)</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> In the example above there is only ONE PRIMARY KEY (<code>pk_PersonID</code>). However, the VALUE of the primary key is made up of TWO COLUMNS (<code>P_Id</code> + <code>LastName</code>).</p>
+<ul>
+<li>PRIMARY KEY Constraint on ALTER TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ADD CONSTRAINT pk_PersonID PRIMARY KEY (P_Id,LastName)</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> If you use the ALTER TABLE statement to add a primary key, the primary key column(s) must already have been declared to not contain NULL values (when the table was first created).</p>
+<ul>
+<li>DROP a PRIMARY KEY Constraint</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">DROP CONSTRAINT pk_PersonID</div></pre></td></tr></table></figure>
+<h4 id="FOREIGN-KEY-Constraint"><a href="#FOREIGN-KEY-Constraint" class="headerlink" title="FOREIGN KEY Constraint"></a>FOREIGN KEY Constraint</h4><p>A <strong>FOREIGN KEY</strong> in one table points to a PRIMARY KEY in another table.</p>
+<p>The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.</p>
+<p>The FOREIGN KEY constraint also prevents invalid data from being inserted into the foreign key column, because it has to be one of the values contained in the table it points to.</p>
+<ul>
+<li>FOREIGN KEY Constraint on CREATE TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Orders</div><div class="line">(</div><div class="line">O_Id int NOT NULL,</div><div class="line">OrderNo int NOT NULL,</div><div class="line">P_Id int,</div><div class="line">PRIMARY KEY (O_Id),</div><div class="line">CONSTRAINT fk_PerOrders FOREIGN KEY (P_Id)</div><div class="line">REFERENCES Persons(P_Id)</div><div class="line">)</div></pre></td></tr></table></figure>
+<ul>
+<li>FOREIGN KEY Constraint on ALTER TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Orders</div><div class="line">ADD CONSTRAINT fk_PerOrders</div><div class="line">FOREIGN KEY (P_Id)</div><div class="line">REFERENCES Persons(P_Id)</div></pre></td></tr></table></figure>
+<ul>
+<li>DROP a FOREIGN KEY Constraint</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Orders</div><div class="line">DROP CONSTRAINT fk_PerOrders</div></pre></td></tr></table></figure>
+<h4 id="CHECK-Constraint"><a href="#CHECK-Constraint" class="headerlink" title="CHECK Constraint"></a>CHECK Constraint</h4><p>The <strong>CHECK</strong> constraint is used to limit the value range that can be placed in a column.</p>
+<p>If you define a CHECK constraint on a single column it allows only certain values for this column.</p>
+<p>If you define a CHECK constraint on a table it can limit the values in certain columns based on values in other columns in the row.</p>
+<ul>
+<li>CHECK Constraint on CREATE TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255),</div><div class="line">CONSTRAINT chk_Person CHECK (P_Id&gt;0 AND City=&apos;Sandnes&apos;)</div><div class="line">)</div></pre></td></tr></table></figure>
+<ul>
+<li>CHECK Constraint on ALTER TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ADD CONSTRAINT chk_Person CHECK (P_Id&gt;0 AND City=&apos;Sandnes&apos;)</div></pre></td></tr></table></figure>
+<ul>
+<li>DROP a CHECK Constraint</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">DROP CONSTRAINT chk_Person</div></pre></td></tr></table></figure>
+<h4 id="DEFAULT-Constraint"><a href="#DEFAULT-Constraint" class="headerlink" title="DEFAULT Constraint"></a>DEFAULT Constraint</h4><p>The <strong>DEFAULT</strong> constraint is used to insert a default value into a column.</p>
+<p>The default value will be added to all new records, if no other value is specified.</p>
+<ul>
+<li>DEFAULT Constraint on CREATE TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255) DEFAULT &apos;Sandnes&apos;</div><div class="line">)</div></pre></td></tr></table></figure>
+<ul>
+<li>DEFAULT Constraint on ALTER TABLE</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ALTER COLUMN City SET DEFAULT &apos;SANDNES&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li>DROP a DEFAULT Constraint</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ALTER COLUMN City DROP DEFAULT</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;继续学习，教程来自&lt;a href=&quot;http://www.w3schools.com/sql/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161130-myblog124.jpg&quot; alt=&quot;Code SQL Database&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
+    
+    
+      <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="SQL" scheme="http://rrkaige.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL 学习笔记之二</title>
+    <link href="http://rrkaige.com/2016/11/29/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%BA%8C/"/>
+    <id>http://rrkaige.com/2016/11/29/SQL学习笔记之二/</id>
+    <published>2016-11-29T11:58:53.000Z</published>
+    <updated>2016-12-01T13:51:49.612Z</updated>
+    
+    <content type="html"><![CDATA[<p> 继续学习，教程来自 <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="external">w3schools</a>。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161129-myblog123.jpg" alt="SQL"></p>
+<a id="more"></a>
+<h3 id="Aliases"><a href="#Aliases" class="headerlink" title="Aliases"></a>Aliases</h3><p>SQL aliases are used to give a database table, or a column in a table, a temporary name. Basically aliases are created to make column names more readable.</p>
+<ul>
+<li>SQL Alias Syntax for Columns</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT column_name AS alias_name</div><div class="line">FROM table_name;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT CustomerName, Address+&apos;, &apos;+City+&apos;, &apos;+PostalCode+&apos;, &apos;+Country AS Address</div><div class="line">FROM Customers;</div></pre></td></tr></table></figure>
+<ul>
+<li>SQL Alias Syntax for Tables</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table_name AS alias_name;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT o.OrderID, o.OrderDate, c.CustomerName</div><div class="line">FROM Customers AS c, Orders AS o</div><div class="line">WHERE c.CustomerName=&quot;Around the Horn&quot; AND c.CustomerID=o.CustomerID;</div></pre></td></tr></table></figure>
+<p>Aliases can be useful when:</p>
+<ul>
+<li>There are more than one table involved in a query</li>
+<li>Functions are used in the query</li>
+<li>Column names are big or not very readable</li>
+<li>Two or more columns are combined together</li>
+</ul>
+<h3 id="Joins"><a href="#Joins" class="headerlink" title="Joins"></a>Joins</h3><p>An SQL <strong>JOIN</strong> clause is used to combine rows from two or more tables, based on a common field between them.</p>
+<h4 id="INNER-JOIN-Keyword"><a href="#INNER-JOIN-Keyword" class="headerlink" title="INNER JOIN Keyword"></a>INNER JOIN Keyword</h4><p>The <strong>INNER JOIN</strong> keyword selects all rows from both tables as long as there is a match between the columns in both tables.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table1</div><div class="line">INNER JOIN table2</div><div class="line">ON table1.column_name=table2.column_name;</div></pre></td></tr></table></figure>
+<p>or:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table1</div><div class="line">JOIN table2</div><div class="line">ON table1.column_name=table2.column_name;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> INNER JOIN is the same as JOIN.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT Customers.CustomerName, Orders.OrderID</div><div class="line">FROM Customers</div><div class="line">INNER JOIN Orders</div><div class="line">ON Customers.CustomerID=Orders.CustomerID</div><div class="line">ORDER BY Customers.CustomerName;</div></pre></td></tr></table></figure>
+<h4 id="LEFT-JOIN-Keyword"><a href="#LEFT-JOIN-Keyword" class="headerlink" title="LEFT JOIN Keyword"></a>LEFT JOIN Keyword</h4><p>The <strong>LEFT JOIN</strong> keyword returns all rows from the left table (table1), with the matching rows in the right table (table2). The result is NULL in the right side when there is no match.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table1</div><div class="line">LEFT JOIN table2</div><div class="line">ON table1.column_name=table2.column_name;</div></pre></td></tr></table></figure>
+<p>or:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table1</div><div class="line">LEFT OUTER JOIN table2</div><div class="line">ON table1.column_name=table2.column_name;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> In some databases LEFT JOIN is called LEFT OUTER JOIN.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT Customers.CustomerName, Orders.OrderID</div><div class="line">FROM Customers</div><div class="line">LEFT JOIN Orders</div><div class="line">ON Customers.CustomerID=Orders.CustomerID</div><div class="line">ORDER BY Customers.CustomerName;</div></pre></td></tr></table></figure>
+<h4 id="RIGHT-JOIN-Keyword"><a href="#RIGHT-JOIN-Keyword" class="headerlink" title="RIGHT JOIN Keyword"></a>RIGHT JOIN Keyword</h4><p>The <strong>RIGHT JOIN</strong> keyword returns all rows from the right table (table2), with the matching rows in the left table (table1). The result is NULL in the left side when there is no match.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table1</div><div class="line">RIGHT JOIN table2</div><div class="line">ON table1.column_name=table2.column_name;</div></pre></td></tr></table></figure>
+<p>or:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table1</div><div class="line">RIGHT OUTER JOIN table2</div><div class="line">ON table1.column_name=table2.column_name;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> In some databases RIGHT JOIN is called RIGHT OUTER JOIN.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT Orders.OrderID, Employees.FirstName</div><div class="line">FROM Orders</div><div class="line">RIGHT JOIN Employees</div><div class="line">ON Orders.EmployeeID=Employees.EmployeeID</div><div class="line">ORDER BY Orders.OrderID;</div></pre></td></tr></table></figure>
+<h4 id="FULL-OUTER-JOIN-Keyword"><a href="#FULL-OUTER-JOIN-Keyword" class="headerlink" title="FULL OUTER JOIN Keyword"></a>FULL OUTER JOIN Keyword</h4><p>The <strong>FULL OUTER JOIN</strong> keyword returns all rows from the left table (table1) and from the right table (table2).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s)</div><div class="line">FROM table1</div><div class="line">FULL OUTER JOIN table2</div><div class="line">ON table1.column_name=table2.column_name;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT Customers.CustomerName, Orders.OrderID</div><div class="line">FROM Customers</div><div class="line">FULL OUTER JOIN Orders</div><div class="line">ON Customers.CustomerID=Orders.CustomerID</div><div class="line">ORDER BY Customers.CustomerName;</div></pre></td></tr></table></figure>
+<h3 id="UNION-Operator"><a href="#UNION-Operator" class="headerlink" title="UNION Operator"></a>UNION Operator</h3><p>The <strong>UNION</strong> operator is used to combine the result-set of two or more SELECT statements.</p>
+<p>Notice that each SELECT statement within the UNION must have the same number of columns. The columns must also have similar data types. Also, the columns in each SELECT statement must be in the same order.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s) FROM table1</div><div class="line">UNION</div><div class="line">SELECT column_name(s) FROM table2;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The UNION operator selects only distinct values by default. To allow duplicate values, use the ALL keyword with UNION.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT column_name(s) FROM table1</div><div class="line">UNION ALL</div><div class="line">SELECT column_name(s) FROM table2;</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The column names in the result-set of a UNION are usually equal to the column names in the first SELECT statement in the UNION.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">SELECT City, Country FROM Customers</div><div class="line">WHERE Country=&apos;Germany&apos;</div><div class="line">UNION ALL</div><div class="line">SELECT City, Country FROM Suppliers</div><div class="line">WHERE Country=&apos;Germany&apos;</div><div class="line">ORDER BY City;</div></pre></td></tr></table></figure>
+<h3 id="SELECT-INTO-Statement"><a href="#SELECT-INTO-Statement" class="headerlink" title="SELECT INTO Statement"></a>SELECT INTO Statement</h3><p>The <strong>SELECT INTO</strong> statement selects data from one table and inserts it into a new table.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT *</div><div class="line">INTO newtable [IN externaldb]</div><div class="line">FROM table1;</div></pre></td></tr></table></figure>
+<p>The new table will be created with the column-names and types as defined in the SELECT statement. You can apply new names using the AS clause.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT Customers.CustomerName, Orders.OrderID</div><div class="line">INTO CustomersOrderBackup2013</div><div class="line">FROM Customers</div><div class="line">LEFT JOIN Orders</div><div class="line">ON Customers.CustomerID=Orders.CustomerID;</div></pre></td></tr></table></figure>
+<p><strong>Tip:</strong> The SELECT INTO statement can also be used to create a new, empty table using the schema of another. Just add a WHERE clause that causes the query to return no data:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT *</div><div class="line">INTO newtable</div><div class="line">FROM table1</div><div class="line">WHERE 1=0;</div></pre></td></tr></table></figure>
+<h3 id="INSERT-INTO-SELECT-Statement"><a href="#INSERT-INTO-SELECT-Statement" class="headerlink" title="INSERT INTO SELECT Statement"></a>INSERT INTO SELECT Statement</h3><p>The <strong>INSERT INTO SELECT</strong> statement selects data from one table and inserts it into an existing table. Any existing rows in the target table are unaffected.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INSERT INTO table2</div><div class="line">SELECT * FROM table1;</div></pre></td></tr></table></figure>
+<p>or:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">INSERT INTO table2</div><div class="line">(column_name(s))</div><div class="line">SELECT column_name(s)</div><div class="line">FROM table1;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">INSERT INTO Customers (CustomerName, Country)</div><div class="line">SELECT SupplierName, Country FROM Suppliers</div><div class="line">WHERE Country=&apos;Germany&apos;;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;继续学习，教程来自&lt;a href=&quot;http://www.w3schools.com/sql/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161129-myblog123.jpg&quot; alt=&quot;SQL&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
+    
+    
+      <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="SQL" scheme="http://rrkaige.com/tags/SQL/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL 学习笔记之一</title>
@@ -225,9 +433,9 @@
       <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
     
     
-      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="SQL" scheme="http://rrkaige.com/tags/SQL/"/>
     
@@ -495,9 +703,9 @@
       <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
     
     
-      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
     
@@ -635,9 +843,9 @@
       <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
     
     
-      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
     
@@ -807,9 +1015,9 @@
       <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
     
     
-      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
     
@@ -965,9 +1173,9 @@
       <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
     
     
-      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
     
@@ -1154,9 +1362,9 @@
       <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
     
     
-      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
     
@@ -1363,93 +1571,6 @@
     
     
       <category term="纪录片" scheme="http://rrkaige.com/tags/%E7%BA%AA%E5%BD%95%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>金庸的小说</title>
-    <link href="http://rrkaige.com/2016/11/10/%E9%87%91%E5%BA%B8%E7%9A%84%E5%B0%8F%E8%AF%B4/"/>
-    <id>http://rrkaige.com/2016/11/10/金庸的小说/</id>
-    <published>2016-11-10T11:43:40.000Z</published>
-    <updated>2016-11-11T15:36:38.330Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p> 飞雪连天射白鹿，笑书神侠倚碧鸳。</p>
-</blockquote>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161110-myblog104.jpg" alt="Jinyong"></p>
-<a id="more"></a>
-<p> 忘了何时何地何人，只记得当年在课堂上听老师念出这两句，无比佩服。金庸老爷子，神人也。这诗当然是事后编撰，但其足以青史留名。</p>
-<p> 那时我早已读过不少金庸作品，接触的电视剧电影更是数不胜数。没记错的话，我看的第一本应是《笑傲江湖》，犹记得两个片段。</p>
-<p> 放学路上，我拿着书，就像现在拿着手机。令狐冲背任盈盈，在水中看到她真面目时，惊为天人。</p>
-<blockquote>
-<p> 令狐冲已喝了好几口涧水，眼前金星乱舞，定了定神，只见清澈的涧水之中，映上来两个倒影，一个妙龄姑娘正抓着自己背心。</p>
-<p> 再看水中倒影时，见到那姑娘的半边脸蛋，眼睛紧闭，睫毛甚长，虽然倒影瞧不清楚，但显然容貌秀丽绝伦，不过十七八岁年纪。</p>
-</blockquote>
-<p> 午睡时，看到桃谷六仙插科打诨，舌戏群雄，忍不住笑出声来。</p>
-<blockquote>
-<p>“这个……嗯，是了，定静师太说道：‘五派虽然并而为一，但泰山、衡山、华山、恒山、嵩山这东南西北中五岳，却是并不到一块的。左冷禅又不是玉皇大帝，难道他还能将五座大山搬在一起吗？请桃谷六仙中的五兄弟分驻五山，剩下一个做总掌门也就是了。’”</p>
-<p>“不错！定逸师太便说：‘师姊此见甚是。原来桃谷六仙的父母当年甚有先见，知道日后左冷禅要合并五岳剑派，因此生下他六个兄弟来，既不是五个，又不是七个，佩服啊佩服！’”</p>
-</blockquote>
-<p> 奇怪的是，记忆中第一个发生在小学，第二个是初一。莫非是错觉？不明白，但这两个片段印象深刻，确凿无疑。后来，陆续看过《碧血剑》，《鹿鼎记》，《侠客行》，其他的或许读过，已不大确定。</p>
-<p> 今天说起这个，是因为沙漠公众号中提及。沙漠是网络小说历史穿越类作者，追过几本书，多有关注。之后又正巧看到“六神磊磊读金庸”，天马行空又紧跟时事，很有趣的公众号，很有意思的人。他抓住一点，坚持不懈，成功转身。</p>
-<blockquote>
-<p> 我觉得一个写字的人，随时要做好被人忘记的准备，你会有干气象的时候，也会有苦低垂的时候，我们都应该是一只蚂蚱，但是必须是一个不停地学习，不停地充实自己的蚂蚱，我们要努力地蹦达着，然后静静地等待秋后的到来。</p>
-</blockquote>
-<p> 我需要积累的还很多很多。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;飞雪连天射白鹿，笑书神侠倚碧鸳。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161110-myblog104.jpg&quot; alt=&quot;Jinyong&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="书里时光" scheme="http://rrkaige.com/categories/%E4%B9%A6%E9%87%8C%E6%97%B6%E5%85%89/"/>
-    
-    
-      <category term="读书" scheme="http://rrkaige.com/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
-      <category term="金庸" scheme="http://rrkaige.com/tags/%E9%87%91%E5%BA%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>秋橘</title>
-    <link href="http://rrkaige.com/2016/11/09/%E7%A7%8B%E6%A9%98/"/>
-    <id>http://rrkaige.com/2016/11/09/秋橘/</id>
-    <published>2016-11-09T14:45:32.000Z</published>
-    <updated>2016-11-09T15:08:47.906Z</updated>
-    
-    <content type="html"><![CDATA[<p> 晚上吃完饭，去后街买点橘子。</p>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161109-myblog103.jpg" alt="Orange"></p>
-<a id="more"></a>
-<p> 秋天，正是橘子上市的时节。后街对面的水果摊，2.8 元 / 斤，挑 10 个，7 块钱左右即可，微信支付，非常方便。相对来说，橘子真是够便宜。表皮金黄圆润，非常好剥，味道甜而不酸，饱满多汁，我一口气可以吃两个。拎回实验室，大家一起分享。</p>
-<p> 突然想起来，“橘”和“桔”的区别在哪？以前似乎随便用，并无注意。寻思不得，Google 之。嘿，还真有不少门道和争论。</p>
-<ul>
-<li><a href="http://health.sohu.com/20151224/n432477039.shtml" target="_blank" rel="external"> 终于分得清橘、橙、柑、桔了！</a></li>
-<li><a href="http://www.guokr.com/question/7111/" target="_blank" rel="external"> 桔 + 柑 + 橙 + 枳 + 有什么区别？</a></li>
-<li><a href="https://www.zhihu.com/question/20686259" target="_blank" rel="external"> 桔子、橘子、芦柑三者之间的差别是什么？</a></li>
-</ul>
-<p> 看了半天，还是没搞明白。所以，我这吃的到底是“橘”、“桔”还是“柑”呢？反正肯定不是“橙”了。</p>
-<p> 算了，还是吃个橘子压压惊吧。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;晚上吃完饭，去后街买点橘子。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161109-myblog103.jpg&quot; alt=&quot;Orange&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="尘世行者" scheme="http://rrkaige.com/categories/%E5%B0%98%E4%B8%96%E8%A1%8C%E8%80%85/"/>
-    
-    
-      <category term="随笔" scheme="http://rrkaige.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="吃货" scheme="http://rrkaige.com/tags/%E5%90%83%E8%B4%A7/"/>
     
   </entry>
   
