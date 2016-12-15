@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-12-14T15:11:44.441Z</updated>
+  <updated>2016-12-15T13:27:11.112Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>纯黑的噩梦</title>
+    <link href="http://rrkaige.com/2016/12/15/%E7%BA%AF%E9%BB%91%E7%9A%84%E5%99%A9%E6%A2%A6/"/>
+    <id>http://rrkaige.com/2016/12/15/纯黑的噩梦/</id>
+    <published>2016-12-15T05:29:16.000Z</published>
+    <updated>2016-12-15T13:27:11.112Z</updated>
+    
+    <content type="html"><![CDATA[<p> 剧场版让人越发失望，名字没起错，真是噩梦。</p>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161215-myblog139.jpg" alt="Detective Conan The Darkest Nightmare"></p>
+<a id="more"></a>
+<p> 作为侦探的本职工作，破案没有，甚至连凶手都没有。从头到尾，飞车追逐，高空打斗，机枪扫射，完全成了日本公安、FBI、黑衣组织和柯南等人的一场动作片大战。</p>
+<p> 一个突然冒出来的银发异瞳大姐姐库拉索，她窃取资料，坠海失忆，和少年侦探团愉快玩耍；她飞檐走壁，几十米高空跳下都不带喘气；她恢复记忆后回心转意，驾驶吊车阻止失控的摩天轮壮烈牺牲。还能更扯么……</p>
+<p> 能，柯南的伸缩吊带足球腰带脚力增强鞋，已经成为万能工具，每次都能在最后违反科学定律强行挽救剧情。少年侦探团依旧拖后腿，灰原哀几乎没有存在感，小兰和毛利小五郎早就成了酱油党。</p>
+<p> 画面效果也差，人物线条粗犷比例失调动作僵硬，大场面更是粗糙，竟然有种 Flash 的错觉。不无恶意地猜想，黑夜大战莫不就是因为画面制作起来相对容易？</p>
+<p> 唯一的优点，恐怕就是雨露均沾，主要人物都有出场台词，总算没有白白领盒饭。如此看来，更像是柯南角色大放送，敌我双方也是你中有我我中有你，难怪这么多年仍然不相上下。</p>
+<p> 或许是太苛求了吧。追剧这么多年，明显感觉到质量不断下降。宛若鸡肋，食之无味弃之可惜。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;剧场版让人越发失望，名字没起错，真是噩梦。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161215-myblog139.jpg&quot; alt=&quot;Detective Conan The Darkest Nightmare&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="影里偷闲" scheme="http://rrkaige.com/categories/%E5%BD%B1%E9%87%8C%E5%81%B7%E9%97%B2/"/>
+    
+    
+      <category term="观影" scheme="http://rrkaige.com/tags/%E8%A7%82%E5%BD%B1/"/>
+    
+      <category term="动画" scheme="http://rrkaige.com/tags/%E5%8A%A8%E7%94%BB/"/>
+    
+      <category term="柯南" scheme="http://rrkaige.com/tags/%E6%9F%AF%E5%8D%97/"/>
+    
+  </entry>
   
   <entry>
     <title>我要 K 歌</title>
@@ -1091,54 +1127,6 @@
       <category term="JavaScript" scheme="http://rrkaige.com/tags/JavaScript/"/>
     
       <category term="JQuery" scheme="http://rrkaige.com/tags/JQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>域名</title>
-    <link href="http://rrkaige.com/2016/11/22/%E5%9F%9F%E5%90%8D/"/>
-    <id>http://rrkaige.com/2016/11/22/域名/</id>
-    <published>2016-11-22T12:16:13.000Z</published>
-    <updated>2016-11-22T14:01:05.095Z</updated>
-    
-    <content type="html"><![CDATA[<p>关于域名的一些事，整理下。</p>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161122-myblog116.gif" alt="Domain Name"></p>
-<a id="more"></a>
-<h3 id="域名注册"><a href="# 域名注册" class="headerlink" title="域名注册"></a>域名注册 </h3><p> 当初注册域名，本来想用 <code>kaneren.com</code> 或<code>rrk.com</code>，无奈均已被注册。所以退而求其次，在 GoDaddy 上注册了现在这个。</p>
-<p>但总是不爽，本来看着快到期，想试试能否捡漏。但我还是太天真，原来还有续费保留赎回等说法。好吧，那就不等了，我再找找。</p>
-<p>嘿，还真让我找着了。<code>kaneren.me</code>，<code>kaneren.xyz</code>，<code>kane.ren</code>，均未注册。</p>
-<p>先科普下，域名包括顶级域名、二级域名，三级域名等。顶级域名又分为两类：</p>
-<ul>
-<li>国家和地区顶级域名（country code top-level domains，简称 ccTLDs），或者说国家顶级域名（national top-level domainnames，简称 nTLDs）；</li>
-<li>通用顶级域名（generic top-level domains，简称 gTLDs），或者说国际顶级域名（international top-level domain names，简称 iTLDs）。</li>
-</ul>
-<p>现在，<code>.me</code>域名是前南斯拉夫地区西南部的国家黑山共和国（Montenegro，旧译“门的内哥罗”）的国家域名，<code>.xyz</code>和 <code>.ren</code> 域名是全球新通用顶级域名（后者竟然是人人网母公司千橡网景科技运营的）。</p>
-<p>好吧，不管其他。考虑之后，决定在万网上注册 <code>kaneren.xyz</code> 和<code>kane.ren</code>，正搞促销，费用低廉，权且一试。申请付款，这两个后缀暂时不用实名认证，就此搞定。</p>
-<p>从此，咱也是有三个域名的人了。手中有粮心中不慌，后面该折腾点事了。</p>
-<h3 id="导航网页"><a href="# 导航网页" class="headerlink" title="导航网页"></a>导航网页 </h3><p> 于是，想着先更改个人导航网页的域名，就用<code>navi.kane.ren</code>，简单。操作如下：</p>
-<ol>
-<li>在万网中添加解析，给对应的二级域名添加 <code>CNAME</code> 解析到<code>kaneren.github.com</code>;</li>
-<li>在 GoDaddy 中删除相应设置。</li>
-<li>进入 <code>navi</code> 主页右面的 <code>Settings</code>，更改<code>Custom domain</code> 为<code>navi.kane.ren</code>；</li>
-<li>更改 <code>navi</code> 项目的 <code>CNAME</code> 文件，将不带协议名的裸域名写进去(<code>navi.kane.ren</code>)。</li>
-</ol>
-<p>deploy 之后，等待 DNS 生效即可。</p>
-<p>PS：一开始无法 deploy，和上次一样，更改 <code>.git/config</code> 文件中的 <code>rul</code> 即可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;关于域名的一些事，整理下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161122-myblog116.gif&quot; alt=&quot;Domain Name&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="零壹之间" scheme="http://rrkaige.com/categories/%E9%9B%B6%E5%A3%B9%E4%B9%8B%E9%97%B4/"/>
-    
-    
-      <category term="域名" scheme="http://rrkaige.com/tags/%E5%9F%9F%E5%90%8D/"/>
-    
-      <category term="导航网页" scheme="http://rrkaige.com/tags/%E5%AF%BC%E8%88%AA%E7%BD%91%E9%A1%B5/"/>
     
   </entry>
   
