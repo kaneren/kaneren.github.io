@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://rrkaige.com/"/>
-  <updated>2016-12-21T14:50:16.348Z</updated>
+  <updated>2016-12-22T14:37:13.517Z</updated>
   <id>http://rrkaige.com/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>背景时代</title>
+    <link href="http://rrkaige.com/2016/12/22/%E8%83%8C%E6%99%AF%E6%97%B6%E4%BB%A3/"/>
+    <id>http://rrkaige.com/2016/12/22/背景时代/</id>
+    <published>2016-12-22T11:57:15.000Z</published>
+    <updated>2016-12-22T14:37:13.517Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p> 这是最好的时代，也是最坏的时代，更是背景的时代。</p>
+</blockquote>
+<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161222-myblog146.jpg" alt="Stephen Chow"></p>
+<a id="more"></a>
+<p> 这几天的雾霾肆虐全国，网络各路神仙妖魔鬼怪齐出。从和菜头处，了解到力行斗霾的一毛不拔“大师”，继而发现大师成名之举是朱令铊中毒案。一番搜索，各种传闻甚嚣尘上，包括贝志诚的自述和孙维的声明。此外，又关注到复旦投毒案、佘祥林杀妻案和辛普森杀妻案。真相只有一个，外人永远不知道。</p>
+<p> 当年这起搅动网络至今仍不息的案件，其中任何人的背景都不简单。天子脚下，谁都能和皇亲国戚沾上边。由此看来，这简单案件搞得如此复杂，岂不理所当然。背后势力的博弈，深水区的争斗，无非又是利益的瓜分。至于当事人，作为导火索，却忍受一生的苦痛。</p>
+<p> 同学找工作，申请选调生，说想试试看。我想起来，学校之前有挂出通知。一查，发现我泱泱省会，招 38 人，其中男生 23 人。得，没戏。三代贫农，还是得靠自己吃饭。</p>
+<p> 现实残酷，一碗干。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这是最好的时代，也是最坏的时代，更是背景的时代。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161222-myblog146.jpg&quot; alt=&quot;Stephen Chow&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="尘世行者" scheme="http://rrkaige.com/categories/%E5%B0%98%E4%B8%96%E8%A1%8C%E8%80%85/"/>
+    
+    
+      <category term="随笔" scheme="http://rrkaige.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="背景" scheme="http://rrkaige.com/tags/%E8%83%8C%E6%99%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>显微镜下的大明</title>
@@ -680,127 +716,6 @@
       <category term="纪录片" scheme="http://rrkaige.com/tags/%E7%BA%AA%E5%BD%95%E7%89%87/"/>
     
       <category term="地球" scheme="http://rrkaige.com/tags/%E5%9C%B0%E7%90%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL 学习笔记之三</title>
-    <link href="http://rrkaige.com/2016/11/30/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E4%B8%89/"/>
-    <id>http://rrkaige.com/2016/11/30/SQL学习笔记之三/</id>
-    <published>2016-11-30T13:36:17.000Z</published>
-    <updated>2016-12-01T14:49:00.889Z</updated>
-    
-    <content type="html"><![CDATA[<p> 继续学习，教程来自 <a href="http://www.w3schools.com/sql/default.asp" target="_blank" rel="external">w3schools</a>。</p>
-<p><img src="http://ob0mgqhy4.bkt.clouddn.com/20161130-myblog124.jpg" alt="Code SQL Database"></p>
-<a id="more"></a>
-<h3 id="CREATE-DATABASE-Statement"><a href="#CREATE-DATABASE-Statement" class="headerlink" title="CREATE DATABASE Statement"></a>CREATE DATABASE Statement</h3><p>The <strong>CREATE DATABASE</strong> statement is used to create a database.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE DATABASE dbname;</div></pre></td></tr></table></figure>
-<h3 id="CREATE-TABLE-Statement"><a href="#CREATE-TABLE-Statement" class="headerlink" title="CREATE TABLE Statement"></a>CREATE TABLE Statement</h3><p>The <strong>CREATE TABLE</strong> statement is used to create a table in a database. Tables are organized into rows and columns; and each table must have a name.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE table_name</div><div class="line">(</div><div class="line">column_name1 data_type(size),</div><div class="line">column_name2 data_type(size),</div><div class="line">column_name3 data_type(size),</div><div class="line">....</div><div class="line">);</div></pre></td></tr></table></figure>
-<ul>
-<li>The column_name parameters specify the names of the columns of the table.</li>
-<li>The data_type parameter specifies what type of data the column can hold (e.g. varchar, integer, decimal, date, etc.).</li>
-<li>The size parameter specifies the maximum length of the column of the table.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">PersonID int,</div><div class="line">LastName varchar(255),</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255)</div><div class="line">);</div></pre></td></tr></table></figure>
-<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><p>SQL constraints are used to specify rules for the data in a table. If there is any violation between the constraint and the data action, the action is aborted by the constraint.</p>
-<p>Constraints can be specified when the table is created (inside the CREATE TABLE statement) or after the table is created (inside the ALTER TABLE statement).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE table_name</div><div class="line">(</div><div class="line">column_name1 data_type(size) constraint_name,</div><div class="line">column_name2 data_type(size) constraint_name,</div><div class="line">column_name3 data_type(size) constraint_name,</div><div class="line">....</div><div class="line">);</div></pre></td></tr></table></figure>
-<h4 id="NOT-NULL-Constraint"><a href="#NOT-NULL-Constraint" class="headerlink" title="NOT NULL Constraint"></a>NOT NULL Constraint</h4><p>The <strong>NOT NULL</strong> constraint enforces a column to NOT accept NULL values.</p>
-<p>The NOT NULL constraint enforces a field to always contain a value. This means that you cannot insert a new record, or update a record without adding a value to this field.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE PersonsNotNull</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255)</div><div class="line">)</div></pre></td></tr></table></figure>
-<h4 id="UNIQUE-Constraint"><a href="#UNIQUE-Constraint" class="headerlink" title="UNIQUE Constraint"></a>UNIQUE Constraint</h4><p>The <strong>UNIQUE</strong> constraint uniquely identifies each record in a database table.</p>
-<p>The UNIQUE and PRIMARY KEY constraints both provide a guarantee for uniqueness for a column or set of columns. A PRIMARY KEY constraint automatically has a UNIQUE constraint defined on it.</p>
-<p><strong>Note:</strong> You can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.</p>
-<ul>
-<li>UNIQUE Constraint on CREATE TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255),</div><div class="line">CONSTRAINT uc_PersonID UNIQUE (P_Id,LastName)</div><div class="line">)</div></pre></td></tr></table></figure>
-<ul>
-<li>UNIQUE Constraint on ALTER TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ADD CONSTRAINT uc_PersonID UNIQUE (P_Id,LastName)</div></pre></td></tr></table></figure>
-<ul>
-<li>DROP a UNIQUE Constraint</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">DROP CONSTRAINT uc_PersonID</div></pre></td></tr></table></figure>
-<h4 id="PRIMARY-KEY-Constraint"><a href="#PRIMARY-KEY-Constraint" class="headerlink" title="PRIMARY KEY Constraint"></a>PRIMARY KEY Constraint</h4><p>The <strong>PRIMARY KEY</strong> constraint uniquely identifies each record in a database table.</p>
-<p>Primary keys must contain UNIQUE values. A primary key column cannot contain NULL values.</p>
-<p>Most tables should have a primary key, and each table can have only ONE primary key.</p>
-<ul>
-<li>PRIMARY KEY Constraint on CREATE TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255),</div><div class="line">CONSTRAINT pk_PersonID PRIMARY KEY (P_Id,LastName)</div><div class="line">)</div></pre></td></tr></table></figure>
-<p><strong>Note:</strong> In the example above there is only ONE PRIMARY KEY (<code>pk_PersonID</code>). However, the VALUE of the primary key is made up of TWO COLUMNS (<code>P_Id</code> + <code>LastName</code>).</p>
-<ul>
-<li>PRIMARY KEY Constraint on ALTER TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ADD CONSTRAINT pk_PersonID PRIMARY KEY (P_Id,LastName)</div></pre></td></tr></table></figure>
-<p><strong>Note:</strong> If you use the ALTER TABLE statement to add a primary key, the primary key column(s) must already have been declared to not contain NULL values (when the table was first created).</p>
-<ul>
-<li>DROP a PRIMARY KEY Constraint</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">DROP CONSTRAINT pk_PersonID</div></pre></td></tr></table></figure>
-<h4 id="FOREIGN-KEY-Constraint"><a href="#FOREIGN-KEY-Constraint" class="headerlink" title="FOREIGN KEY Constraint"></a>FOREIGN KEY Constraint</h4><p>A <strong>FOREIGN KEY</strong> in one table points to a PRIMARY KEY in another table.</p>
-<p>The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.</p>
-<p>The FOREIGN KEY constraint also prevents invalid data from being inserted into the foreign key column, because it has to be one of the values contained in the table it points to.</p>
-<ul>
-<li>FOREIGN KEY Constraint on CREATE TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Orders</div><div class="line">(</div><div class="line">O_Id int NOT NULL,</div><div class="line">OrderNo int NOT NULL,</div><div class="line">P_Id int,</div><div class="line">PRIMARY KEY (O_Id),</div><div class="line">CONSTRAINT fk_PerOrders FOREIGN KEY (P_Id)</div><div class="line">REFERENCES Persons(P_Id)</div><div class="line">)</div></pre></td></tr></table></figure>
-<ul>
-<li>FOREIGN KEY Constraint on ALTER TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Orders</div><div class="line">ADD CONSTRAINT fk_PerOrders</div><div class="line">FOREIGN KEY (P_Id)</div><div class="line">REFERENCES Persons(P_Id)</div></pre></td></tr></table></figure>
-<ul>
-<li>DROP a FOREIGN KEY Constraint</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Orders</div><div class="line">DROP CONSTRAINT fk_PerOrders</div></pre></td></tr></table></figure>
-<h4 id="CHECK-Constraint"><a href="#CHECK-Constraint" class="headerlink" title="CHECK Constraint"></a>CHECK Constraint</h4><p>The <strong>CHECK</strong> constraint is used to limit the value range that can be placed in a column.</p>
-<p>If you define a CHECK constraint on a single column it allows only certain values for this column.</p>
-<p>If you define a CHECK constraint on a table it can limit the values in certain columns based on values in other columns in the row.</p>
-<ul>
-<li>CHECK Constraint on CREATE TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255),</div><div class="line">CONSTRAINT chk_Person CHECK (P_Id&gt;0 AND City=&apos;Sandnes&apos;)</div><div class="line">)</div></pre></td></tr></table></figure>
-<ul>
-<li>CHECK Constraint on ALTER TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ADD CONSTRAINT chk_Person CHECK (P_Id&gt;0 AND City=&apos;Sandnes&apos;)</div></pre></td></tr></table></figure>
-<ul>
-<li>DROP a CHECK Constraint</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">DROP CONSTRAINT chk_Person</div></pre></td></tr></table></figure>
-<h4 id="DEFAULT-Constraint"><a href="#DEFAULT-Constraint" class="headerlink" title="DEFAULT Constraint"></a>DEFAULT Constraint</h4><p>The <strong>DEFAULT</strong> constraint is used to insert a default value into a column.</p>
-<p>The default value will be added to all new records, if no other value is specified.</p>
-<ul>
-<li>DEFAULT Constraint on CREATE TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE Persons</div><div class="line">(</div><div class="line">P_Id int NOT NULL,</div><div class="line">LastName varchar(255) NOT NULL,</div><div class="line">FirstName varchar(255),</div><div class="line">Address varchar(255),</div><div class="line">City varchar(255) DEFAULT &apos;Sandnes&apos;</div><div class="line">)</div></pre></td></tr></table></figure>
-<ul>
-<li>DEFAULT Constraint on ALTER TABLE</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ALTER COLUMN City SET DEFAULT &apos;SANDNES&apos;</div></pre></td></tr></table></figure>
-<ul>
-<li>DROP a DEFAULT Constraint</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE Persons</div><div class="line">ALTER COLUMN City DROP DEFAULT</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;继续学习，教程来自&lt;a href=&quot;http://www.w3schools.com/sql/default.asp&quot;&gt;w3schools&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ob0mgqhy4.bkt.clouddn.com/20161130-myblog124.jpg&quot; alt=&quot;Code SQL Database&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web征途" scheme="http://rrkaige.com/categories/Web%E5%BE%81%E9%80%94/"/>
-    
-    
-      <category term="学习" scheme="http://rrkaige.com/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="笔记" scheme="http://rrkaige.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="SQL" scheme="http://rrkaige.com/tags/SQL/"/>
     
   </entry>
   
